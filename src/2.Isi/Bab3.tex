@@ -1,441 +1,979 @@
 %-----------------------------------------------------------------------------%
+% \listoftables
 \chapter{\babTiga}
 
 
 %-----------------------------------------------------------------------------%
-\lipsum[6-6]
+% \lipsum[6-6]
 
 %-----------------------------------------------------------------------------%
 \section{Kedudukan dan Koordinasi}
 %-----------------------------------------------------------------------------%
 
+Selama pelaksanaan kerja magang di PT Visi Karya Nusantara (NTS), penulis menempati posisi sebagai \textit{Software Engineer Intern} dalam \textit{Software Development Team}. Peran utama yang dijalankan berfokus pada pengembangan dan pengujian \textit{Application Programming Interface} (API) menggunakan Node.js dan Express.js, serta integrasinya dengan basis data PostgreSQL. Selain itu, penulis juga berkolaborasi dengan tim \textit{frontend} dalam membangun dan mengimplementasi modul \textit{Payroll} yang terhubung dengan sistem \textit{Daily Attendance}.
 
-\lipsum[7-8]
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_struktur_tim_pengembang.jpg}}
+    \caption{Struktur Tim Pengembang PT Visi Karya Nusantara (NTS)}
+    \label{fig:struktur_tim_pengembang}
+\end{figure}
 
-\noindent \begin{align}\label{eq:garis}
-	\cfrac{y - y_{1}}{y_{2} - y_{1}} = 
-	\cfrac{x - x_{1}}{x_{2} - x_{1}}
-\end{align}
+Struktur tim pengembang dapat dilihat pada Gambar \ref{fig:struktur_tim_pengembang}, yang terdiri dari beberapa anggota dengan peran yang saling terintegrasi. Tim ini berada di bawah koordinasi Bapak Atanasius Raditya Herkristito selaku \textit{Software Engineer Manager}, yang berperan sebagai pembimbing sekaligus pengarah teknis selama masa magang. Beliau bertanggung jawab dalam memberikan umpan balik, melakukan evaluasi mingguan terhadap progres proyek, serta mengadakan sesi \textit{code review} untuk memastikan kualitas kode sesuai standar perusahaan.
 
-\equ~\ref{eq:garis} di atas adalah persamaan garis. 
-\equ~\ref{eq:garis} dan \ref{eq:bola} sama-sama dibuat dengan perintah \bslash
-align. 
-Perintah ini juga dapat digunakan untuk menulis lebih dari satu persamaan. 
+Dalam pelaksanaan proyek, kolaborasi dilakukan bersama anggota tim lainnya yang terdiri dari:
+\begin{itemize}
+    \item Amanda — \textit{Software Engineer Intern}
+    \item Calista — \textit{Software Engineer Intern}
+    \item Kevin — \textit{Software Engineer Intern}
+    \item Elisabeth Hutabarat — \textit{UI/UX Designer}
+\end{itemize}
 
-\noindent \begin{align}\label{eq:bola}
-	\underbrace{|\overline{ab}|}_{\text{pada bola $|\overline{ab}| = r$}} 
-		= \sqrt[2]{(x_{b} - x_{a})^{2} + (y_{b} - y_{a})^{2} + 
-				\vert\vert(z_{b} - z_{a})^{2}}
-\end{align}
+Seluruh kegiatan magang dilaksanakan secara \textit{remote}, sehingga koordinasi tim dilakukan secara daring melalui \textit{platform Discord} dan \textit{repository management system} GitHub. Discord digunakan sebagai sarana komunikasi utama untuk berdiskusi, menyampaikan pembaruan progres, serta melakukan rapat mingguan. Sementara itu, GitHub digunakan untuk mengelola kode sumber, melakukan \textit{pull request}, serta memfasilitasi proses \textit{code review} dan kolaborasi antar anggota tim.
+
+Setiap minggu diadakan \textit{sprint meeting} yang dipimpin oleh Raditya untuk membahas perkembangan proyek, hambatan teknis, serta rencana pengembangan fitur berikutnya. Selain itu, setiap anggota tim juga melakukan \textit{asynchronous daily updates} melalui Discord yang berisi laporan progres harian dan kendala yang dihadapi. Evaluasi hasil kerja dilakukan secara berkala melalui sesi \textit{code review} dan \textit{sprint retrospective} untuk memastikan kualitas pengembangan tetap terjaga serta selaras dengan standar teknis perusahaan.
+
+% \noindent \begin{align}\label{eq:garis}
+% 	\cfrac{y - y_{1}}{y_{2} - y_{1}} = 
+% 	\cfrac{x - x_{1}}{x_{2} - x_{1}}
+% \end{align}
+
+% \equ~\ref{eq:garis} di atas adalah persamaan garis. 
+% \equ~\ref{eq:garis} dan \ref{eq:bola} sama-sama dibuat dengan perintah \bslash
+% align. 
+% Perintah ini juga dapat digunakan untuk menulis lebih dari satu persamaan. 
+
+% \noindent \begin{align}\label{eq:bola}
+% 	\underbrace{|\overline{ab}|}_{\text{pada bola $|\overline{ab}| = r$}} 
+% 		= \sqrt[2]{(x_{b} - x_{a})^{2} + (y_{b} - y_{a})^{2} + 
+% 				\vert\vert(z_{b} - z_{a})^{2}}
+% \end{align}
 
 %-----------------------------------------------------------------------------%
 \section{Tugas yang Dilakukan}
-\label{sec:multiEqu}
+% \label{sec:multiEqu}
 %-----------------------------------------------------------------------------%
 
-\lipsum[9-10]
+Selama pelaksanaan kerja magang di PT Visi Karya Nusantara, penulis terlibat dalam proyek pengembangan aplikasi \textit{Internal System}, yaitu sebuah sistem kepegawaian berbasis web yang dikembangkan tidak hanya untuk kebutuhan internal perusahaan, tetapi juga ditujukan sebagai produk yang dapat digunakan oleh perusahaan lain. Fokus utama pekerjaan mencakup pengembangan sisi sistem dan integrasi antara backend dan frontend untuk mendukung fungsionalitas dan skalabilitas produk. 
 
-% %-----------------------------------------------------------------------------%
-% \section{Membuat Tabel}
-% %-----------------------------------------------------------------------------%
-% Seperti pada gambar, tabel juga dapat diberi label dan caption. 
-% Caption pada tabel terletak pada bagian atas tabel. 
-% Contoh tabel sederhana dapat dilihat pada \tab~\ref{tab:tab1}.
+Tugas-tugas yang dilakukan meliputi:
 
-\begin{table}
-	\centering
-	\caption{Contoh Tabel}
-	\label{tab:tab1}
-	\begin{tabular}{l | c r}
-		\hline
-		& kol 1 & kol 2 \\ 
-		\hline
-		baris 1 & 1 & 2 \\
-		baris 2 & 3 & 4 \\
-		baris 3 & 5 & 6 \\
-		jumlah  & 9 & 12 \\
-		\hline
-	\end{tabular}
-\end{table}
+\begin{enumerate}
+    \item Mengembangkan dan memelihara API untuk aplikasi \textit{Internal System}, termasuk pembuatan fitur baru, serta memastikan kompatibilitas dengan sistem lain yang akan menggunakan produk ini.
+    \item Melakukan dokumentasi API menggunakan \textit{platform} Apidog untuk mempermudah kolaborasi antar tim dan memfasilitasi integrasi dengan pihak eksternal.
+    \item Melakukan pengujian terhadap API dan fitur yang dikembangkan, mencakup validasi data, penanganan kesalahan, serta pengujian fungsionalitas untuk memastikan sistem berjalan stabil.
+    \item Melakukan koordinasi dan kolaborasi dengan tim pengembang melalui Discord dan GitHub terkait pembagian tugas, pembahasan revisi, serta proses integrasi antar modul.
+\end{enumerate}
 
-Ada jenis tabel lain yang dapat dibuat dengan \latex~berikut 
-beberapa di antaranya. 
-Contoh-contoh ini bersumber dari 
-\url{http://en.wikibooks.org/wiki/LaTeX/Tables}
-
-\begin{table}
-	\centering
-	\caption{An example of rows spanning multiple columns}
-	\label{row.spanning}
-	\begin{tabular}{l l *{6}{c}}
-  		\hline % create horizontal line
-  		No & Name & \multicolumn{3}{c}{Week 1} & \multicolumn{3}{c}{Week 2} \\
-  		\cline{3-8} % create line from 3rd column till 8th column
-  		& & A & B & C & A & B & C\\
-  		\hline
-  		1 & Lala & 1 & 2 & 3 & 4 & 5 & 6\\
-  		2 & Lili & 1 & 2 & 3 & 4 & 5 & 6\\
-  		3 & Lulu & 1 & 2 & 3 & 4 & 5 & 6\\
-  		\hline
-	\end{tabular}
-\end{table}
-
-\lipsum[43-44]
-
-\begin{table}
-	\centering
-	\caption{Penulisan judul tabel dan judul gambar adalah rata kiri kanan serta tidak dicetak tebal dan mengikuti cara penulisan kalimat (sentence case).}
-	\label{column.spanning}
-	\begin{tabular}{l c l}
-		\hline
-		Percobaan & Iterasi & Waktu \\
-		\hline
-		Pertama & 1 & 0.1 sec \\ \hline
-		\multirow{2}{*}{Kedua} & 1 & 0.1 sec \\
- 		& 3 & 0.15 sec \\ 
- 		\hline
-		\multirow{3}{*}{Ketiga} & 1 & 0.09 sec \\
- 		& 2 & 0.16 sec \\
- 		& 3 & 0.21 sec \\ 
- 		\hline
-	\end{tabular}\\
-	\vspace{1em}
-	{\small Sumber: \url{http://en.wikibooks.org/wiki/LaTeX/Tables}}
-\end{table}
-
-
-\lipsum[45-46]
-
-\noindent \begin{align}\label{eq:matriks}	
-	|\overline{a} * \overline{b}| &= |\overline{a}| |\overline{b}| \sin\theta 
-		\\[0.2cm]
-	\overline{a} * \overline{b} &=  
-		\begin{array}{| c c c |}
-			\hat{i} & x_{1} & x_{2} \\
-			\hat{j} & y_{1} & y_{2} \\
-			\hat{k} & z_{1} & z_{2} \\
-		\end{array} \nonumber \\[0.2cm]
-	&= \hat{i} \,
-		\begin{array}{ | c c | }
-			y_{1} & y_{2} \\
-			z_{1} & z_{2} \\
-		\end{array} 
-	   + \hat{j} \,
-		\begin{array}{ | c c | }
-			z_{1} & z_{2} \\
-			x_{1} & x_{2} \\
-		\end{array} 
-	   + \hat{k} \,	
-		\begin{array}{ | c c | }
-			x_{1} & x_{2} \\
-			y_{1} & y_{2} \\
-		\end{array}
-		\nonumber
-\end{align}
-
-Pada \equ~\ref{eq:matriks} dapat dilihat beberapa baris menjadi satu bagian 
-dari \equ~\ref{eq:matriks}. 
-Sedangkan di bawah ini dapat dilihat bahwa dengan cara yang sama, \equ~
-\ref{eq:gabungan1}, \ref{eq:gabungan2}, dan \ref{eq:gabungan3} memiliki nomor 
-persamaannya masing-masing. 
-
-\noindent \begin{align}\label{eq:gabungan1}	
-	\int_{a}^{b} f(x)\, dx + \int_{b}^{c} f(x) \, dx = \int_{a}^{c} f(x) \, dx
-		\\\label{eq:gabungan2}
-	\lim_{x \to \infty} \frac{f(x)}{g(x)} = 0 \hspace{1cm} 
-		\text{jika pangkat $f(x)$ $<$ pangkat $g(x)$} \\\label{eq:gabungan3}
-	a^{m^{a \, ^{n}\log b }} = b^{\frac{m}{n}}
-\end{align}
-
-
-
-Rumus \ref{eq:Precision} menunjukkan cara perhintungan \textit{Precision}.
-
-\addequation{\textit{Precision}}{%
-\begin{equation}  \label{eq:Precision}
-    Precision = \frac{TP}{TP+FP}
-\end{equation}
-}
-
-Rumus \ref{eq:Recall} menunjukkan cara perhitungan \textit{Recall}.
-
-\addequation{\textit{Recall}}{
-\begin{equation}  \label{eq:Recall}
-    Recall = \frac{TP}{TP+FN}
-\end{equation}
-
-}
-
-\addequation{\textit{F1 Score}}{%
-\begin{equation}  \label{eq:F1-score}
-    F1 Score = 2*\frac{Precision*Recall}{Precision+Recall}
-\end{equation}
-}
-
-
+Seluruh aktivitas tersebut berperan penting dalam mendukung terciptanya sistem yang andal, terukur, dan siap diimplementasikan secara luas. Dengan adanya dokumentasi dan proses pengembangan yang terstruktur, sistem ini tidak hanya memenuhi kebutuhan operasional internal, tetapi juga mampu beradaptasi dengan kebutuhan perusahaan lain yang menjadi calon pengguna produk. Hal ini menjadi bagian dari upaya strategis perusahaan dalam membangun solusi digital yang efisien dan berkelanjutan.
+% -----------------------------------------------------------------------------%
 \section{Uraian Pelaksanaan Magang}
-
-\lipsum[34-35]
-
-Pelaksanaan kerja magang diuraikan seperti pada Tabel \ref{tbl_uraian}.
-
-\begin{table}
-	\centering
-	\caption{ Pekerjaan yang dilakukan tiap minggu selama pelaksanaan kerja magang}
-	\label{tbl_uraian}
-	\begin{tabular}{|c | p{0.75\textwidth}| }
-		\hline
-		Minggu Ke - & Pekerjaan yang dilakukan \\
-		\hline
-		1 & Memahami .... \\
-		\hline
- 		2 & Menerapkan desain UI/UX pada ..... \\
-		\hline
- 		3 & Menerapkan desain UI/UX untuk.....  \\
- 		\hline
- 		4 & Melakukan ...... \\
- 		\hline
- 		5 & Membuat ......... \\
- 		\hline
- 		6 & \\
- 		\hline
-	\end{tabular}
-\end{table}
-
-
-\subsection{Sub-section}
-
-\lipsum[11-12]
-
-
-\begin{figure}
-     \centering
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \fbox{\includegraphics[width=\textwidth]{assets/pics/graph1.png}}
-         \caption{$y=x$}
-         \label{fig:y equals x}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \fbox{\includegraphics[width=\textwidth]{assets/pics/graph2.png}}
-         \caption{$y=3sinx$}
-         \label{fig:three sin x}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \fbox{\includegraphics[width=\textwidth]{assets/pics/graph3.jpg}}
-         \caption{$y=5/x$}
-         \label{fig:five over x}
-     \end{subfigure}
-        \caption{Three simple graphs}
-        \label{fig:three graphs}
-\end{figure}
-
-
-
-\subsubsection{Subsub-section}
-
-\lipsum[13-14]
-
+% -----------------------------------------------------------------------------%
+Pelaksanaan kerja magang diuraikan seperti pada Tabel~\ref{tab:tbl_uraian}.
 
 \begin{center}
-\begin{longtable}{|l|l|l|}
-\caption{A sample of a long table} \label{tab:long} \\
+    \begin{longtable}{|c|p{0.75\textwidth}|}
+        \caption{Pekerjaan yang dilakukan tiap minggu selama pelaksanaan kerja magang}
+        \label{tab:tbl_uraian} \\
+        \hline
+        \textbf{Minggu Ke -} & \textbf{Pekerjaan yang dilakukan} \\
+        \hline
+        \endfirsthead
 
-\hline \multicolumn{1}{|c|}{\textbf{First column}} & \multicolumn{1}{c|}{\textbf{Second column}} & \multicolumn{1}{c|}{\textbf{Third column}} \\ \hline 
-\endfirsthead
+        \multicolumn{2}{c}%
+        {{\parbox{\textwidth}{\centering \tablename\ \thetable{} -- Pekerjaan yang dilakukan tiap minggu selama pelaksanaan kerja magang (lanjutan)}}} \\
+        \hline
+        \textbf{Minggu Ke -} & \textbf{Pekerjaan yang dilakukan} \\
+        \hline
+        \endhead
 
-\multicolumn{3}{c}%
-{{ \tablename\ \thetable{} \small A sample of a long table (lanjutan)}} \\
-\hline \multicolumn{1}{|c|}{\textbf{First column}} & \multicolumn{1}{c|}{\textbf{Second column}} & \multicolumn{1}{c|}{\textbf{Third column}} \\ \hline 
-\endhead
+        \hline \multicolumn{2}{|r|}{{Lanjut pada halaman berikutnya}} \\
+        \hline
+        \endfoot
 
-\hline \multicolumn{3}{|r|}{{Lanjut pada halaman berikutnya}} \\ \hline
-\endfoot
+        \hline \hline
+        \endlastfoot
 
-\hline \hline
-\endlastfoot
-
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-One & abcdef ghjijklmn & 123.456778 \\
-\end{longtable}
+        1 & Melakukan perancangan awal modul \textit{Payroll}, mencakup pembuatan skema basis data, model, serta pengembangan awal API untuk \textit{Contract}, \textit{Payslip}, dan \textit{Payroll Setting}. \\
+        \hline
+        2 & Melanjutkan pengembangan \textit{Contract API} dengan penambahan fitur pembatalan, persetujuan, dan penghapusan kontrak, melakukan refaktor pada \textit{controller}, serta menambahkan seeding data untuk tabel pendukung seperti \textit{misc}, \textit{penalty rules}, dan \textit{schedules}. \\
+        \hline
+        3 & Melakukan perbaikan pada \textit{Contract API}, menambahkan fitur baru untuk \textit{Job Title} termasuk perbaikan routing dan pembuatan \textit{API} baru, serta melakukan revamp pada modul \textit{Leave Permit} dan penyusunan ulang logika penalti pada kontrak. \\
+        \hline
+        4 & Revamp pada modul \textit{User Management}, \textit{Leave Management}, dan \textit{Permit Detail}, termasuk memperbaiki validator autentikasi serta fungsi perhitungan hari untuk meningkatkan konsistensi sistem. \\
+        \hline
+        5 & Menambah API baru untuk persetujuan cuti, memperbaiki fungsi perhitungan hari, melakukan refaktor pada fungsi pengguna dan paginasi, serta memperbaiki data terkait proyek, produk, dan jabatan. \\
+        \hline
+        6 & Melakukan pembaruan besar pada laporan pengguna, kontrak, dan API Stand Up, menambahkan detail pada kontrak serta item payroll, memperbaiki relasi model dan API payslip, serta meningkatkan sistem paginasi dan manajemen jenis cuti. \\
+        \hline
+        7 & Melakukan finalisasi pada API Payslip, memperbaiki bug pada People Report, menambahkan fitur paginasi dan penyortiran, melakukan migrasi baru untuk Payslip Details, serta memperbaiki validator sistem. \\
+        \hline
+        8 & Melakukan pengembangan fitur ekspor data ke format XLSX, perbaikan API pembuatan pengguna, perbaikan berkas migrasi dan seeding, serta penambahan sistem perizinan baru pada setiap modul. \\
+        \hline
+        9 & Melakukan perbaikan pada berbagai modul seperti kontrak, akun, dan pengguna, menambahkan fungsi baru untuk pengelolaan kontrak aktif, serta merencanakan fitur input data klien melalui pembacaan berkas CSV untuk proses onboarding. \\
+        \hline
+        10 & Melanjutkan pengembangan fitur onboarding klien dengan melanjutkan pengembangan sistem pembacaan berkas CSV, pembuatan tabel serta fungsi Import Mapping, dan perbaikan FileController untuk mendukung proses impor data secara efisien. \\
+        \hline
+        11 & Menyelesaikan pengembangan layanan Onboarding dengan menerapkan proses parsing data pada setiap modul, sehingga sistem impor data klien dapat berjalan secara otomatis dan terintegrasi dengan baik. \\
+        \hline
+        12 & Menambahkan fitur penanganan kesalahan pada fungsi Onboarding untuk proses unggah dan impor berkas CSV, serta memungkinkan pengguna untuk mengimpor bagian modul secara bertahap guna meningkatkan fleksibilitas dan keandalan sistem. \\
+        \hline
+    \end{longtable}
 \end{center}
 
+%-----------------------------------------------------------------------------%
+\section{Pengumpulan dan Analisis Kebutuhan}
+%-----------------------------------------------------------------------------%
+Kebutuhan sistem dalam proyek ini diperoleh melalui koordinasi langsung dengan \textit{Software Engineer Manager}. Sebagian besar \textit{requirement} ditentukan secara iteratif berdasarkan kebutuhan bisnis dan \textit{sprint} mingguan yang telah direncanakan oleh tim. Proses pengumpulan \textit{requirement} dilakukan melalui diskusi teknis mingguan di \textit{retrospective meeting}. Setiap \textit{requirement} yang diidentifikasi kemudian dianalisis untuk menentukan cakupan fungsionalitas, prioritas implementasi, serta dampaknya terhadap sistem yang ada. Hasil analisis ini menjadi dasar dalam perancangan dan pengembangan fitur-fitur baru yang sesuai dengan kebutuhan pengguna dan tujuan bisnis perusahaan.
 
-\paragraph{Paragraph 1}
+Berikut ini adalah uraian \textit{requirement} utama yang berhasil diidentifikasi selama masa kerja praktik:
 
-\lipsum[15-16]
+%-----------------------------------------------------------------------------%
+\subsubsection{Modul \textit{Contract}}
 
-Contoh Python script yang digunakan dapat dilihat pada Kode \ref{kode1}.
+Sebagai landasan utama bagi sistem penggajian (\textit{Payroll}), perusahaan membutuhkan mekanisme pengelolaan data kontrak yang terpusat. Sistem harus mampu menangani seluruh siklus hidup kontrak kerja pegawai, mulai dari pembuatan draf hingga pemantauan masa berlaku. Selain itu, modul ini harus memfasilitas validasi status kontrak melalui fitur persetujuan (\textit{approval}), pengakhiran (\textit{terminate}), serta penghapusan data untuk menjamin fleksibilitas dalam pengelolaan hubungan kerja.
 
-{\footnotesize
-\begin{lstlisting}[basicstyle=\linespread{0.8},language=Python, caption= Contoh potongan kode, label= kode1]
-import numpy as np
-    
-def incmatrix(genl1,genl2):
-    m = len(genl1)
-    n = len(genl2)
-    M = None #to become the incidence matrix
-    VT = np.zeros((n*m,1), int)  #dummy variable
-    
-    #compute the bitwise xor matrix
-    M1 = bitxormatrix(genl1)
-    M2 = np.triu(bitxormatrix(genl2),1) 
+%-----------------------------------------------------------------------------%
+\subsubsection{Modul \textit{Payroll Item}}
 
-    for i in range(m-1):
-        for j in range(i+1, m):
-            [r,c] = np.where(M2 == M1[i,j])
-            for k in range(len(r)):
-                VT[(i)*n + r[k]] = 1;
-                VT[(i)*n + c[k]] = 1;
-                VT[(j)*n + r[k]] = 1;
-                VT[(j)*n + c[k]] = 1;
-                
-                if M is None:
-                    M = np.copy(VT)
-                else:
-                    M = np.concatenate((M, VT), 1)
-                
-                VT = np.zeros((n*m,1), int)
-    
-    return M
-\end{lstlisting}
-}
+Manajemen kompensasi yang dinamis membutuhkan pengelolaan komponen gaji yang terstruktur. Sistem harus mampu mendefinisikan berbagai kategori penghasilan seperti gaji pokok, tunjangan, hingga potongan secara spesifik. Modul ini dirancang untuk memfasilitasi penyesuaian komponen gaji berdasarkan kebijakan perusahaan yang berlaku, sehingga setiap perubahan parameter gaji dapat terpetakan dengan akurat ke dalam sistem.
 
-\subparagraph{Sub-paragraph 1.1}
+%-----------------------------------------------------------------------------%
+\subsubsection{Modul \textit{Payslip}}
 
-\lipsum[17-18]
+Proses finalisasi penggajian membutuhkan akurasi tinggi dalam kalkulasi pembayaran. Sistem harus mampu melakukan kalkulasi otomatis berdasarkan integrasi data kontrak dan variabel lainnya untuk menghasilkan slip gaji yang akurat. Modul ini memfasilitasi penyediaan informasi rincian gaji, periode pembayaran, dan catatan historis secara transparan, yang dapat diakses secara mandiri oleh pegawai.
 
-\subparagraph{Sub-paragraph 1.2}
+%-----------------------------------------------------------------------------%
+\subsubsection{Modul \textit{On Boarding}}
 
-\lipsum[19-20]
+Untuk menangani ekspansi data klien, operasional perusahaan membutuhkan metode input data yang cepat dan masal. Sistem harus mampu memproses impor data melalui berkas \textit{Comma Separated Values} (CSV) sesuai dengan \textit{template} yang telah ditentukan. Fitur ini memfasilitasi validasi integritas dan konsistensi data secara otomatis, sehingga mempercepat waktu implementasi bagi pengguna baru.
 
-\subsubsection{Subsub-section}
+%-----------------------------------------------------------------------------%
+\subsubsection{Modul \textit{Overtime}}
 
-\lipsum[21-22]
+Pencatatan jam kerja tambahan membutuhkan sistem pemantauan yang transparan untuk menghindari kesalahan perhitungan manual. Sistem harus mampu mencatat durasi lembur secara tepat dan mengelola alur persetujuan oleh atasan. Modul ini memfasilitasi pengintegrasian kompensasi lembur ke dalam sistem penggajian, memastikan setiap jam kerja tambahan pegawai tercatat dan dibayarkan sesuai regulasi perusahaan.
+% ---------------------------------------------------------------------------------%
+\section{Perancangan dan Pengembangan Sistem}
+% ---------------------------------------------------------------------------------%
+Bagian ini menguraikan perancangan dan pengembangan sistem, mencakup struktur basis data serta alur kerja sistem untuk fitur-fitur yang dikembangkan selama masa kerja praktik.
 
-\paragraph{Paragraph}
+% ---------------------------------- %
+\subsection{Modul Contract}
+% ---------------------------------- %
 
-\subparagraph{Sub-paragraph}
+Modul \textit{Contract} berfungsi sebagai fondasi utama dalam sistem penggajian (\textit{Payroll}) yang dikembangkan. Modul ini mencakup pembuatan, pengelolaan, dan pemantauan kontrak kerja pegawai, termasuk fitur-fitur seperti persetujuan kontrak, pembatalan, serta penghapusan kontrak. Struktur basis data dirancang untuk mendukung berbagai jenis kontrak dan aturan terkait, sehingga memungkinkan fleksibilitas dalam pengelolaan hubungan kerja.
 
-\subparagraph{Sub-paragraph}
+\subsubsection{Diagram ERD Modul \textit{Contract}}
 
-\subsection{Sub-section}
+Berikut merupakan \textit{database diagram} untuk modul \textit{Contract} yang telah dibuat selama pelaksanaan kerja praktik. 
 
-\lipsum[25-26]
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_erd_contract.png}}
+    \caption{Diagram ERD untuk modul \textit{Contract}}
+    \label{fig:erd_contract}
+\end{figure}
 
-\section{Section}
+Gambar \ref{fig:erd_contract} menunjukkan struktur basis data untuk modul \textit{Contract}. Terdapat beberapa tabel utama yang saling berhubungan, yaitu: 
+\begin{itemize}
+    \item \textit{Contracts}: Tabel ini menyimpan data kontrak kerja pegawai, termasuk informasi seperti tanggal mulai dan berakhir kontrak, status persetujuan, serta referensi ke pegawai yang bersangkutan.
+    \item \textit{Employment Statuses}: Tabel ini menyimpan berbagai status kepegawaian yang dapat dimiliki oleh pegawai, seperti aktif, cuti, atau tidak aktif.
+    \item \textit{Job Titles}: Tabel ini menyimpan informasi mengenai jabatan atau posisi yang dimiliki oleh pegawai dalam perusahaan.
+    \item \textit{Office Location}: Tabel ini menyimpan data lokasi kantor tempat pegawai bekerja, yang dapat digunakan untuk keperluan absensi.
+    \item \textit{Miscellaneous}: Tabel ini menyimpan data tambahan terkait kontrak, seperti jenis kontrak, durasi kerja, dan informasi lainnya yang mendukung pengelolaan kontrak.
+    \item \textit{Schedules}: Tabel ini menyimpan jadwal kerja yang terkait dengan kontrak, termasuk jam kerja dan hari kerja yang ditetapkan.
+    \item \textit{Leave Types}: Tabel ini menyimpan jenis-jenis cuti yang tersedia bagi pegawai, yang dapat dikaitkan dengan kontrak kerja.
+    \item \textit{Contract Items}: Tabel ini menyimpan rincian \textit{item-item} yang termasuk dalam kontrak, seperti gaji pokok, tunjangan, dan potongan.
+    \item \textit{Contract Penalties}: Tabel ini menyimpan data penalti yang dapat dikenakan dalam kontrak kerja, termasuk jenis pelanggaran dan besaran penalti.
+    \item \textit{Contract Schedules}: Tabel ini menyimpan hubungan antara kontrak dan jadwal kerja yang ditetapkan.
+    \item \textit{Contract Leaves}: Tabel ini menyimpan hubungan antara kontrak dan jenis cuti yang tersedia bagi pegawai.
+\end{itemize}
 
-\subsection{Sub-Section}
+\subsubsection{\textit{Contract} API \textit{Endpoints}}
+
+Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Contract}:
+\begin{table}
+    \centering
+    \begin{tabular}{|p{25mm}|c|p{35mm}|p{45mm}|}
+        \hline
+        \textbf{Nama API} & \textbf{Metode} & \textbf{Endpoint} & \textbf{Deskripsi} \\
+        \hline
+        Get All User's Contracts & GET & /contract/user & Mengambil semua kontrak milik pengguna \\
+        \hline
+        Get User's Contract Detail by ID & GET & /contract/user/:id & Mengambil detail kontrak \textit{user} berdasarkan ID \\
+        \hline
+        Approve Contract by ID & PATCH & /contract/:id/approve & Menyetujui kontrak \textit{user} berdasarkan ID \\
+        \hline
+        Terminate Contract by ID & DELETE & /contract/:id & Mengakhiri kontrak \textit{user} berdasarkan ID \\
+        \hline
+        Delete Contract by ID & DELETE & /contract/:id/delete & Menghapus kontrak \textit{user} berdasarkan ID \\
+        \hline
+    \end{tabular}
+    \caption{Daftar \textit{endpoints} API untuk modul \textit{Contract}}
+    \label{tab:contract_api_endpoints}
+\end{table}
+
+Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Contract} seperti pada Tabel \ref{tab:contract_api_endpoints}. Setiap \textit{endpoint} memiliki fungsi spesifik dalam mengelola kontrak kerja pegawai, mulai dari pengambilan data kontrak, persetujuan, hingga penghapusan kontrak. Selanjutnya, akan dijelaskan alur sistem untuk \textit{endpoints} dalam pada modul ini.
+
+\paragraph*{\textit{Get All User's Contracts}}
+
+Berikut merupakan \textit{flowchart} API \textit{Get All User's Contracts}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_get_all_user_contracts.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get All User's Contracts}}
+    \label{fig:flowchart_get_all_user_contracts}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get All User's Contracts}.
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_all_user_contracts.png}}
+    \caption{Contoh \textit{request} API \textit{Get All User's Contracts}}
+    \label{fig:request_get_all_user_contracts}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_all_user_contracts.png}}
+    \caption{Contoh \textit{response} API \textit{Get All User's Contracts}}
+    \label{fig:response_get_all_user_contracts}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_all_user_contracts} menunjukkan \textit{flowchart} alur sistem API \textit{Get All User's Contracts} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/user} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_all_user_contracts}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data kontrak dari pengguna tersebut. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar kontrak yang dimiliki oleh pengguna tersebut seperti pada Gambar \ref{fig:response_get_all_user_contracts}.
+
+\paragraph*{\textit{Get User's Contract Detail by ID}}
+Berikut merupakan \textit{flowchart} API \textit{Get User's Contract Detail by ID}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_get_user_contract_detail_by_id.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get User's Contract Detail by ID}}
+    \label{fig:flowchart_get_user_contract_detail_by_id}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get User's Contract Detail by ID}.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_request_get_user_contract_detail_by_id.png}}
+    \caption{Contoh \textit{request} API \textit{Get User's Contract Detail by ID}}
+    \label{fig:request_get_user_contract_detail_by_id}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_user_contract_detail_by_id_1.png}}
+    \caption{Contoh \textit{response} API \textit{Get User's Contract Detail by ID}}
+    \label{fig:response_get_user_contract_detail_by_id_1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_user_contract_detail_by_id_2.png}}
+    \caption{Contoh \textit{response} API \textit{Get User's Contract Detail by ID} (lanjutan)}
+    \label{fig:response_get_user_contract_detail_by_id_2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_user_contract_detail_by_id_3.png}}
+    \caption{Contoh \textit{response} API \textit{Get User's Contract Detail by ID} (lanjutan)}
+    \label{fig:response_get_user_contract_detail_by_id_3}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_user_contract_detail_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get User's Contract Detail by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/user/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_contract_detail_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail kontrak berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail kontrak yang diminta seperti pada Gambar \ref{fig:response_get_user_contract_detail_by_id_1}, \ref{fig:response_get_user_contract_detail_by_id_2}, dan \ref{fig:response_get_user_contract_detail_by_id_3}.
+
+\paragraph*{\textit{Approve Contract by ID}}
+Berikut merupakan \textit{flowchart} API \textit{Approve Contract by ID}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_approve_contract_by_id.jpg}}
+    \caption{Contoh \textit{response} API \textit{Approve Contract by ID}}
+    \label{fig:response_approve_contract_by_id}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Approve Contract by ID}.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_request_approve_contract_by_id.png}}
+    \caption{Contoh \textit{request} API \textit{Approve Contract by ID}}
+    \label{fig:request_approve_contract_by_id}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.7\textwidth]{assets/pics/fig_response_approve_contract_by_id.png}}
+    \caption{Contoh \textit{response} API \textit{Approve Contract by ID}}
+    \label{fig:response_approve_contract_by_id}
+\end{figure}
+
+Gambar \ref{fig:flowchart_approve_contract_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Approve Contract by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/:id/approve} menggunakan metode HTTP \textit{PATCH} seperti pada Gambar \ref{fig:request_approve_contract_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta memperbarui status kontrak menjadi disetujui (\textit{Approved}) berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah status kontrak berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi kontrak yang telah disetujui seperti pada Gambar \ref{fig:response_approve_contract_by_id}.
+
+\newpage
+\paragraph*{\textit{Terminate Contract by ID}}
+Berikut merupakan \textit{flowchart} API \textit{Terminate Contract by ID}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_terminate_contract_by_id.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Terminate Contract by ID}}
+    \label{fig:flowchart_terminate_contract_by_id}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Terminate Contract by ID}.
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_request_terminate_contract_by_id.png}}
+    \caption{Contoh \textit{request} API \textit{Terminate Contract by ID}}
+    \label{fig:request_terminate_contract_by_id}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_response_terminate_contract_by_id.png}}
+    \caption{Contoh \textit{response} API \textit{Terminate Contract by ID}}
+    \label{fig:response_terminate_contract_by_id}
+\end{figure}
+
+Gambar \ref{fig:flowchart_terminate_contract_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Terminate Contract by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/:id} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_terminate_contract_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, lalu mencari data kontrak berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah ditemukan, status akan berubah sesuai dengan status kontrak sekarang, dengan ketentuan sebagai berikut:
+\begin{itemize}
+    \item Jika status kontrak adalah \textit{Pending}, maka status akan diubah menjadi \textit{Rejected}.
+    \item Jika status kontrak adalah \textit{Approved}, maka status akan diubah menjadi \textit{Cancelled}.
+    \item Jika status kontrak adalah \textit{On Going}, maka status akan diubah menjadi \textit{Terminated}.
+\end{itemize}
+Jika status kontrak tidak sesuai dengan ketentuan di atas, maka sistem akan mengembalikan respons kesalahan (\textit{error response}) kepada pengguna. Setelah status kontrak berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi kontrak yang telah dihentikan seperti pada Gambar \ref{fig:response_terminate_contract_by_id}.
+
+\paragraph*{\textit{Delete Contract by ID}}
+Berikut merupakan \textit{flowchart} API \textit{Delete Contract by ID}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_delete_contract_by_id.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Delete Contract by ID}}
+    \label{fig:flowchart_delete_contract_by_id}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Delete Contract by ID}.
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_request_delete_contract_by_id.png}}
+    \caption{Contoh \textit{request} API \textit{Delete Contract by ID}}
+    \label{fig:request_delete_contract_by_id}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_response_delete_contract_by_id.png}}
+    \caption{Contoh \textit{response} API \textit{Delete Contract by ID}}
+    \label{fig:response_delete_contract_by_id}
+\end{figure}
+
+Gambar \ref{fig:flowchart_delete_contract_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Delete Contract by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/:id/delete} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_delete_contract_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta menghapus data kontrak berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah data kontrak berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi keberhasilan penghapusan kontrak seperti pada Gambar \ref{fig:response_delete_contract_by_id}.
+
+% ---------------------------------- %
+\subsection{Modul Payroll Item}
+% ---------------------------------- %
+Modul Payroll Item dibuat untuk mengelola berbagai komponen gaji yang akan digunakan dalam perhitungan gaji pegawai. Modul ini mencakup fitur pembuatan, pengelolaan, dan penghapusan item gaji seperti gaji pokok, tunjangan, dan potongan. Struktur basis data dirancang untuk menyimpan informasi terkait item gaji, termasuk jenis item, besaran, serta aturan penerapannya. Dengan adanya modul ini, perusahaan
+
+\subsubsection{Diagram ERD Modul \textit{Payroll Item}}
+Berikut merupakan \textit{database diagram} untuk modul \textit{Payroll Item} yang telah dibuat selama pelaksanaan kerja praktik.
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.6\textwidth]{assets/pics/fig_erd_payroll_item.png}}
+    \caption{Diagram ERD untuk modul \textit{Payroll Item}}
+    \label{fig:erd_payroll_item}
+\end{figure}
+
+Gambar \ref{fig:erd_payroll_item} menunjukkan struktur basis data untuk modul \textit{Payroll Item}.
+
+\subsubsection{\textit{Payroll Item} API \textit{Endpoints}}
+Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Payroll Item}:
+\begin{table}
+    \centering
+    \begin{tabular}{|p{25mm}|c|p{35mm}|p{45mm}|}
+        \hline
+        \textbf{Nama API} & \textbf{Metode} & \textbf{Endpoint} & \textbf{Deskripsi} \\
+        \hline
+        Get All Payroll Item & GET & /payroll-items & Mengambil semua komponen gaji (\textit{Payroll Item}) \\
+        \hline
+        Get Payroll Item by ID & GET & /payroll-items/:id & Mengambil detail komponen gaji berdasarkan ID \\
+        \hline
+        Create Payroll Item & POST & /payroll-items & Membuat komponen gaji baru \\
+        \hline
+        Update Payroll Item & PUT & /payroll-items/:id & Memperbarui komponen gaji berdasarkan ID \\
+        \hline
+        Delete Payroll Item & DELETE & /payroll-items/:id & Menghapus komponen gaji berdasarkan ID \\
+        \hline
+    \end{tabular}
+    \caption{Daftar \textit{endpoints} API untuk modul \textit{Payroll Item}}
+    \label{tab:payroll_item_api_endpoints}
+\end{table}
+
+Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Payroll Item} seperti pada Tabel \ref{tab:payroll_item_api_endpoints}. Setiap \textit{endpoint} memiliki fungsi spesifik untuk mengelola komponen gaji (\textit{Payroll Item}). Selanjutnya, akan dijelaskan alur sistem untuk \textit{endpoints} dalam pada modul ini.
 
 
-\subsection{Sub-Section}
+\paragraph*{\textit{Get All Payroll Item}}
+Berikut merupakan \textit{flowchart} API \textit{Get All Payroll Item}.
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_flowchart_get_all_payroll_items.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get All Payroll Item}}
+    \label{fig:flowchart_get_all_payroll_item}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get All Payroll Item}.
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_all_payroll_items.png}}
+    \caption{Contoh \textit{request} API \textit{Get All Payroll Item}}
+    \label{fig:request_get_all_payroll_item}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_all_payroll_items.png}}
+    \caption{Contoh \textit{response} API \textit{Get All Payroll Item}}
+    \label{fig:response_get_all_payroll_item}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_all_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Get All Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_all_payroll_item}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil semua data komponen gaji (\textit{Payroll Item}). Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar komponen gaji seperti pada Gambar \ref{fig:response_get_all_payroll_item}.
+
+\paragraph*{\textit{Get Payroll Item by ID}}
+
+Berikut merupakan \textit{flowchart} API \textit{Get Payroll Item by ID}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_get_payroll_item_by_id.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get Payroll Item by ID}}
+    \label{fig:flowchart_get_payroll_item_by_id}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get Payroll Item by ID}.
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_payroll_item_by_id.png}}
+    \caption{Contoh \textit{request} API \textit{Get Payroll Item by ID}}
+    \label{fig:request_get_payroll_item_by_id}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_payroll_item_by_id.png}}
+    \caption{Contoh \textit{response} API \textit{Get Payroll Item by ID}}
+    \label{fig:response_get_payroll_item_by_id}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_payroll_item_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get Payroll Item by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_payroll_item_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data komponen gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail komponen gaji yang diminta seperti pada Gambar \ref{fig:response_get_payroll_item_by_id}.
 
 
-\subsubsection{Sub-sub-section}
+\paragraph*{\textit{Create Payroll Item}}
 
-\paragraph{Paragraph}
+Berikut merupakan \textit{flowchart} API \textit{Create Payroll Item}.
 
-\subparagraph{Sub-paragraph}
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_create_payroll_items.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Create Payroll Item}}
+    \label{fig:flowchart_create_payroll_item}
+\end{figure}
 
-\lipsum[27]
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Create Payroll Item}.
 
-\paragraph{Paragraph}
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_create_payroll_items.png}}
+    \caption{Contoh \textit{request} API \textit{Create Payroll Item}}
+    \label{fig:request_create_payroll_item}
+\end{figure}
 
-\subparagraph{Sub-paragraph}
-\subparagraph{Sub-paragraph}
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_create_payroll_items.png}}
+    \caption{Contoh \textit{response} API \textit{Create Payroll Item}}
+    \label{fig:response_create_payroll_item}
+\end{figure}
+
+Gambar \ref{fig:flowchart_create_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Create Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{POST} seperti pada Gambar \ref{fig:request_create_payroll_item}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, serta membuat data komponen gaji baru berdasarkan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil dibuat, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah dibuat seperti pada Gambar \ref{fig:response_create_payroll_item}.
+
+\paragraph*{\textit{Update Payroll Item}}
+
+Berikut merupakan \textit{flowchart} API \textit{Update Payroll Item}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_update_payroll_item_by_id.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Update Payroll Item}}
+    \label{fig:flowchart_update_payroll_item}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Update Payroll Item}.
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_update_payroll_item_by_id.png}}
+    \caption{Contoh \textit{request} API \textit{Update Payroll Item}}
+    \label{fig:request_update_payroll_item}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_update_payroll_item_by_id.png}}
+    \caption{Contoh \textit{response} API \textit{Update Payroll Item}}
+    \label{fig:response_update_payroll_item}
+\end{figure}
+
+Gambar \ref{fig:flowchart_update_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Update Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{PUT} seperti pada Gambar \ref{fig:request_update_payroll_item}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, mencari data \textit{Payroll Item} dengan menggunakan \textit{ID} yang diberikan dari \textit{Path Parameter} serta memperbarui data komponen gaji data tersebut dengan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah diperbarui seperti pada Gambar \ref{fig:response_update_payroll_item}.
+
+\paragraph*{\textit{Delete Payroll Item}}
+
+Berikut merupakan \textit{flowchart} API \textit{Delete Payroll Item}.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_delete_payroll_item.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Delete Payroll Item}}
+    \label{fig:flowchart_delete_payroll_item}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Delete Payroll Item}.
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_delete_payroll_item.png}}
+    \caption{Contoh \textit{request} API \textit{Delete Payroll Item}}
+    \label{fig:request_delete_payroll_item}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_delete_payroll_item.png}}
+    \caption{Contoh \textit{response} API \textit{Delete Payroll Item}}
+    \label{fig:response_delete_payroll_item}
+\end{figure}
+
+Gambar \ref{fig:flowchart_delete_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Delete Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_delete_payroll_item}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta menghapus data komponen gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data komponen gaji berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai keberhasilan penghapusan komponen gaji seperti pada Gambar \ref{fig:response_delete_payroll_item}.
+
+
+% ---------------------------------- %
+\subsection{Modul Payslip}
+% ---------------------------------- %
+Modul Payslip dibuat untuk mengelola dan menghasilkan slip gaji bagi pegawai berdasarkan kontrak yang telah disepakati, dan beberapa. Modul ini mencakup fitur perhitungan gaji, potongan, dan tunjangan sesuai dengan ketentuan yang berlaku dalam kontrak kerja. Struktur basis data dirancang untuk menyimpan informasi terkait gaji, termasuk rincian pembayaran, periode gaji, serta catatan historis. Modul ini juga menyediakan akses untuk menampilkan slip gaji kepada pegawai secara transparan. Modul Payslip juga merupakan langkah terakhir dari sistem penggajian (\textit{Payroll}) yang terintegrasi dengan modul Contract dan modul lainnya.
+
+\subsubsection{Diagram ERD Modul \textit{Payslip}}
+Berikut merupakan \textit{database diagram} untuk modul \textit{Payslip} yang telah dibuat selama pelaksanaan kerja praktik.
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.35\textwidth]{assets/pics/fig_erd_payslip.png}}
+    \caption{Diagram ERD untuk modul \textit{Payslip}}
+    \label{fig:erd_payslip}
+\end{figure}
+Gambar \ref{fig:erd_payslip} menunjukkan struktur basis data untuk modul \textit{Payslip}.
+
+\subsubsection{\textit{Payslip} API \textit{Endpoints}}
+Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Payslip}:
+\begin{table}
+    \centering
+    \begin{tabular}{|p{25mm}|c|p{50mm}|p{30mm}|}
+        \hline
+        \textbf{Nama API} & \textbf{Metode} & \textbf{Endpoint} & \textbf{Deskripsi} \\
+        \hline
+        Get Payslip Detail & GET & /payslip/date/{payslip\_date\_id} /contract/{contract\_id} & Mengambil detail slip gaji \textit{user} \\
+        \hline
+        Save Payslip Detail & PATCH & /payslip/date/{payslip\_date\_id} /contract/{contract\_id} & Mengambil detail slip gaji \textit{user} berdasarkan ID \\
+        \hline
+        Get User Payslips List & GET & /payslip/user & Mengambil semua slip gaji milik pengguna \\
+        \hline
+        Get User Payslip Detail by ID & GET & /payslip/user/:id & Mengambil detail slip gaji \textit{user} berdasarkan ID \\
+        \hline
+    \end{tabular}
+    \caption{Daftar \textit{endpoints} API untuk modul \textit{Payslip}}
+    \label{tab:payslip_api_endpoints}
+\end{table}
+
+Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Payslip} seperti pada Tabel \ref{tab:payslip_api_endpoints}. Setiap \textit{endpoint} memiliki fungsi spesifik dalam mengelola slip gaji pegawai, mulai dari pengambilan data slip gaji, hingga penyimpanan detail slip gaji. Selanjutnya, akan dijelaskan alur sistem untuk \textit{endpoints} dalam pada modul ini.
+
+\paragraph*{\textit{Get Payslip Detail}}
+Berikut merupakan \textit{flowchart} API \textit{Get Payslip Detail}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_flowchart_get_payslip_detail.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get Payslip Detail}}
+    \label{fig:flowchart_get_payslip_detail}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get Payslip Detail}.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.3\textheight]{assets/pics/fig_request_get_payslip_detail.png}}
+    \caption{Contoh \textit{request} API \textit{Get Payslip Detail}}
+    \label{fig:request_get_payslip_detail}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_response_get_payslip_detail.png}}
+    \caption{Contoh \textit{response} API \textit{Get Payslip Detail}}
+    \label{fig:response_get_payslip_detail}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_payslip_detail} menunjukkan \textit{flowchart} alur sistem API \textit{Get Payslip Detail} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/date/{payslip\_date\_id}/contract/{contract\_id}} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_payslip_detail}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail slip gaji (\textit{payslip\_details}) berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters}. Setelah didapatkan data \textit{payslip}, sistem juga akan mengambil data \textit{payslip\_details} yang berelasi dengan \textit{payslip} tersebut. Jika data \textit{payslip\_details} tidak ditemukan, maka sistem akan membuat data \textit{payslip\_details} baru berdasarkan \textit{contract\_id} dan \textit{payslip\_date\_id} yang diberikan. Data akan diambil dari \textit{contract items} untuk komponen gaji yang ada pada kontrak tersebut, dan juga dari \textit{daily\_penalty\_logs} untuk potongan denda harian yang terjadi pada periode slip gaji tersebut.Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail slip gaji yang diminta seperti pada Gambar \ref{fig:response_get_payslip_detail}.
+
+
+\paragraph*{\textit{Save Payslip Detail}}   
+Berikut merupakan \textit{flowchart} API \textit{Save Payslip Detail}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_flowchart_save_payslip_detail.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Save Payslip Detail}}
+    \label{fig:flowchart_save_payslip_detail}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Save Payslip Detail}.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_request_save_payslip_detail.png}}
+    \caption{Contoh \textit{request} API \textit{Save Payslip Detail}}
+    \label{fig:request_save_payslip_detail}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_response_save_payslip_detail_1.png}}
+    \caption{Contoh \textit{response} API \textit{Save Payslip Detail}}
+    \label{fig:response_save_payslip_detail_1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_save_payslip_detail_2.png}}
+    \caption{Contoh \textit{response} API \textit{Save Payslip Detail}} (Lanjutan)
+    \label{fig:response_save_payslip_detail_2}
+\end{figure}
+
+Gambar \ref{fig:flowchart_save_payslip_detail} menunjukkan \textit{flowchart} alur sistem API \textit{Save Payslip Detail} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/date/{payslip\_date\_id}/contract/{contract\_id}} menggunakan metode HTTP \textit{PATCH} seperti pada Gambar \ref{fig:request_save_payslip_detail}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, serta memperbarui data detail slip gaji berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters} dengan data yang diberikan dalam \textit{request body}. Di dalam \textit{request body}, pengguna dapat mengirimkan beberapa data detail slip gaji yang ingin diperbarui, seperti tunjangan, potongan, dan lain-lain. Pengguna juga dapat menambahkan beberapa data detail slip gaji baru yang belum ada pada slip gaji tersebut dengan deskripsi dan nominal yang diinginkan. Setelah data detail slip gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai detail slip gaji yang telah diperbarui seperti pada Gambar \ref{fig:response_save_payslip_detail}.
+
+\paragraph*{\textit{Get User Payslips List}}
+Berikut merupakan \textit{flowchart} API \textit{Get User Payslips List}.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.8\textheight]{assets/pics/fig_flowchart_get_user_payslips_list.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get User Payslips List}}
+    \label{fig:flowchart_get_user_payslips_list}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get User Payslips List}.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_request_get_user_payslips_list.png}}
+    \caption{Contoh \textit{request} API \textit{Get User Payslips List}}
+    \label{fig:request_get_user_payslips_list}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_user_payslips_list.png}}
+    \caption{Contoh \textit{response} API \textit{Get User Payslips List}}
+    \label{fig:response_get_user_payslips_list}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_user_payslips_list} menunjukkan \textit{flowchart} alur sistem API \textit{Get User Payslips List} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslips/user} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_payslips_list}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua slip gaji milik pengguna. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar slip gaji milik pengguna seperti pada Gambar \ref{fig:response_get_user_payslips_list}.
+
+\paragraph*{\textit{Get User Payslip Detail by ID}}
+
+Berikut merupakan \textit{flowchart} API \textit{Get User Payslip Detail by ID}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_get_user_payslip_detail_by_id.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get User Payslip Detail by ID}}
+    \label{fig:flowchart_get_user_payslip_detail_by_id}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get User Payslip Detail by ID}.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_request_get_user_payslip_detail_by_id.png}}
+    \caption{Contoh \textit{request} API \textit{Get User Payslip Detail by ID}}
+    \label{fig:request_get_user_payslip_detail_by_id}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_response_get_user_payslip_detail_by_id.png}}
+    \caption{Contoh \textit{response} API \textit{Get User Payslip Detail by ID}}
+    \label{fig:response_get_user_payslip_detail_by_id}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_user_payslip_detail_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get User Payslip Detail by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/user/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_payslip_detail_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail slip gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail slip gaji yang diminta seperti pada Gambar \ref{fig:response_get_user_payslip_detail_by_id}.
 
 
 
-\section{Section}
+% ---------------------------------- %
+\subsection{Modul On Boarding}
+% ---------------------------------- %
 
-\subsection{Sub-Section}
+Modul On Boarding dikembangkan untuk mempermudah proses penambahan data klien baru ke dalam sistem, dikembangkan modul On Boarding yang memungkinkan pengguna mengimpor data melalui \textit{file} CSV dengan \textit{template} yang sudah disiapkan. Modul ini mencakup fitur pemetaan kolom data dari berkas CSV ke struktur basis data yang sesuai, serta validasi data untuk memastikan integritas dan konsistensi informasi yang diimpor. Dengan adanya modul ini, proses penambahan klien baru menjadi lebih efisien sehingga mempercepat waktu implementasi sistem bagi pengguna baru.
+
+Alur utama dari modul \textit{On Boarding} dimulai dari klien mengisi data utama seperti lokasi perusahaan (\textit{office location}), jam kerja (\textit{schedule}), peranan (\textit{role}), pengguna (\textit{user}), jabatan (\textit{job title}), komponen gaji (\textit{payroll item}), jenis cuti (\textit{leave type}), dan aturan denda (\textit{penalty rule}) di \textit{template sheets} yang sudah disediakan. Setelah klien sudah mengisi data di \textit{template}, klien tinggal menggunggah dari setiap sheetsnya sebagai berkas CSV. Setelah data utama diunggah, klien dapat mengunduh \textit{template} baru, kontrak (\textit{contract}) dan komponen gaji lainnya (\textit{contract item}) untuk diisi dengan data yang sebelumnya sudah di siapkan. Setelah mengisi data pada \textit{template} yang baru, klien dapat mengunduh berkas menjadi format CSV tersebut lalu mengunggahnya ke dalam sistem. Sistem kemudian memproses berkas yang diunggah dengan melakukan validasi data dan menyimpan data ke dalam basis data (tabel \textit{Import Mappings} dan tabel modul masing-masing). Jika terdapat kesalahan pada data yang diunggah, sistem akan memberikan notifikasi kepada klien untuk memperbaiki data tersebut. Setelah data utama dan data kedua berhasil, sesi \textit{On Boarding} sudah selesai dan sistem siap mulai digunakan.
+
+\subsubsection{Diagram ERD Modul \textit{On Boarding}}
+Berikut merupakan \textit{database diagram} untuk modul \textit{On Boarding} yang telah dibuat selama pelaksanaan kerja praktik.
+
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_erd_on_boarding.png}}
+    \caption{Diagram ERD untuk modul \textit{On Boarding}}
+    \label{fig:erd_on_boarding}
+\end{figure}
+
+Gambar \ref{fig:erd_on_boarding} menunjukkan struktur basis data untuk modul \textit{On Boarding}. Disini menggunakan table \texttt{import\_mappings} untuk mencatat riwayat impor data yang dilakukan oleh pengguna. Setiap entri dalam tabel ini menyimpan informasi tentang pengguna yang melakukan impor, nama berkas (\textit{file}) yang diunggah, serta pemetaan kolom yang digunakan selama proses impor. Hal ini memungkinkan pelacakan dan audit terhadap aktivitas impor data, serta memudahkan pengguna untuk mengelola dan meninjau pemetaan kolom yang telah mereka buat sebelumnya.
+
+\subsubsection{\textit{On Boarding} API \textit{Endpoints}}
+
+Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{On Boarding}:
+\begin{table}
+    \centering
+    \begin{tabular}{|p{30mm}|c|p{50mm}|p{30mm}|}
+        \hline
+        \textbf{Nama API} & \textbf{Metode} & \textbf{Endpoint} & \textbf{Deskripsi} \\
+        \hline
+        Get On Boarding & GET & /on-boarding & Mengambil semua data impor \\
+        \hline
+        On Boarding Import & POST & /on-boarding/import-csv & Mengimpor data klien baru dari berkas CSV \\
+        \hline
+        Download Second Batch Template & GET & /on-boarding/download-template & Mengunduh \textit{template} Excel untuk impor batch kedua \\
+        \hline 
+    \end{tabular}
+    \caption{Daftar \textit{endpoints} API untuk modul \textit{On Boarding}}
+    \label{tab:on_boarding_api_endpoints}
+\end{table}
+
+Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{On Boarding} seperti pada Tabel \ref{tab:on_boarding_api_endpoints}. Setiap \textit{endpoint} memiliki fungsi spesifik dalam mengelola proses impor data klien baru, mulai dari pengambilan data impor, hingga proses impor data dari berkas CSV. Selanjutnya, akan dijelaskan alur sistem untuk \textit{endpoints} dalam pada modul ini.
+
+\paragraph*{\textit{Get On Boarding}}
+Berikut merupakan \textit{flowchart} API \textit{Get On Boarding}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.3\textheight]{assets/pics/fig_flowchart_get_on_boarding.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get On Boarding}}
+    \label{fig:flowchart_get_on_boarding}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get On Boarding}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_request_get_on_boarding.png}}
+    \caption{Contoh \textit{request} API \textit{Get On Boarding}}
+    \label{fig:request_get_on_boarding}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_response_get_on_boarding.png}}
+    \caption{Contoh \textit{response} API \textit{Get On Boarding}}
+    \label{fig:response_get_on_boarding}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_on_boarding} menunjukkan \textit{flowchart} alur sistem API \textit{Get On Boarding} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/on-boarding} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_on_boarding}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua riwayat impor data klien baru. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar riwayat impor data seperti pada Gambar \ref{fig:response_get_on_boarding}.
+
+\paragraph*{\textit{On Boarding Import}}
+Berikut merupakan \textit{flowchart} API \textit{On Boarding Import}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_on_boarding_import.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{On Boarding Import}}
+    \label{fig:flowchart_on_boarding_import}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_flowchart_import_data_for_all_module.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{On Boarding Import} (Lanjutan)}
+    \label{fig:flowchart_import_data_for_all_module}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{On Boarding Import}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_request_on_boarding_import_csv.png}}
+    \caption{Contoh \textit{request} API \textit{On Boarding Import}}
+    \label{fig:request_on_boarding_import}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_response_on_boarding_import_csv.png}}
+    \caption{Contoh \textit{response} API \textit{On Boarding Import}}
+    \label{fig:response_on_boarding_import}
+\end{figure}
+
+Gambar \ref{fig:flowchart_on_boarding_import} menunjukkan \textit{flowchart} alur sistem API \textit{On Boarding Import} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/on-boarding/import-csv} menggunakan metode HTTP \textit{POST} seperti pada Gambar \ref{fig:request_on_boarding_import}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, lalu memproses data dari \textit{request body} untuk mengimpor data yang sudah diunggah ke dalam table modul masing-masing. Setelah data berhasil diimpor, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai hasil impor data seperti pada Gambar \ref{fig:response_on_boarding_import}. Untuk proses pada gambar \ref{fig:flowchart_import_data_for_all_module} merupakan proses untuk memastikan tidak ada data yang duplikat dan memproses memasukkan data dari masing-masing modul.
+
+% ---------------------------------- %
+\subsection{Modul Overtime}
+% ---------------------------------- %
+
+Modul Overtime dikembangkan untuk mengelola dan mencatat jam kerja lembur pegawai secara efisien. Modul ini mencakup fitur pengajuan lembur, persetujuan oleh atasan, serta memasukkan kompensasi lembur sesuai dengan kebijakan perusahaan. Struktur basis data dirancang untuk menyimpan informasi terkait jam lembur, termasuk tanggal, durasi, dan status persetujuan. Dengan adanya modul ini, perusahaan dapat memantau dan mengelola jam kerja lembur secara transparan dan akurat.
+
+\subsubsection{Diagram ERD Modul \textit{Overtime}}
+Berikut merupakan \textit{database diagram} untuk modul \textit{Overtime} yang telah dibuat selama pelaksanaan kerja praktik.
+\begin{figure}
+    \centering
+    \fbox{\includegraphics[width=0.6\textwidth]{assets/pics/fig_erd_overtime.png}}
+    \caption{Diagram ERD untuk modul \text{Overtime}}
+    \label{fig:erd_overtime}
+\end{figure}
+Gambar \ref{fig:erd_overtime} menunjukkan struktur basis data untuk modul \text{Overtime}.
 
 
-\subsection{Sub-Section}
+\subsubsection{\textit{Overtime} API \textit{Endpoints}}
 
+Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Overtime}:
+\begin{table}
+    \centering
+    \begin{tabular}{|p{30mm}|c|p{50mm}|p{30mm}|}
+        \hline
+        \textbf{Nama API} & \textbf{Metode} & \textbf{Endpoint} & \textbf{Deskripsi} \\
+        \hline
+        Get Overtime List & GET & /overtime & Mengambil semua permintaan lembur \\
+        \hline
+        Get User Overtime List & GET & /overtime/user & Mengambil permintaan lembur berdasarkan pengguna \\
+        \hline
+        Get Overtime Detail by ID & GET & /overtime/:id & Mengambil detail permintaan lembur berdasarkan ID \\
+        \hline
+        Delete Overtime by ID & DELETE & /overtime/:id & Menghapus permintaan lembur berdasarkan ID \\
+        \hline
+    \end{tabular}
+    \caption{Daftar \textit{endpoints} API untuk modul \textit{Overtime}}
+    \label{tab:overtime_api_endpoints}
+\end{table}
 
-\subsubsection{Sub-sub-section}
+Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Overtime} seperti pada Tabel \ref{tab:overtime_api_endpoints}. Setiap \textit{endpoint} memiliki fungsi spesifik dalam mengelola permintaan lembur pegawai, mulai dari pengambilan data lembur, hingga penghapusan permintaan lembur. Selanjutnya, akan dijelaskan alur sistem untuk \textit{endpoints} dalam pada modul ini.
+
+\paragraph*{\textit{Get Overtime List}}
+Berikut merupakan \textit{flowchart} API \textit{Get Overtime List}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_get_overtime_list.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get Overtime List}}
+    \label{fig:flowchart_get_overtime_list}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get Overtime List}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_overtime_list.png}}
+    \caption{Contoh \textit{request} API \textit{Get Overtime List}}
+    \label{fig:request_get_overtime_list}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_overtime_list.png}}
+    \caption{Contoh \textit{response} API \textit{Get Overtime List}}
+    \label{fig:response_get_overtime_list}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_overtime_list} menunjukkan \textit{flowchart} alur sistem API \textit{Get Overtime List} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_overtime_list}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua permintaan lembur. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar permintaan lembur seperti pada Gambar \ref{fig:response_get_overtime_list}.
+
+\paragraph*{\textit{Get User Overtime List}}
+Berikut merupakan \textit{flowchart} API \textit{Get User Overtime List}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_get_user_overtime_list.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get User Overtime List}}
+    \label{fig:flowchart_get_user_overtime_list}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get User Overtime List}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_user_overtime_list.png}}
+    \caption{Contoh \textit{request} API \textit{Get User Overtime List}}
+    \label{fig:request_get_user_overtime_list}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_user_overtime_list.png}}
+    \caption{Contoh \textit{response} API \textit{Get User Overtime List}}
+    \label{fig:response_get_user_overtime_list}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_user_overtime_list} menunjukkan \textit{flowchart} alur sistem API \textit{Get User Overtime List} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime/user} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_overtime_list}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua permintaan lembur milik pengguna. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar permintaan lembur milik pengguna seperti pada Gambar \ref{fig:response_get_user_overtime_list}.
+
+\paragraph*{\textit{Get Overtime Detail by ID}}
+Berikut merupakan \textit{flowchart} API \textit{Get Overtime Detail by ID}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_flowchart_get_overtime_detail_by_id.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Get Overtime Detail by ID}}
+    \label{fig:flowchart_get_overtime_detail_by_id}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get Overtime Detail by ID}.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_request_get_overtime_detail_by_id.png}}
+    \caption{Contoh \textit{request} API \textit{Get Overtime Detail by ID}}
+    \label{fig:request_get_overtime_detail_by_id}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_overtime_detail_by_id.png}}
+    \caption{Contoh \textit{response} API \textit{Get Overtime Detail by ID}}
+    \label{fig:response_get_overtime_detail_by_id}
+\end{figure}
+
+Gambar \ref{fig:flowchart_get_overtime_detail_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get Overtime Detail by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_overtime_detail_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail permintaan lembur berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail permintaan lembur yang diminta seperti pada Gambar \ref{fig:response_get_overtime_detail_by_id}.
+
+\paragraph*{\textit{Delete Overtime by ID}}
+Berikut merupakan \textit{flowchart} API \textit{Delete Overtime by ID}.
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_delete_overtime_by_id.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Delete Overtime by ID}}
+    \label{fig:flowchart_delete_overtime_by_id}
+\end{figure}
+
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Delete Overtime by ID}.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_request_delete_overtime_by_id.png}}
+    \caption{Contoh \textit{request} API \textit{Delete Overtime by ID}}
+    \label{fig:request_delete_overtime_by_id}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_delete_overtime_by_id.png}}
+    \caption{Contoh \textit{response} API \textit{Delete Overtime by ID}}
+    \label{fig:response_delete_overtime_by_id}
+\end{figure}
+
+Gambar \ref{fig:flowchart_delete_overtime_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Delete Overtime by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime/:id} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_delete_overtime_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta menghapus data permintaan lembur berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data permintaan lembur berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai keberhasilan penghapusan permintaan lembur seperti pada Gambar \ref{fig:response_delete_overtime_by_id}.
 
 \section{Kendala dan Solusi yang Ditemukan}
+
+Selama pelaksanaan kerja praktik, terdapat beberapa kendala yang dihadapi dalam pengembangan sistem, antara lain:
+
+\begin{itemize}
+    \item Beberapa \textit{edge case} tidak teridentifikasi pada tahap pengembangan dan pengujian awal. Akibatnya, ketika sistem telah memasuki tahap produksi, masih ditemukan \textit{bug} yang sebelumnya tidak terdeteksi. Hal ini berpotensi mengganggu stabilitas sistem dan pengalaman pengguna.
+
+    \item Fokus pengembangan diarahkan pada pencapaian target agar klien dapat segera menggunakan modul utama, khususnya modul \textit{Contract} dan \textit{Payslip}. Kondisi ini menyebabkan keterbatasan waktu untuk melakukan \textit{refactoring} kode lama serta perbaikan \textit{bug} pada modul-modul yang telah dikembangkan sebelumnya.
+\end{itemize}
+
+Untuk mengatasi kendala-kendala tersebut, beberapa solusi yang diterapkan dan direkomendasikan adalah sebagai berikut:
+
+\begin{itemize}
+    \item Pengembangan sistem dilengkapi dengan pengujian otomatis, seperti \textit{unit testing}, untuk membantu mendeteksi \textit{edge case} sejak tahap awal pengembangan. Dengan adanya pengujian otomatis, potensi \textit{bug} dapat diidentifikasi lebih cepat sebelum sistem diterapkan ke lingkungan produksi.
+
+    \item Untuk mengatasi keterbatasan waktu akibat prioritas pengembangan fitur utama, dilakukan perencanaan \textit{refactoring} dan perbaikan \textit{bug} secara bertahap. Pendekatan ini memungkinkan tim untuk tetap memenuhi target implementasi klien tanpa mengabaikan kualitas kode dan stabilitas modul yang telah ada.
+\end{itemize}

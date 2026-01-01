@@ -1,15 +1,22 @@
 %---------------------------------------------------------------
 \chapter{\babEmpat}
 %---------------------------------------------------------------
-\todo{Tuliskan simpulan dan saran terkait dengan pekerjaan 
-	yang dilakukan.}
-
-
-%---------------------------------------------------------------
 \section{Simpulan}
 %---------------------------------------------------------------
-
+Pengembangan dari sisi \textit{backend} pada sistem informasi kepegawaian Nine to Six di PT Visi Karya Nusantara telah berhasil dilakukan dan diimplementasikan sesuai dengan kebutuhan yang telah ditetapkan. Selama pengembangan, terdapat \textit{framework} dan teknologi yang digunakan seperti \textit{ExpressJs} untuk membangun \textit{API}, \textit{PostgreSQL} sebagai basis data, serta \textit{Sequelize} sebagai \textit{ORM} untuk memudahkan interaksi dengan basis data. Beberapa modul utama yang telah dikembangkan meliputi modul \textit{Contract} untuk manajemen kontrak karyawan, modul \textit{Payslip} untuk pengelolaan slip gaji, serta modul \textit{Attendance} untuk pencatatan kehadiran karyawan. Pengembangan ini juga melibatkan integrasi dengan sistem yang sudah ada, serta penerapan praktik terbaik dalam pengembangan perangkat lunak seperti penggunaan \textit{version control} dengan Git dan penerapan \textit{code review} untuk memastikan kualitas kode yang dihasilkan.
 
 %---------------------------------------------------------------
 \section{Saran}
 %---------------------------------------------------------------
+Ada beberapa saran yang dapat dipertimbangkan untuk pengembangan sistem informasi kepegawaian Nine to Six ke depannya:
+
+\begin{enumerate}
+    \item Disarankan untuk menambahkan \textit{unit testing} pada setiap fungsi atau modul yang dikembangkan. Hal ini akan memastikan bahwa setiap perubahan kode dapat langsung tervalidasi, sehingga meminimalkan risiko \textit{bug} yang tidak terdeteksi.
+    \item Saling integrasi untuk modul-modul yang sudah ada seperti \textit{Leave Permit}, \textit{Overtime}, dan \textit{Payslip}. Karena modul \textit{Payslip} bisa mengambil data dari modul-modul tersebut seperti data lembur dari modul \textit{Overtime} dan data cuti dari modul \textit{Leave Permit}.
+\end{enumerate}
+
+% \begin{enumerate}
+% 	\item \textbf{Otomasi Pengujian}: Disarankan untuk menambahkan unit testing dan integrasi testing otomatis pada setiap modul yang dikembangkan. Hal ini akan memastikan bahwa setiap perubahan kode dapat langsung tervalidasi, sehingga meminimalkan risiko bug yang tidak terdeteksi.
+% 	\item \textbf{Monitoring Produksi}: Disarankan untuk menerapkan sistem monitoring pada server produksi untuk memantau performa layanan, mendeteksi error secara real-time, serta memastikan ketersediaan layanan bagi pengguna akhir.
+% 	\item \textbf{Integrasi Notifikasi}: Modul seperti Leave Permit atau Payroll dapat dikembangkan lebih lanjut dengan integrasi sistem notifikasi real-time (misal: email atau push notification). Hal ini akan meningkatkan responsivitas pengguna terhadap pembaruan status, sehingga mereka dapat segera mengambil tindakan yang diperlukan.
+% \end{enumerate}

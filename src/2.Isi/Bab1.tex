@@ -2,32 +2,77 @@
 \chapter{\babSatu}
 %-----------------------------------------------------------------------------%
 
-\lipsum[1-1]
-
 %-----------------------------------------------------------------------------%
 \section{Latar Belakang Masalah}
 %-----------------------------------------------------------------------------%
-\lipsum[2-3]
 
-% %-----------------------------------------------------------------------------%
-% \section{Permasalahan}
-% %-----------------------------------------------------------------------------%
-% Pada bagian ini akan dijelaskan mengenai definisi permasalahan 
-% yang \saya~hadapi dan ingin diselesaikan serta asumsi dan batasan 
-% yang digunakan dalam menyelesaikannya.
+Transformasi digital dalam pengelolaan sumber daya manusia (SDM) telah menjadi salah satu faktor utama dalam peningkatan efisiensi operasional perusahaan di era industri 4.0. Penerapan sistem informasi kepegawaian atau \textit{Human Resource Information System} (HRIS) memungkinkan proses administrasi dan pengambilan keputusan berbasis data dilakukan secara lebih cepat dan akurat \cite{moussa2020impact}. Digitalisasi fungsi SDM tidak hanya berdampak pada efisiensi kerja, tetapi juga membuka potensi untuk peningkatan transparansi dan konsistensi data pegawai \cite{shiferaw2025digital}. 
 
+Salah satu aspek penting dari digitalisasi SDM adalah otomatisasi proses penggajian atau \textit{payroll automation}. Menurut penelitian oleh Onuotu dan Amaewhule (2024), penerapan sistem akuntansi terotomatisasi pada konteks usaha kecil dan menengah secara signifikan dapat meningkatkan efisiensi dan akurasi dalam persiapan penggajian, dengan mencatatkan pengurangan kesalahan perhitungan dan penurunan beban kerja manual \cite{onuotu2024influence}. Hal ini mengindikasikan bahwa, terutama dalam skenario transisi dari proses manual, integrasi sistem penggajian digital sangat efektif dalam mempercepat proses administrasi. Meskipun demikian, perlu dicatat bahwa otomatisasi \textit{payroll} berfokus pada akurasi perhitungan dan tidak serta merta menjamin validitas data masukan, menyoroti pentingnya keakuratan data sumber.
+
+Lebih lanjut, menurut Meenugu (2025), evolusi sistem penggajian dari proses manual menuju otomatisasi cerdas tidak hanya meningkatkan efisiensi dan akurasi, tetapi juga memperkuat kepatuhan terhadap regulasi \cite{meenugu2025payroll}. Meskipun demikian, masih banyak sistem penggajian yang berjalan secara terpisah dari modul HRIS utama, sehingga menimbulkan inefisiensi akibat kebutuhan untuk memasukkan data secara berulang dari sistem lain seperti absensi dan manajemen cuti. Kondisi ini kembali membuka peluang terjadinya kesalahan manusia dan menghambat efektivitas kerja. Oleh karena itu, diperlukan integrasi yang mulus antara pengelolaan data pegawai dan proses penggajian dalam satu platform terpadu.
+
+Perhitungan variabel lembur dan absensi menjadi sumber kerumitan dan potensi sengketa. Tanpa sistem yang terintegrasi, penetapan jam lembur yang akurat memerlukan waktu dan rentan terhadap kesalahan manual atau manipulasi data (\textit{buddy punching}). Modul Lembur dan Absensi (\textit{Overtime and Absence Module}) dalam HRIS modern berfungsi sebagai alat untuk memastikan pencatatan waktu yang tepat dan otomatis. Penggunaan sistem pencatatan waktu kerja elektronik kini dianggap sebagai komponen penting untuk memastikan kepatuhan terhadap regulasi jam kerja (\textit{working time regulations}), karena memungkinkan pemantauan jam kerja yang akurat dan efisien \cite{fedushko2023working}. Data dari modul ini sangat vital karena merupakan input transaksional yang mempengaruhi Modul Payslip.
+
+Integrasi dan akurasi data yang diupayakan oleh modul variabel seperti lembur dan penggajian bergantung secara fundamental pada ketersediaan data master pegawai yang konsisten dan terstandardisasi \cite{shiferaw2025digital}. Oleh karena itu, Modul Kontrak Karyawan (\textit{Employee Contract Module}) harus berfungsi sebagai basis data primer di dalam HRIS, yang menyimpan informasi krusial seperti struktur gaji dasar, tunjangan tetap, periode kontrak, dan ketentuan jadwal kerja. Konsep ini sesuai dengan evolusi HRIS modern berbasis komputasi awan (\textit{cloud computing}) yang dirancang untuk menjadi sumber tunggal kebenaran (\textit{single source of truth}) bagi seluruh data kepegawaian organisasi \cite{porkodi2025cloud}. Kegagalan dalam sentralisasi ini, seperti yang terjadi pada sistem tradisional, menyebabkan data kepegawaian tersebar dalam dokumen fisik atau file terisolasi, yang menyulitkan pembaruan serentak dan validasi silang data.
+
+Digitalisasi Modul Kontrak memiliki peran ganda sebagai fondasi data dan sebagai penjaga kepatuhan. Secara inheren, modul ini berfungsi untuk mengeliminasi risiko ketidakpatuhan hukum (\textit{legal compliance risk}) yang timbul dari \textit{template} kontrak yang tidak seragam atau klausul yang sudah usang. Dengan mengimplementasikan sistem yang mengacu pada kebijakan perusahaan dan regulasi ketenagakerjaan yang berlaku, HRIS dapat memastikan standardisasi kontrak bagi seluruh karyawan. Selain itu, sentralisasi data kontrak ini memungkinkan integrasi yang mulus antara data personalia dan database penggajian, sebuah faktor kritis yang telah terbukti meningkatkan transparansi dan akuntabilitas dalam pengelolaan kompensasi \cite{kinyeki2015adoption}. Hal ini menyoroti bahwa kualitas informasi SDM sangat bergantung pada seberapa baik data kontrak dikelola sejak awal.
+
+Setelah data dasar (Data Statis), seperti yang terdapat di Modul Kontrak, dan data variabel (Data Transaksional), seperti yang diperoleh dari Modul Lembur, Absensi, dan Reimbursement berhasil dikumpulkan dan divalidasi, tantangan selanjutnya adalah pada proses finalisasi kompensasi, yang diwujudkan dalam Modul Payslip Karyawan (\textit{Payslip Module}). Proses pembuatan payslip secara manual adalah tugas yang sangat kompleks dan rentan kesalahan, karena harus menggabungkan perhitungan gaji pokok, tunjangan, potongan pajak, iuran wajib (statutory deduction), serta komponen variabel seperti lembur dan keterlambatan. Studi kasus menunjukkan bahwa sistem perhitungan gaji manual menghadapi inefisiensi yang signifikan \cite{ahmad2023payroll}. Oleh karena itu, digitalisasi dan otomatisasi modul ini sangat penting untuk memastikan akurasi perhitungan dan efektivitas \cite{chowdhury2019review}.
+
+Peran Modul Payslip digital tidak hanya terbatas pada pencetakan dokumen, tetapi sebagai titik akhir validasi data. Dengan mengadopsi sistem berbasis web terintegrasi, Modul Payslip menyediakan audit trail yang jelas, memungkinkan HR untuk meninjau secara rinci sumber data dari setiap komponen gaji \cite{assimakopoulos2015integrated}. Bagi karyawan, modul ini meningkatkan transparansi karena mereka dapat mengakses slip gaji mereka secara mandiri (self-service) dan melihat perincian potongan atau penambahan secara real-time. Adopsi sistem HRIS seperti ini merupakan revolusi yang diadopsi korporasi untuk meningkatkan operasi hariannya \cite{chowdhury2019review}, yang pada akhirnya meningkatkan kepercayaan dan pengalaman pegawai (employee experience) secara keseluruhan \cite{bah2022assessing}.
+
+Meskipun berbagai literatur dan implementasi HRIS telah menunjukkan manfaat signifikan dari digitalisasi fungsi SDM secara terpisah—baik itu efisiensi penggajian \cite{onuotu2024influence} maupun kepatuhan manajemen waktu \cite{fedushko2023working} masih terdapat kesenjangan operasional dalam realisasi sistem yang benar-benar terintegrasi dan berpusat pada data master. Banyak organisasi masih menghadapi kesulitan dalam menyinkronkan data statis dari Modul Kontrak dengan data transaksional dari Modul Lembur dan Absensi untuk diolah di Modul Payslip, menunjukkan adanya \textit{silo} data yang menghambat otomatisasi menyeluruh \cite{chowdhury2019review}. Kegagalan dalam mengintegrasikan data personalia dan \textit{database} penggajian, misalnya, merupakan tantangan utama yang harus diatasi untuk menjamin transparansi dan akuntabilitas sistem kompensasi \cite{kinyeki2015adoption}.
+
+Tantangan integrasi ini menuntut adanya perancangan HRIS yang tidak hanya menyediakan fungsi-fungsi tersebut, tetapi juga berfokus pada arsitektur data tunggal yang mulus (\textit{single source of truth}). Konsep arsitektur ini, yang didukung oleh sistem berbasis \textit{cloud} modern, menjadi kunci untuk mendapatkan informasi SDM yang konsisten dan akurat \cite{porkodi2025cloud}. Proyek perancangan ini hadir untuk menjembatani kesenjangan operasional tersebut. Tujuan dari perancangan sistem ini adalah untuk mengembangkan dan mengimplementasikan modul HRIS yang mengintegrasikan Modul Kontrak, Modul Lembur, dan Modul Payslip dalam satu platform terpadu. Integrasi ini diharapkan dapat meningkatkan efisiensi operasional HR secara signifikan, memastikan keakuratan data master, menjamin kepatuhan perhitungan kompensasi, dan menyediakan transparansi penuh kepada karyawan, sehingga mendukung pengambilan keputusan strategis yang lebih baik.
 
 %-----------------------------------------------------------------------------%
 \section{Maksud dan Tujuan Kerja Magang}
 %-----------------------------------------------------------------------------%
-\todo{Tuliskan Maksud dan Tujuan Kerja Magang}
 
+Pelaksanaan kerja magang di PT Visi Karya Nusantara bertujuan untuk memberikan pengalaman langsung kepada mahasiswa dalam menghadapi tantangan nyata di industri pengembangan perangkat lunak, serta berkontribusi terhadap transformasi digital di bidang pengelolaan sumber daya manusia. Melalui kegiatan magang ini, peserta memperoleh kesempatan untuk menerapkan pengetahuan akademik ke dalam praktik profesional, khususnya dalam pengembangan sistem informasi kepegawaian berbasis web.
 
+Secara khusus, maksud dari pelaksanaan kerja magang ini adalah:
+
+\begin{itemize}
+    \item Mengimplementasikan pengetahuan yang telah diperoleh selama perkuliahan ke dalam lingkungan kerja profesional yang menerapkan standar industri.
+    \item Mengasah keterampilan teknis dalam pengembangan sistem berbasis \textit{PERN stack} (PostgreSQL, Express.js, React, Node.js) serta kemampuan kolaborasi dalam tim lintas divisi.
+    \item Memahami proses kerja profesional dalam pengembangan dan pemeliharaan sistem \textit{backend} yang terstruktur, terdokumentasi, dan terintegrasi dengan sistem lainnya.
+\end{itemize}
+
+Adapun tujuan utama dari pelaksanaan kerja magang ini, yang difokuskan pada pengembangan sistem Nine to Six (NTS), meliputi:
+
+\begin{enumerate}
+    \item Merancang dan mengimplementasikan modul Contract Management untuk mendukung pembuatan serta penugasan kontrak kerja kepada karyawan secara efisien.
+    \item Merancang dan mengimplementasikan modul Payslip Management yang terintegrasi dengan modul Daily Attendance, sehingga proses perhitungan gaji dapat dilakukan secara otomatis berdasarkan data kehadiran.
+    \item Menyediakan fitur pengurangan otomatis terhadap ketidakhadiran tanpa keterangan (\textit{Missing in Action (MIA)}) agar perhitungan penggajian menjadi lebih akurat dan transparan.
+    \item Meningkatkan integrasi sistem antara sisi \textit{backend} dan \textit{frontend} untuk memastikan alur data yang konsisten dan \textit{real-time}.
+    \item Mengembangkan \textit{Application Programming Interface (API)} terstandarisasi yang dapat digunakan oleh HR maupun karyawan untuk mengakses data penggajian secara aman dan terukur.
+\end{enumerate}
+
+Dengan pencapaian tujuan-tujuan tersebut, diharapkan sistem Nine to Six (NTS) dapat menjadi fondasi penting dalam mendukung efisiensi operasional perusahaan serta meningkatkan transparansi dan akurasi dalam pengelolaan penggajian di PT Visi Karya Nusantara.
 
 %-----------------------------------------------------------------------------%
 \section{Waktu dan Prosedur Pelaksanaan Kerja Magang}
 %-----------------------------------------------------------------------------%
-\todo{Jelaskan Waktu dan Prosedur Pelaksanaan Kerja Magang.}
 
+Pelaksanaan kerja magang di PT Visi Karya Nusantara (NTS) berlangsung dari tanggal 
+4 Agustus 2025 sampai dengan 4 Januari 2026 berdasarkan kontrak kerja yang telah disepakati dengan perusahaan. Selama periode magang ini, penulis dibimbing oleh Bapak Raditya selaku \textit{Supervisor} dalam tim \textit{Software Development}. Program ini dirancang untuk memberikan pengalaman langsung dalam proses pengembangan perangkat lunak profesional, termasuk pemahaman terhadap alur kerja kolaboratif dan siklus pengembangan produk di lingkungan industri.
 
+Jadwal dan ketentuan kerja magang di PT Visi Karya Nusantara diatur sebagai berikut:
 
+\begin{enumerate}
+    \item Aktivitas kerja magang dilaksanakan secara \textit{remote}, dengan total waktu kerja sebesar 35 jam per minggu.
+    \item Waktu kerja bersifat fleksibel namun tetap mengikuti tanggung jawab proyek dan jadwal yang telah disepakati bersama \textit{supervisor}.
+    \item Seluruh aktivitas kerja dilakukan secara daring dengan koordinasi melalui \textit{platform} komunikasi Discord.
+\end{enumerate}
+
+Selama menjalani program kerja magang, peserta wajib mengikuti sejumlah prosedur yang telah ditetapkan oleh perusahaan, antara lain:
+
+\begin{enumerate}
+    \item Mengikuti sesi \textit{onboarding} dan \textit{orientation meeting} pada awal masa magang untuk memahami sistem kerja dan proyek yang akan dikerjakan.
+    \item Melakukan pelaporan harian melalui \textit{daily updates} yang mencakup tugas yang telah diselesaikan (\textit{yesterday tasks}), rencana pekerjaan (\textit{today tasks}), serta hambatan yang dihadapi (\textit{blocking issues}).
+    \item Berpartisipasi dalam \textit{sprint meeting} mingguan untuk melaporkan progres, melakukan evaluasi hasil kerja, serta membahas rencana pengembangan modul selanjutnya.
+    \item Melakukan komunikasi aktif dengan tim pengembang lain, baik pada sisi \textit{backend}, \textit{frontend} maupun \textit{design}, guna memastikan integrasi sistem berjalan dengan optimal.
+    \item Menyerahkan laporan akhir dan hasil proyek kepada \textit{supervisor} pada akhir periode magang sebagai bentuk evaluasi kinerja dan kontribusi selama program berlangsung.
+\end{enumerate}
