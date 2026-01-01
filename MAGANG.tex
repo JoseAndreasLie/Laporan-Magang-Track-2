@@ -1,0 +1,212 @@
+%
+% @author  unknown
+% @version 1.1a
+% @edit by Andreas Febrian
+% @edit by Moeljono Widjaja
+% @edit by Arya Wicaksana
+%
+% Template Laporan Skripsi Informatika UMN
+%
+
+%
+% Tipe dokumen adalah report dengan satu kolom. 
+%
+\documentclass[12pt, a4paper, onecolumn, oneside, final]{report1}
+
+% \usepackage{indentfirst}
+
+% Load konfigurasi LaTeX untuk tipe laporan thesis
+\usepackage{_internals/umnthesis}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{array}
+
+
+
+% Daftar pemenggalan suku kata dan istilah dalam LaTeX
+\input{_internals/hype.indonesia}
+
+% Load konfigurasi khusus untuk laporan yang sedang dibuat
+\input{settings}
+% Daftar istilah yang mungkin perlu ditandai 
+\input{istilah}
+
+
+
+% Awal bagian penulisan laporan
+\begin{document}
+\hyphenpenalty=10000
+%
+% Sampul Laporan
+\input{src/1.Awal/00-SampulJudul}
+
+%
+% Gunakan penomeran romawi
+\pagenumbering{roman}
+% setelah bagian ini, halaman dihitung sebagai halaman ke 2
+\setcounter{page}{1}
+
+\BgThispage
+
+
+
+\pagestyle{fancy}
+
+% Halaman Judul
+\addChapter{HALAMAN JUDUL}
+\input{src/1.Awal/01-HalamanJudul}
+
+
+\addChapter{HALAMAN PERNYATAAN ORISINALITAS}
+% Nonaktifkan watermark dan footer sementara
+\input{src/1.Awal/02a-Plagiat}
+
+\clearpage
+
+\addChapter{HALAMAN PERNYATAAN PENGGUNAAN BANTUAN KECERDASAN ARTIFISIAL (AI)}
+\input{src/1.Awal/02b-Penggunaan AI}
+\clearpage
+
+\addChapter{HALAMAN PERNYATAAN KEABSAHAN PERUSAHAAN}
+\input{src/1.Awal/03c-Keabsahan}
+\clearpage
+
+
+
+%
+% load halaman persetujuan (jika untuk maju sidang)
+% \addChapter{HALAMAN PERSETUJUAN}
+% % \clearpage
+% \input{src/1.Awal/03b-Pengesahan}
+% % \thispagestyle{empty}
+% % \begingroup
+% % \renewcommand{\BgThispage}{} % Matikan watermark
+% % \includepdf[
+% %     pages=1,
+% %     pagecommand={},
+% %     width=\paperwidth,
+% %     % pagecommand={\thispagestyle{empty}} % Nonaktifkan footer
+% % ]{assets/pdf/LembarPersetujuan_00000077007.pdf}
+% % \endgroup
+% \clearpage
+
+% %
+% % load halaman pengesahan (jika sesudah selesai sidang) menggantikan halaman persetujuan
+% \addChapter{HALAMAN PENGESAHAN}
+% \input{src/1.Awal/03b-Pengesahan}
+
+
+
+\addChapter{HALAMAN PERSETUJUAN PUBLIKASI KARYA ILMIAH}
+\input{src/1.Awal/04-Publikasi}
+\clearpage
+
+
+\addChapter{HALAMAN PERSEMBAHAN/MOTO}
+\input{src/1.Awal/05-Persembahan}
+\clearpage
+
+
+\addChapter{KATA PENGANTAR}
+\input{src/1.Awal/06-Kata Pengantar}
+\clearpage
+
+
+\addChapter{ABSTRAK}
+\input{src/1.Awal/07a-Abstrak}
+\clearpage
+
+\addChapter{ABSTRACT}
+\input{src/1.Awal/07b-Abstract}
+\clearpage
+
+
+%
+% Daftar isi, gambar, tabel, dan kode
+%
+\singlespacing
+\phantomsection
+%  \pagestyle{daftarIsi}
+\pagestyle{plain}
+\tableofcontents
+\clearpage
+
+
+
+\phantomsection
+\listoftables
+\clearpage
+
+\phantomsection
+\listoffigures
+\clearpage
+
+% \phantomsection
+% \lstlistoflistings
+% \clearpage
+
+
+% \phantomsection
+% \listofequation
+% \addChapter{DAFTAR RUMUS}
+% \clearpage
+
+
+% \phantomsection
+% \listoflistings
+% \addChapter{DAFTAR KODE}
+% \clearpage
+
+
+
+
+
+\phantomsection
+\listofappendices
+\addChapter{DAFTAR LAMPIRAN}
+\clearpage
+
+\onehalfspacing
+
+\pagestyle{fancy}
+
+%
+% Gunakan penomeran Arab (1, 2, 3, ...) setelah bagian ini.
+%
+\pagenumbering{arabic}
+
+%
+% Isi Skripsi
+%
+
+\BgThispage
+
+\input{src/2.Isi/Bab1}
+\input{src/2.Isi/Bab2}
+\input{src/2.Isi/Bab3}
+\input{src/2.Isi/Bab4}
+
+%
+% Daftar Pustaka
+%
+\singlespacing
+
+% \vspace{-1cm}
+
+\bibliographystyle{IEEEtran}
+\bibliography{ref}
+
+
+
+\onehalfspacing
+
+%
+% Lampiran 
+%
+
+\input{src/3.Akhir/lampiran}
+
+
+\end{document}

@@ -1,0 +1,422 @@
+%
+% Konfigurasi LaTeX untuk laporan thesis/ta/skripsi/sp sesuai dengan aturan UMN
+%
+% @author  Andreas Febrian (Universitas Indonesia)
+% @edited by  Moeljono Widjaja
+% @version 1.1m
+% modifikasi dari LaTeX template uithesis.sty
+%
+
+%-----------------------------------------------------------------------------%
+% Package
+%-----------------------------------------------------------------------------%
+
+
+% Formating line spacing in Table of contents (mw 20210226)
+\usepackage[titles]{tocloft}
+\renewcommand{\cftchapfont}{\scshape}
+\setlength\cftparskip{-2pt}
+\setlength\cftbeforechapskip{0pt}
+
+
+% \usepackage{titlesec}
+
+% \titleformat{\chapter}[display]
+%   {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{12pt}{\Huge}
+% \titlespacing*{\chapter}
+%   {0pt}{50pt}{40pt}
+
+
+%
+% From The tocbibind package [author: Peter Wilson, Herries Press]:
+% The tocbibind package can be used to add document elements like a 
+% bibliography or an index to the Table of Contents. The package is designed 
+% to work with the four standard book, report, article and proc classes, and to 
+% a limited extent with the ltxdoc class.
+% 
+\usepackage{tocbibind}
+
+%
+% From [Wikipedia]:
+% The package hyperref provides LaTeX the ability to create hyperlinks within 
+% the document. It works with pdflatex and also with standard "latex" used with 
+% dvips and ghostscript or dvipdfm to build a PDF file. For example: 
+%	- \hyperref[mainlemma]{lemma \ref{mainlemma}}
+%	- \url{http://www.wikibooks.org}
+%	- \href{http://www.wikibooks.org}{wikibooks home}
+%	- \href{mailto:my_address@wikibooks.org}{
+%		\nolinkurl{my_address@wikibooks.org}}
+% 
+\usepackage[linktocpage=true]{hyperref}
+  \hypersetup{
+  	colorlinks=false,
+  	pdfborder=0 0 0,
+  	linkcolor=blue,
+  	citecolor=black,
+  	bookmarksopen=false,
+  	bookmarksnumbered=true,
+  	pdfstartview=FitH,
+  	pdfview=FitH
+	}
+
+% Formating line spacing in Table of contents ( Moeljono 20210226)
+\usepackage[titles]{tocloft}
+% \renewcommand{\cftchapfont}{\scshape} % Moeljono 20210416
+\renewcommand{\cftchapfont}{\normalfont} % Moeljono 20210416
+\setlength\cftparskip{-2pt}
+\setlength\cftbeforechapskip{0pt}
+
+
+%
+% The url package allows spacing and line breaks that result in intelligent 
+% printing of email addresses, hypertext links, and path or directory addresses. 
+% You must enter package commands in TeX fields. The address, link, path, or 
+% directory address specified in the command must not contain unbalanced braces. 
+% If it doesn't contain certain other characters (such as % or #) and doesn't 
+% end with a backslash, you can use the command in the argument to another 
+% command.
+% 
+\usepackage{url}
+  \urlstyle{same}
+  
+
+\usepackage{longtable}
+\usepackage{indentfirst}  
+
+
+% Set length of indentation
+\setlength{\parindent}{3em}
+  
+% 
+%  Agar tabel bisa menggunakan rowspan atau colspan. 
+% 
+\usepackage{multirow}
+
+%
+% Digunakan untuk memasukan gambar ke laporan. 
+% 
+\usepackage{graphicx}
+
+%
+% Digunakan untuk mengantur line spacing pada laporan. Umumnya spacing yang 
+% digunakan adalah 1.5. 
+% 
+\usepackage{setspace}
+%   \onehalfspacing
+  \doublespacing
+  %\singlespacing
+  
+%
+% From Rforge:
+% The geometry package controls the overall margins and text area of the 
+% document. The package must be called in the preamble of the document and 
+% specified when called.
+% 
+\usepackage[paper=a4paper,headheight=0pt,left=4cm,top=3cm,right=3cm,bottom=3cm]{geometry}
+
+% 
+% Digunakan untuk mengatur caption dalam dokumen.
+% 
+%  Edited by MW (20210202)
+% \usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up]{caption}
+\usepackage[format=plain,labelfont=up,textfont=up]{caption}
+
+\captionsetup[table]{labelformat=simple, labelsep=period}
+\captionsetup[figure]{labelformat=simple, labelsep=period}
+% Adding center in caption (j 20210419) saya pindah ke umnthesis.sty (Moeljono 20210419)
+% \usepackage{caption}
+% \captionsetup{justification   = raggedright, singlelinecheck = false}
+% \captionsetup{justification=centering}
+
+% 
+% Membantu penulisan notasi matematika terutama untuk dokumen dengan banyak 
+% rumus. 
+% 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+
+% 
+% Membuat seluruh tulisan menjadi Times New Roman.
+% 
+\usepackage{pslatex}
+
+% Setting Times New Roman font  mw 20210416
+\usepackage{mathptmx}
+
+
+
+% 
+% Package untuk membuat header dan footer pada dokumen. 
+% 
+\usepackage{fancyhdr}
+
+ 
+\fancypagestyle{daftarIsi}{%
+    \fancyhead{}
+	\fancyfoot[C]{\thepage}
+	\renewcommand{\footrulewidth}{0.0pt} 
+    % \renewcommand{\headrulewidth}{0pt}
+}
+
+
+
+% 
+% Package untuk memasukan berkas pdf sebagai bagian dari dokumen.
+% 
+\usepackage{pdfpages}
+
+% 
+% Membantu dalam mengatur jarak antara tepi kertas dengan posisi header. 
+% 
+\usepackage[ConnyRevised]{_internals/fncychap}
+
+% 
+% Digunakan untuk membuat tabel berwarna-warni. 
+% 
+\usepackage{colortbl}
+
+% 
+% 
+% 
+\usepackage{float}
+  \floatplacement{figure}{H}
+  \floatplacement{table}{H}
+
+% Bibliography
+% \usepackage{natbib}
+\usepackage[comma]{natbib}
+
+% Slanted fraction symbol
+\usepackage{nicefrac}
+
+% Code listing
+\usepackage[titles]{tocloft}
+% \renewcommand{\cftchappagefont}{ \sffamily} % Moeljono 20210303
+\renewcommand{\cftchappagefont}{ \normalfont} % Moeljono 20210416
+
+% \usepackage[page,toc,titletoc,title]{appendix}  % Moeljono 20210303
+
+\newcommand{\listappendicesname}{Daftar Lampiran}
+\newlistof{appendices}{apc}{\listappendicesname}
+\newcommand{\appendices}[1]{\addcontentsline{apc}{appendices}{#1}}
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+
+% \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
+% \renewcommand\cftsecdotsep{\cftdot}
+% \renewcommand\cftsubsecdotsep{\cftdot}
+
+
+
+\newlistof{listing}{lol}{Daftar Kode}
+\usepackage[newfloat]{minted}
+% \usepackage{caption} commented by MW 20210203
+\SetupFloatingEnvironment{listing}{name=\bo{Kode}}
+\setminted{
+	style=pastie,
+	autogobble,
+	linenos,
+	fontsize=\footnotesize,
+	breaklines,
+	breakanywhere,
+	python3,
+}
+
+\renewcommand{\theFancyVerbLine}{{\tiny{\arabic{FancyVerbLine}}}}
+	
+% Set `listing` numbering to [chapter].[listing_num]
+\makeatletter
+\renewcommand*{\thelisting}{\thechapter.\arabic{listing}}
+\@addtoreset{listing}{chapter}
+\makeatother
+
+% Set listing frame
+\usepackage[framemethod=TikZ]{mdframed}
+\definecolor{code_bg}{rgb}{0.95,0.95,0.95}
+\mdfdefinestyle{code}{
+	backgroundcolor=code_bg,
+	roundcorner=2pt,
+	linewidth=0pt
+}
+\surroundwithmdframed[style=code]{minted}
+
+
+\renewcommand{\cftlistingpresnum}{\bo{Kode}~}
+\setlength{\cftlistingnumwidth}{1in}
+
+\renewcommand{\cftfigpresnum}{\figurename~}
+\setlength{\cftfignumwidth}{1in}
+
+\renewcommand{\cfttabpresnum}{\tablename~}
+\setlength{\cfttabnumwidth}{1in}
+
+%-----------------------------------------------------------------------------%
+% Konfigurasi
+%-----------------------------------------------------------------------------%
+\sloppy
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+   \pdffalse 
+\else
+   \pdfoutput=1
+   \pdftrue
+\fi
+
+
+% link page numbers in TOC 
+\makeatletter
+\def\contentsline#1#2#3#4{%
+  \ifx\\#4\\%
+    \csname l@#1\endcsname{#2}{#3}%
+  \else
+    \csname l@#1\endcsname{%
+      \hyper@linkstart{link}{#4}{#2}\hyper@linkend
+    }{%
+      % same link destination for the page:
+      \hyper@linkstart{link}{#4}{#3}\hyper@linkend
+      % link destination is the page itself:
+      % \hyperpage{#3}%
+    }%
+  \fi
+}
+% \renewcommand\section{\@startsection {section}{1}{\z@}% revised by moeljono 20210507
+%                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+%                                   {2.3ex \@plus.2ex}%
+%                                   {\large\bfseries}}
+
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                  {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                  {2.3ex \@plus.2ex}%
+                                  {\bfseries}}                                  
+\makeatother
+
+\setcounter{secnumdepth}{5}
+
+\setcounter{tocdepth}{2} % Moeljono 20210419
+\renewcommand{\thesubsubsection}{\Alph{subsubsection}} 
+\renewcommand{\theparagraph}{\Alph{subsubsection}.\arabic{paragraph}}
+\renewcommand{\thesubparagraph}{\Alph{subsubsection}.\arabic{paragraph}.\arabic{subparagraph}}
+
+%
+% Atur header dan footer dalam dokumen.
+% 
+\renewcommand{\headrulewidth}{0.0pt}
+	\fancyhf{} 
+	\fancyhead[L]{} 
+	\fancyhead[C]{} 
+% 	\fancyhead[R]{\thepage} 
+	\renewcommand{\headrulewidth}{0.0pt} 
+	\fancyfoot[R]{\thepage}
+% 	\fancyfoot[R]{\footnotesize \textsf{\bo{Universitas Indonesia}}}
+% 	\fancyfoot[R]{\footnotesize \textsf{\bo{Universitas Multimedia Nusantara}}}
+	\renewcommand{\footrulewidth}{0.0pt} 
+\pagestyle{fancy}
+
+
+%-----------------------------------------------------------------------------%
+% Perintah Baru
+%-----------------------------------------------------------------------------%
+
+% 
+% Perintah untuk membuat huruf tecetak miring. (alias)
+\newcommand{\f}[1]{\textit{#1}}
+% 
+% Perintah untuk huruf tercetak tebal dan miring. 
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
+% 
+% Perintah untuk huruf tercetak tebal.
+\newcommand{\bo}[1]{\textbf{#1}}
+% 
+% 
+\newcommand{\m}[1]{\bm{#1}}
+% 
+% 
+\newcommand{\code}[1]{{\texttt{#1}}}
+% 
+% Buat catatan kecil. Catatan akan ditampilkan dalam tabel. 
+\newcommand{\todo}[1]{
+    \begin{tabular}{| p{13.5cm} |}
+		\rowcolor[rgb]{.9,.6,.6}
+		\bo{@todo} \\
+		\rowcolor[gray]{1.}
+		 #1 \\
+		 \\
+		\hline
+	\end{tabular}
+    }
+% 
+% Buat catatan untuk menambahkan referensi. 
+\newcommand{\todoCite}{
+	\begin{tabular}{| l |}
+		\rowcolor[rgb]{.6,.9,.6}
+		\bo{@todo} \\
+		\rowcolor[gray]{1.} 
+		 Referensi \\
+		 \\
+		\hline
+	\end{tabular}
+    }
+% 
+% Tambahkan berkas PDF ke dalam laporan dan gunakan style laporan  
+% terhadap berkas ini. 
+\newcommand{\inpdf}[1]{
+	\includepdf[pages=-,pagecommand={\thispagestyle{fancy}}]{#1.pdf}}
+% 
+% Tambahkan berkas PDF ke dalam laporan. 
+\newcommand{\putpdf}[1]{\includepdf[pages=-]{#1.pdf}}
+% 
+% Perintah untuk membuat perintah/variabel baru. 
+\newcommand{\var}[2]{\newcommand{#1}{#2}}
+% 
+% Perintah untuk membuat perintah/variabel baru. Teks yang ditulis dalam 
+% perintah ini akan diformat ulang menggunakan huruf kapital. 
+\newcommand{\Var}[2]{\newcommand{#1}{\uppercase{#2}}}
+% 
+% Tambahkan kata-kata yang dimasukan kedalam Table of Contents. 
+
+\newcommand{\addChapter}[1]{\phantomsection \addcontentsline{toc}{chapter}{#1}}
+
+
+
+
+% 
+% Alias untuk perintah \LaTeX
+\newcommand{\latex}{\LaTeX}
+
+
+
+%-----------------------------------------------------------------------------%
+% Ubah Istilah Penulisan
+%-----------------------------------------------------------------------------%
+%
+% Beberapa istilah yang tepat untuk digunakan dalam laporan.
+\renewcommand{\bibname}{\uppercase{Daftar Pustaka}}
+% 
+% 
+\renewcommand{\contentsname}{\uppercase{Daftar Isi}}
+% 
+% 
+\renewcommand{\listfigurename}{\uppercase{Daftar Gambar}}
+% 
+% 
+\renewcommand{\listtablename}{\uppercase{Daftar Tabel}}
+% 
+% 
+\renewcommand{\chaptername}{BAB}
+% 
+% 
+\renewcommand{\figurename}{Gambar}
+% 
+% 
+\renewcommand{\tablename}{Tabel}
+% 
+% 
+\newcommand{\pic}{Gambar}
+% 
+% 
+\newcommand{\tab}{Tabel}
+% 
+% 
+\newcommand{\equ}{Persamaan}
