@@ -167,14 +167,7 @@ Modul \textit{Contract} berfungsi sebagai fondasi utama dalam sistem penggajian 
 
 Berikut merupakan \textit{database diagram} untuk modul \textit{Contract} yang telah dibuat selama pelaksanaan kerja praktik. 
 
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_erd_contract.png}}
-    \caption{Diagram ERD untuk modul \textit{Contract}}
-    \label{fig:erd_contract}
-\end{figure}
-
-Gambar \ref{fig:erd_contract} menunjukkan struktur basis data untuk modul \textit{Contract}. Terdapat beberapa tabel utama yang saling berhubungan, yaitu: 
+Pada gambar \ref{fig:erd_contract} menunjukkan struktur basis data untuk modul \textit{Contract}. Terdapat beberapa tabel utama yang saling berhubungan, yaitu: 
 \begin{itemize}
     \item \textit{Contracts}: Tabel ini menyimpan data kontrak kerja pegawai, termasuk informasi seperti tanggal mulai dan berakhir kontrak, status persetujuan, serta referensi ke pegawai yang bersangkutan.
     \item \textit{Employment Statuses}: Tabel ini menyimpan berbagai status kepegawaian yang dapat dimiliki oleh pegawai, seperti aktif, cuti, atau tidak aktif.
@@ -189,10 +182,19 @@ Gambar \ref{fig:erd_contract} menunjukkan struktur basis data untuk modul \texti
     \item \textit{Contract Leaves}: Tabel ini menyimpan hubungan antara kontrak dan jenis cuti yang tersedia bagi pegawai.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_erd_contract.png}}
+    \caption{Diagram ERD untuk modul \textit{Contract}}
+    \label{fig:erd_contract}
+\end{figure}
+
 \subsubsection{\textit{Contract} API \textit{Endpoints}}
 
 Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Contract}:
 \begin{table}
+    \caption{Daftar \textit{endpoints} API untuk modul \textit{Contract}}
+    \label{tab:contract_api_endpoints}
     \centering
     \begin{tabular}{|p{25mm}|c|p{35mm}|p{45mm}|}
         \hline
@@ -209,15 +211,15 @@ Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul
         Delete Contract by ID & DELETE & /contract/:id/delete & Menghapus kontrak \textit{user} berdasarkan ID \\
         \hline
     \end{tabular}
-    \caption{Daftar \textit{endpoints} API untuk modul \textit{Contract}}
-    \label{tab:contract_api_endpoints}
 \end{table}
 
 Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Contract} seperti pada Tabel \ref{tab:contract_api_endpoints}. Setiap \textit{endpoint} memiliki fungsi spesifik dalam mengelola kontrak kerja pegawai, mulai dari pengambilan data kontrak, persetujuan, hingga penghapusan kontrak. Selanjutnya, akan dijelaskan alur sistem untuk \textit{endpoints} dalam pada modul ini.
 
 \paragraph*{\textit{Get All User's Contracts}}
+\textit{Get All User's Contracts} adalah \textit{endpoint} API yang berfungsi untuk mengambil semua kontrak yang dimiliki oleh pengguna tertentu. API ini digunakan di sisi \textit{frontend} untuk menampilkan daftar kontrak yang terkait dengan pengguna yang sedang masuk (\textit{logged in user}) dalam page \textit{Contract}. Gambar \ref{fig:request_get_all_user_contracts} dan \ref{fig:response_get_all_user_contracts} menunjukkan contoh \textit{request} dan \textit{response} untuk API \textit{Get All User's Contracts}.
 
-Berikut merupakan \textit{flowchart} API \textit{Get All User's Contracts}.
+\textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission user contract} untuk mengakses data kontrak. Jika pengguna tidak ada \textit{permission user contract}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data kontrak dari basis data berdasarkan ID pengguna yang terautentikasi. Data kontrak yang diambil kemudian dikemas dalam format JSON dan dikirimkan kembali sebagai respons kepada pengguna.
+
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_get_all_user_contracts.jpg}}
@@ -225,26 +227,28 @@ Berikut merupakan \textit{flowchart} API \textit{Get All User's Contracts}.
     \label{fig:flowchart_get_all_user_contracts}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get All User's Contracts}.
+Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get All User's Contracts}. Pada gambar \ref{fig:request_get_all_user_contracts} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/contract/user} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{query parameters} untuk \textit{pagination}. 
 
 \begin{figure}
     \centering
-    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_all_user_contracts.png}}
+    \fbox{\includegraphics[width=1\textwidth]{assets/pics/fig_request_get_all_user_contracts.png}}
     \caption{Contoh \textit{request} API \textit{Get All User's Contracts}}
     \label{fig:request_get_all_user_contracts}
 \end{figure}
 
+Pada gambar \ref{fig:response_get_all_user_contracts} menunjukkan contoh \textit{response} yang diterima dari server, berisi daftar kontrak yang dimiliki oleh pengguna beserta informasi terkait seperti \textit{contract ID}, nama kontrak, status kontrak, \textit{start date}, \textit{end date}, nama karyawan, pekerjaan karyawan, \textit{employment status} karyawan, dan karyawan yang membuat kontrak tersebut.
 \begin{figure}
     \centering
-    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_all_user_contracts.png}}
+    \fbox{\includegraphics[height=0.6\textheight]{assets/pics/fig_response_get_all_user_contracts.png}}
     \caption{Contoh \textit{response} API \textit{Get All User's Contracts}}
     \label{fig:response_get_all_user_contracts}
 \end{figure}
 
-Gambar \ref{fig:flowchart_get_all_user_contracts} menunjukkan \textit{flowchart} alur sistem API \textit{Get All User's Contracts} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/user} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_all_user_contracts}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data kontrak dari pengguna tersebut. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar kontrak yang dimiliki oleh pengguna tersebut seperti pada Gambar \ref{fig:response_get_all_user_contracts}.
 
 \paragraph*{\textit{Get User's Contract Detail by ID}}
-Berikut merupakan \textit{flowchart} API \textit{Get User's Contract Detail by ID}.
+\textit{Get User's Contract Detail by ID} adalah \textit{endpoint} API yang berfungsi untuk mengambil detail kontrak milik pengguna berdasarkan \textit{ID} kontrak yang diberikan. API ini digunakan di sisi \textit{frontend} untuk menampilkan informasi rinci mengenai kontrak tertentu dalam page \textit{Contract Detail}.
+
+Pada gambar \ref{fig:flowchart_get_user_contract_detail_by_id} merupakan \textit{flowchart} API \textit{Get User's Contract Detail by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission user contract} untuk mengakses data kontrak. Jika pengguna tidak ada \textit{permission user contract}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem akan memeriksa apabila pemilik kontrak yang diminta tidak sama dengan pengguna yang melakukan permintaan. Jika tidak, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data detail kontrak dari basis data berdasarkan \textit{ID} kontrak yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Data detail kontrak yang diambil kemudian dikemas dalam format JSON dan dikirimkan kembali sebagai respons kepada pengguna.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_get_user_contract_detail_by_id.jpg}}
@@ -252,7 +256,7 @@ Berikut merupakan \textit{flowchart} API \textit{Get User's Contract Detail by I
     \label{fig:flowchart_get_user_contract_detail_by_id}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get User's Contract Detail by ID}.
+Pada gambar \ref{fig:request_get_user_contract_detail_by_id} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/contract/user/:id} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{path parameters}, \texttt{contract\_id}, untuk menentukan kontrak yang ingin diambil detailnya.
 
 \begin{figure}[H]
     \centering
@@ -260,37 +264,49 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \caption{Contoh \textit{request} API \textit{Get User's Contract Detail by ID}}
     \label{fig:request_get_user_contract_detail_by_id}
 \end{figure}
+
+
+Pada gambar \ref{fig:response_get_user_contract_detail_by_id_1} 
+% , \ref{fig:response_get_user_contract_detail_by_id_2}, dan \ref{fig:response_get_user_contract_detail_by_id_3} 
+menunjukkan contoh \textit{response} yang diterima dari server, berisi informasi rinci mengenai kontrak tertentu, termasuk data kontrak, data pegawai terkait, jadwal kerja, jenis cuti, rincian komponen gaji kontrak (\textit{contract items}), serta aturan penalti yang berlaku dalam kontrak tersebut.
+
+Berikut merupakan contoh \textit{response} untuk API \textit{Get User's Contract Detail by ID}.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_user_contract_detail_by_id_1.png}}
     \caption{Contoh \textit{response} API \textit{Get User's Contract Detail by ID}}
     \label{fig:response_get_user_contract_detail_by_id_1}
 \end{figure}
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_user_contract_detail_by_id_2.png}}
-    \caption{Contoh \textit{response} API \textit{Get User's Contract Detail by ID} (lanjutan)}
-    \label{fig:response_get_user_contract_detail_by_id_2}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_user_contract_detail_by_id_3.png}}
-    \caption{Contoh \textit{response} API \textit{Get User's Contract Detail by ID} (lanjutan)}
-    \label{fig:response_get_user_contract_detail_by_id_3}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_user_contract_detail_by_id_2.png}}
+%     \caption{Contoh \textit{response} API \textit{Get User's Contract Detail by ID} (lanjutan)}
+%     \label{fig:response_get_user_contract_detail_by_id_2}
+% \end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_user_contract_detail_by_id_3.png}}
+%     \caption{Contoh \textit{response} API \textit{Get User's Contract Detail by ID} (lanjutan)}
+%     \label{fig:response_get_user_contract_detail_by_id_3}
+% \end{figure}
 
-Gambar \ref{fig:flowchart_get_user_contract_detail_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get User's Contract Detail by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/user/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_contract_detail_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail kontrak berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail kontrak yang diminta seperti pada Gambar \ref{fig:response_get_user_contract_detail_by_id_1}, \ref{fig:response_get_user_contract_detail_by_id_2}, dan \ref{fig:response_get_user_contract_detail_by_id_3}.
+
+% Gambar \ref{fig:flowchart_get_user_contract_detail_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get User's Contract Detail by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_contract_detail_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail kontrak berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail kontrak yang diminta seperti pada Gambar \ref{fig:response_get_user_contract_detail_by_id_1}
+% , \ref{fig:response_get_user_contract_detail_by_id_2}, dan \ref{fig:response_get_user_contract_detail_by_id_3}
+.
 
 \paragraph*{\textit{Approve Contract by ID}}
-Berikut merupakan \textit{flowchart} API \textit{Approve Contract by ID}.
+\textit{Approve Contract by ID} adalah \textit{endpoint} API yang berfungsi untuk menyetujui kontrak milik pengguna berdasarkan \textit{ID} kontrak yang diberikan. API ini digunakan di sisi \textit{frontend} untuk mengubah status kontrak menjadi disetujui (\textit{Approved}) dalam page \textit{Contract Detail}.
+
+Pada gambar \ref{fig:flowchart_approve_contract_by_id} merupakan \textit{flowchart} API \textit{Approve Contract by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission contract management} untuk menyetujui kontrak. Jika pengguna tidak ada \textit{permission contract management}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem akan mencari kontrak berdasarkan \textit{ID} yang diberikan pada \textit{request path parameters}. Jika kontrak tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Lalu, kontrak yang ditemukan akan diperiksa status kontrak. Apabila status kontrak bukan \textit{Pending}, sistem akan mengembalikan \textit{error} 400. Setelah sistem memperbarui status kontrak menjadi disetujui (\textit{Approved}) berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah status kontrak berhasil diperbarui, sistem mengembalikan \textit{success} 200 dan menyatakan bahwa kontrak berhasil di.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_approve_contract_by_id.jpg}}
-    \caption{Contoh \textit{response} API \textit{Approve Contract by ID}}
-    \label{fig:response_approve_contract_by_id}
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_approve_contract_by_id.jpg}}
+    \caption{\textit{Flowchart} alur sistem API \textit{Approve Contract by ID}}
+    \label{fig:flowchart_approve_contract_by_id}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Approve Contract by ID}.
+Pada gambar \ref{fig:request_approve_contract_by_id} merupakan contoh \textit{request} untuk API \textit{Approve Contract by ID}. \textit{Request} dikirimkan ke \textit{endpoint} \texttt{/contract/{id}/approve} dengan metode HTTP \textit{PATCH} dengan menyertakan \textit{path parameters}, \texttt{contract\_id} untuk menentukan kontrak yang ingin dimodifikasi.
 
 \begin{figure}[H]
     \centering
@@ -299,18 +315,20 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_approve_contract_by_id}
 \end{figure}
 
+Pada gambar \ref{fig:response_approve_contract_by_id} merupakan contoh \textit{response} untuk API \textit{Approve Contract by ID}. \textit{Response} yang diberikan hanya berupa \textit{status code} 200 dengan pesan sukses.
 \begin{figure}
     \centering
-    \fbox{\includegraphics[width=0.7\textwidth]{assets/pics/fig_response_approve_contract_by_id.png}}
+    \fbox{\includegraphics[height=0.1\textheight]{assets/pics/fig_response_approve_contract_by_id.png}}
     \caption{Contoh \textit{response} API \textit{Approve Contract by ID}}
     \label{fig:response_approve_contract_by_id}
 \end{figure}
 
-Gambar \ref{fig:flowchart_approve_contract_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Approve Contract by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/:id/approve} menggunakan metode HTTP \textit{PATCH} seperti pada Gambar \ref{fig:request_approve_contract_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta memperbarui status kontrak menjadi disetujui (\textit{Approved}) berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah status kontrak berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi kontrak yang telah disetujui seperti pada Gambar \ref{fig:response_approve_contract_by_id}.
+% Gambar \ref{fig:flowchart_approve_contract_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Approve Contract by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/:id/approve} menggunakan metode HTTP \textit{PATCH} seperti pada Gambar \ref{fig:request_approve_contract_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta memperbarui status kontrak menjadi disetujui (\textit{Approved}) berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah status kontrak berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi kontrak yang telah disetujui seperti pada Gambar \ref{fig:response_approve_contract_by_id}.
 
-\newpage
 \paragraph*{\textit{Terminate Contract by ID}}
-Berikut merupakan \textit{flowchart} API \textit{Terminate Contract by ID}.
+\textit{Terminate Contract by ID} adalah \textit{endpoint} API yang berfungsi untuk mengakhiri kontrak milik pengguna berdasarkan \textit{ID} kontrak yang diberikan. API ini digunakan di sisi \textit{frontend} untuk mengubah status kontrak menjadi dihentikan (\textit{Terminated}) dalam page \textit{Contract Detail}.
+
+Pada gambar \ref{fig:flowchart_terminate_contract_by_id} merupakan \textit{flowchart} API \textit{Terminate Contract by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission contract management} untuk mengakhiri kontrak. Jika pengguna tidak ada \textit{permission contract management}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem akan mencari kontrak berdasarkan \textit{ID} yang diberikan pada \textit{request path parameters}. Jika kontrak tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Lalu, kontrak yang ditemukan akan diperiksa status kontrak. Apabila status kontrak tidak sesuai dengan ketentuan, sistem akan mengembalikan \textit{error} 400. Setelah itu, sistem akan memeriksa apa status kontrak sekarang. Kalau status kontak sekarang adalah \textit{Pending}, maka status kontrak akan diperbarui menjadi \textit{Rejected} mengindikasikan bahwa kontrak ditolak. Jika status kontrak sekarang adalah \textit{Approved}, status kontrak diperbarui menjadi \textit{Cancelled} mengindikasikan bahwa kontrak sudah diakhiri sebelum dimulai. Jika status kontrak sekarang adalah \textit{On Going}, status kontrak akan diperbarui menjadi \textit{Terminated} mengindikasikan bahwa kontrak sempat aktif lalu diakhiri. Jika status kontrak tidak ada yang sesuai dengan yang diatas, sistem akan mengembalikan \textit{error} 400. Setelah status kontrak berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi kontrak yang telah dihentikan.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_terminate_contract_by_id.jpg}}
@@ -318,7 +336,7 @@ Berikut merupakan \textit{flowchart} API \textit{Terminate Contract by ID}.
     \label{fig:flowchart_terminate_contract_by_id}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Terminate Contract by ID}.
+Pada gambar \ref{fig:request_terminate_contract_by_id} dan \ref{fig:response_terminate_contract_by_id} menunjukkan contoh \textit{request} dan \textit{response} untuk API \textit{Terminate Contract by ID}. \textit{Request} dikirimkan ke \textit{endpoint} \texttt{/contract/{id}} dengan metode HTTP \textit{DELETE} dengan menyertakan \textit{path parameters}, \texttt{contract\_id} untuk menentukan kontrak yang ingin diakhiri.
 
 \begin{figure}
     \centering
@@ -327,6 +345,8 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_terminate_contract_by_id}
 \end{figure}
 
+Pada gambar \ref{fig:response_terminate_contract_by_id} merupakan contoh \textit{response} untuk API \textit{Terminate Contract by ID}. \textit{Response} yang diberikan berisi \textit{status code} 200 dengan pesan sukses mengidikasikan bahwa kontrak berhasil dihentikan.
+
 \begin{figure}
     \centering
     \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_response_terminate_contract_by_id.png}}
@@ -334,24 +354,27 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_terminate_contract_by_id}
 \end{figure}
 
-Gambar \ref{fig:flowchart_terminate_contract_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Terminate Contract by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/:id} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_terminate_contract_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, lalu mencari data kontrak berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah ditemukan, status akan berubah sesuai dengan status kontrak sekarang, dengan ketentuan sebagai berikut:
-\begin{itemize}
-    \item Jika status kontrak adalah \textit{Pending}, maka status akan diubah menjadi \textit{Rejected}.
-    \item Jika status kontrak adalah \textit{Approved}, maka status akan diubah menjadi \textit{Cancelled}.
-    \item Jika status kontrak adalah \textit{On Going}, maka status akan diubah menjadi \textit{Terminated}.
-\end{itemize}
-Jika status kontrak tidak sesuai dengan ketentuan di atas, maka sistem akan mengembalikan respons kesalahan (\textit{error response}) kepada pengguna. Setelah status kontrak berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi kontrak yang telah dihentikan seperti pada Gambar \ref{fig:response_terminate_contract_by_id}.
+% Gambar \ref{fig:flowchart_terminate_contract_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Terminate Contract by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/:id} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_terminate_contract_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, lalu mencari data kontrak berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah ditemukan, status akan berubah sesuai dengan status kontrak sekarang, dengan ketentuan sebagai berikut:
+% \begin{itemize}
+%     \item Jika status kontrak adalah \textit{Pending}, maka status akan diubah menjadi \textit{Rejected}.
+%     \item Jika status kontrak adalah \textit{Approved}, maka status akan diubah menjadi \textit{Cancelled}.
+%     \item Jika status kontrak adalah \textit{On Going}, maka status akan diubah menjadi \textit{Terminated}.
+% \end{itemize}
+% Jika status kontrak tidak sesuai dengan ketentuan di atas, maka sistem akan mengembalikan respons kesalahan (\textit{error response}) kepada pengguna. Setelah status kontrak berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi kontrak yang telah dihentikan seperti pada Gambar \ref{fig:response_terminate_contract_by_id}.
 
 \paragraph*{\textit{Delete Contract by ID}}
-Berikut merupakan \textit{flowchart} API \textit{Delete Contract by ID}.
+\textit{Delete Contract by ID} adalah \textit{endpoint} API yang berfungsi untuk menghapus kontrak dari sistem berdasarkan \textit{ID} kontrak yang diberikan. API ini digunakan di sisi \textit{frontend} untuk menghapus data kontrak dalam page \textit{Contract Detail}.
+
+Pada gambar \ref{fig:flowchart_delete_contract_by_id} merupakan \textit{flowchart} API \textit{Delete Contract by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission contract management} untuk menghapus kontrak. Jika pengguna tidak ada \textit{permission contract management}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem akan mencari kontrak berdasarkan \textit{ID} yang diberikan pada \textit{request path parameters}. Jika kontrak tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Setelah itu, sistem menghapus data kontrak berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah data kontrak berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi keberhasilan penghapusan kontrak.
+
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_delete_contract_by_id.jpg}}
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_delete_contract_by_id.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Delete Contract by ID}}
     \label{fig:flowchart_delete_contract_by_id}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Delete Contract by ID}.
+Berikut merupakan contoh \textit{request} untuk API \textit{Delete Contract by ID}. Pada gambar \ref{fig:request_delete_contract_by_id} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/contract/{id}/delete} menggunakan metode HTTP \textit{DELETE} dengan menyertakan \textit{path parameters}, \texttt{contract\_id}, untuk menentukan kontrak yang ingin dihapus.
 
 \begin{figure}
     \centering
@@ -360,6 +383,8 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_delete_contract_by_id}
 \end{figure}
 
+Pada gambar \ref{fig:response_delete_contract_by_id} merupakan contoh \textit{response} untuk API \textit{Delete Contract by ID}. \textit{Response} yang diberikan berisi \textit{status code} 200 dengan pesan sukses mengidikasikan bahwa kontrak berhasil dihapus.
+
 \begin{figure}
     \centering
     \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_response_delete_contract_by_id.png}}
@@ -367,7 +392,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_delete_contract_by_id}
 \end{figure}
 
-Gambar \ref{fig:flowchart_delete_contract_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Delete Contract by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/:id/delete} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_delete_contract_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta menghapus data kontrak berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah data kontrak berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi keberhasilan penghapusan kontrak seperti pada Gambar \ref{fig:response_delete_contract_by_id}.
+% Gambar \ref{fig:flowchart_delete_contract_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Delete Contract by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/contract/:id/delete} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_delete_contract_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta menghapus data kontrak berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{contract\_id}. Setelah data kontrak berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi keberhasilan penghapusan kontrak seperti pada Gambar \ref{fig:response_delete_contract_by_id}.
 
 % ---------------------------------- %
 \subsection{Modul Payroll Item}
@@ -652,7 +677,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_save_payslip_detail_2}
 \end{figure}
 
-Gambar \ref{fig:flowchart_save_payslip_detail} menunjukkan \textit{flowchart} alur sistem API \textit{Save Payslip Detail} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/date/{payslip\_date\_id}/contract/{contract\_id}} menggunakan metode HTTP \textit{PATCH} seperti pada Gambar \ref{fig:request_save_payslip_detail}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, serta memperbarui data detail slip gaji berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters} dengan data yang diberikan dalam \textit{request body}. Di dalam \textit{request body}, pengguna dapat mengirimkan beberapa data detail slip gaji yang ingin diperbarui, seperti tunjangan, potongan, dan lain-lain. Pengguna juga dapat menambahkan beberapa data detail slip gaji baru yang belum ada pada slip gaji tersebut dengan deskripsi dan nominal yang diinginkan. Setelah data detail slip gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai detail slip gaji yang telah diperbarui seperti pada Gambar \ref{fig:response_save_payslip_detail}.
+Gambar \ref{fig:flowchart_save_payslip_detail} menunjukkan \textit{flowchart} alur sistem API \textit{Save Payslip Detail} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/date/{payslip\_date\_id}/contract/{contract\_id}} menggunakan metode HTTP \textit{PATCH} seperti pada Gambar \ref{fig:request_save_payslip_detail}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, serta memperbarui data detail slip gaji berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters} dengan data yang diberikan dalam \textit{request body}. Di dalam \textit{request body}, pengguna dapat mengirimkan beberapa data detail slip gaji yang ingin diperbarui, seperti tunjangan, potongan, dan lain-lain. Pengguna juga dapat menambahkan beberapa data detail slip gaji baru yang belum ada pada slip gaji tersebut dengan deskripsi dan nominal yang diinginkan. Setelah data detail slip gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai detail slip gaji yang telah diperbarui seperti pada Gambar \ref{fig:response_save_payslip_detail_1} dan \ref{fig:response_save_payslip_detail_2}.
 
 \paragraph*{\textit{Get User Payslips List}}
 Berikut merupakan \textit{flowchart} API \textit{Get User Payslips List}.
@@ -965,7 +990,7 @@ Gambar \ref{fig:flowchart_delete_overtime_by_id} menunjukkan \textit{flowchart} 
 Selama pelaksanaan kerja praktik, terdapat beberapa kendala yang dihadapi dalam pengembangan sistem, antara lain:
 
 \begin{itemize}
-    \item Beberapa \textit{edge case} tidak teridentifikasi pada tahap pengembangan dan pengujian awal. Akibatnya, ketika sistem telah memasuki tahap produksi, masih ditemukan \textit{bug} yang sebelumnya tidak terdeteksi. Hal ini berpotensi mengganggu stabilitas sistem dan pengalaman pengguna.
+    \item Beberapa \textit{edge case} tidak teridentifikasi pada tahap pengembangan dan pengujian awal, salah satu contohnya adalah pada \textit{Payslip Detail}, \textit{penalty} yang dikenakan itu tidak sesuai dengan jangka waktu pada \textit{Payslip} tersebut. Akibatnya, ketika sistem telah memasuki tahap produksi, masih ditemukan \textit{bug} yang sebelumnya tidak terdeteksi. Hal ini berpotensi mengganggu stabilitas sistem dan pengalaman pengguna.
 
     \item Fokus pengembangan diarahkan pada pencapaian target agar klien dapat segera menggunakan modul utama, khususnya modul \textit{Contract} dan \textit{Payslip}. Kondisi ini menyebabkan keterbatasan waktu untuk melakukan \textit{refactoring} kode lama serta perbaikan \textit{bug} pada modul-modul yang telah dikembangkan sebelumnya.
 \end{itemize}
