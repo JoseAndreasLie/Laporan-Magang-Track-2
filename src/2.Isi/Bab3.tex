@@ -374,7 +374,7 @@ Pada gambar \ref{fig:flowchart_delete_contract_by_id} merupakan \textit{flowchar
     \label{fig:flowchart_delete_contract_by_id}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} untuk API \textit{Delete Contract by ID}. Pada gambar \ref{fig:request_delete_contract_by_id} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/contract/{id}/delete} menggunakan metode HTTP \textit{DELETE} dengan menyertakan \textit{path parameters}, \texttt{contract\_id}, untuk menentukan kontrak yang ingin dihapus.
+Pada gambar \ref{fig:request_delete_contract_by_id} menunjukkan contoh \textit{request} untuk API \textit{Delete Contract by ID} yang dikirimkan ke \textit{endpoint} \texttt{/contract/{id}/delete} menggunakan metode HTTP \textit{DELETE} dengan menyertakan \textit{path parameters}, \texttt{contract\_id}, untuk menentukan kontrak yang ingin dihapus.
 
 \begin{figure}
     \centering
@@ -400,7 +400,7 @@ Pada gambar \ref{fig:response_delete_contract_by_id} merupakan contoh \textit{re
 Modul Payroll Item dibuat untuk mengelola berbagai komponen gaji yang akan digunakan dalam perhitungan gaji pegawai. Modul ini mencakup fitur pembuatan, pengelolaan, dan penghapusan item gaji seperti gaji pokok, tunjangan, dan potongan. Struktur basis data dirancang untuk menyimpan informasi terkait item gaji, termasuk jenis item, besaran, serta aturan penerapannya. Dengan adanya modul ini, perusahaan
 
 \subsubsection{Diagram ERD Modul \textit{Payroll Item}}
-Berikut merupakan \textit{database diagram} untuk modul \textit{Payroll Item} yang telah dibuat selama pelaksanaan kerja praktik.
+Berikut merupakan \textit{database diagram} untuk modul \textit{Payroll Item} yang telah dibuat selama pelaksanaan kerja praktik. Gambar \ref{fig:erd_payroll_item} menunjukkan struktur basis data untuk modul \textit{Payroll Item}.
 
 \begin{figure}
     \centering
@@ -409,7 +409,6 @@ Berikut merupakan \textit{database diagram} untuk modul \textit{Payroll Item} ya
     \label{fig:erd_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:erd_payroll_item} menunjukkan struktur basis data untuk modul \textit{Payroll Item}.
 
 \subsubsection{\textit{Payroll Item} API \textit{Endpoints}}
 Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Payroll Item}:
@@ -448,7 +447,7 @@ Berikut merupakan \textit{flowchart} API \textit{Get All Payroll Item}. \textit{
     \label{fig:flowchart_get_all_payroll_item}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} untuk API \textit{Get All Payroll Item}. Pada gambar \ref{fig:request_get_all_payroll_item} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{query parameters} untuk \textit{pagination} seperti \textit{page}, \textit{row}, \textit{sort}, dan \textit{search}.
+Pada gambar \ref{fig:request_get_all_payroll_item} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{query parameters} untuk \textit{pagination} seperti \textit{page}, \textit{row}, \textit{sort}, dan \textit{search}.
 \begin{figure}
     \centering
     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_all_payroll_items.png}}
@@ -456,7 +455,7 @@ Berikut merupakan contoh \textit{request} untuk API \textit{Get All Payroll Item
     \label{fig:request_get_all_payroll_item}
 \end{figure}
 
-Berikut merupakan contoh \textit{response} untuk API \textit{Get All Payroll Item}. Pada gambar \ref{fig:response_get_all_payroll_item} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi daftar komponen gaji beserta informasi terkait seperti \textit{payroll item ID}, nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
+Pada gambar \ref{fig:response_get_all_payroll_item} menunjukkan contoh \textit{response} untuk API \textit{Get All Payroll Item} yang diterima dari \textit{server}, berisi daftar komponen gaji beserta informasi terkait seperti \textit{payroll item ID}, nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
 \begin{figure}
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_all_payroll_items.png}}
@@ -477,7 +476,7 @@ Gambar \ref{fig:flowchart_get_payroll_item_by_id} merupakan \textit{flowchart} A
     \label{fig:flowchart_get_payroll_item_by_id}
 \end{figure}
 
-Gambar \ref{fig:request_get_payroll_item_by_id} merupakan contoh \textit{request} untuk API \textit{Get Payroll Item by ID}. Pada gambar \ref{fig:request_get_payroll_item_by_id} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{path parameters}, \texttt{payroll\_item\_id}, untuk menentukan komponen gaji yang ingin diambil detailnya.
+Pada gambar \ref{fig:request_get_payroll_item_by_id} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{path parameters}, \texttt{payroll\_item\_id}, untuk menentukan komponen gaji yang ingin diambil detailnya.
 
 \begin{figure}
     \centering
@@ -486,7 +485,7 @@ Gambar \ref{fig:request_get_payroll_item_by_id} merupakan contoh \textit{request
     \label{fig:request_get_payroll_item_by_id}
 \end{figure}
 
-Gambar \ref{fig:response_get_payroll_item_by_id} merupakan contoh \textit{response} untuk API \textit{Get Payroll Item by ID}. Pada gambar \ref{fig:response_get_payroll_item_by_id} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi informasi rinci mengenai komponen gaji tertentu, termasuk nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
+Pada gambar \ref{fig:response_get_payroll_item_by_id} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi informasi rinci mengenai komponen gaji tertentu, termasuk nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
 \begin{figure}
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_payroll_item_by_id.png}}
@@ -498,7 +497,7 @@ Gambar \ref{fig:response_get_payroll_item_by_id} merupakan contoh \textit{respon
 
 \paragraph*{\textit{Create Payroll Item}}
 
-Gambar \ref{fig:flowchart_create_payroll_item} merupakan \textit{flowchart} API \textit{Create Payroll Item}. Flowchart dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payroll item} untuk membuat komponen gaji baru. Jika pengguna tidak ada \textit{permission payroll item}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem memeriksa apakah \textit{request body} valid sesuai dengan ketentuan. Jika \textit{request body} tidak valid, sistem akan mengembalikan \textit{error} 400. Jika valid, sistem membuat data komponen gaji baru berdasarkan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil dibuat, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah dibuat.
+Gambar \ref{fig:flowchart_create_payroll_item} merupakan \textit{flowchart} API \textit{Create Payroll Item}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payroll item} untuk membuat komponen gaji baru. Jika pengguna tidak ada \textit{permission payroll item}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem memeriksa apakah \textit{request body} valid sesuai dengan ketentuan. Jika \textit{request body} tidak valid, sistem akan mengembalikan \textit{error} 400. Jika valid, sistem membuat data komponen gaji baru berdasarkan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil dibuat, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah dibuat.
 
 \begin{figure}[H]
     \centering
@@ -507,7 +506,7 @@ Gambar \ref{fig:flowchart_create_payroll_item} merupakan \textit{flowchart} API 
     \label{fig:flowchart_create_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:request_create_payroll_item} merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Create Payroll Item}. Pada gambar \ref{fig:request_create_payroll_item} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{POST} dengan menyertakan \textit{request body} yang berisi data komponen gaji baru yang akan dibuat.
+Pada gambar \ref{fig:request_create_payroll_item} menunjukkan contoh \textit{request} untuk API \textit{Create Payroll Item} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{POST} dengan menyertakan \textit{request body} yang berisi data komponen gaji baru yang akan dibuat.
 
 \begin{figure}
     \centering
@@ -516,7 +515,7 @@ Gambar \ref{fig:request_create_payroll_item} merupakan contoh \textit{request} d
     \label{fig:request_create_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:response_create_payroll_item} merupakan contoh \textit{response} untuk API \textit{Create Payroll Item}. Pada gambar \ref{fig:response_create_payroll_item} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi informasi mengenai komponen gaji yang telah dibuat, termasuk nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
+Pada gambar \ref{fig:response_create_payroll_item} menunjukkan contoh \textit{response} untuk API \textit{Create Payroll Item} yang diterima dari \textit{server}, berisi informasi mengenai komponen gaji yang telah dibuat, termasuk nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
 \begin{figure}
     \centering
     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_create_payroll_items.png}}
@@ -537,7 +536,7 @@ Gambar \ref{fig:flowchart_update_payroll_item} merupakan \textit{flowchart} API 
     \label{fig:flowchart_update_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:request_update_payroll_item} dan Gambar \ref{fig:response_update_payroll_item} merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Update Payroll Item}. Pada gambar \ref{fig:request_update_payroll_item} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{PUT} dengan menyertakan \textit{path parameters}, \texttt{payroll\_item\_id}, untuk menentukan komponen gaji yang ingin diperbarui serta \textit{request body} yang berisi data komponen gaji yang akan diperbarui.
+Pada gambar \ref{fig:request_update_payroll_item} menunjukkan contoh \textit{request} untuk API \textit{Update Payroll Item} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{PUT} dengan menyertakan \textit{path parameters}, \texttt{payroll\_item\_id}, untuk menentukan komponen gaji yang ingin diperbarui serta \textit{request body} yang berisi data komponen gaji yang akan diperbarui.
 
 \begin{figure}
     \centering
@@ -546,7 +545,7 @@ Gambar \ref{fig:request_update_payroll_item} dan Gambar \ref{fig:response_update
     \label{fig:request_update_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:response_update_payroll_item} merupakan contoh \textit{response} untuk API \textit{Update Payroll Item}. Pada gambar \ref{fig:response_update_payroll_item} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi informasi mengenai komponen gaji yang telah diperbarui, termasuk nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
+Pada gambar \ref{fig:response_update_payroll_item} menunjukkan contoh \textit{response} untuk API \textit{Update Payroll Item} yang diterima dari \textit{server}, berisi informasi mengenai komponen gaji yang telah diperbarui, termasuk nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
 \begin{figure}
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_update_payroll_item_by_id.png}}
@@ -568,7 +567,7 @@ Gambar \ref{fig:flowchart_delete_payroll_item} merupakan \textit{flowchart} API 
     \label{fig:flowchart_delete_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:request_delete_payroll_item} merupakan contoh \textit{request} untuk API \textit{Delete Payroll Item}. Pada gambar \ref{fig:request_delete_payroll_item} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{DELETE} dengan menyertakan \textit{path parameters}, \texttt{payroll\_item\_id}, untuk menentukan komponen gaji yang ingin dihapus.
+Pada gambar \ref{fig:request_delete_payroll_item} menunjukkan contoh \textit{request} untuk API \textit{Delete Payroll Item} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{DELETE} dengan menyertakan \textit{path parameters}, \texttt{payroll\_item\_id}, untuk menentukan komponen gaji yang ingin dihapus.
 
 \begin{figure}
     \centering
@@ -577,7 +576,7 @@ Gambar \ref{fig:request_delete_payroll_item} merupakan contoh \textit{request} u
     \label{fig:request_delete_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:response_delete_payroll_item} merupakan contoh \textit{response} untuk API \textit{Delete Payroll Item}. Pada gambar \ref{fig:response_delete_payroll_item} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi informasi mengenai keberhasilan penghapusan komponen gaji dengan menampilkan \textit{payroll item ID} dari komponen gaji yang telah dihapus.
+Pada gambar \ref{fig:response_delete_payroll_item} menunjukkan contoh \textit{response} untuk API \textit{Delete Payroll Item} yang diterima dari \textit{server}, berisi informasi mengenai keberhasilan penghapusan komponen gaji dengan menampilkan \textit{payroll item ID} dari komponen gaji yang telah dihapus.
 \begin{figure}
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_delete_payroll_item.png}}
@@ -591,21 +590,23 @@ Gambar \ref{fig:response_delete_payroll_item} merupakan contoh \textit{response}
 % ---------------------------------- %
 \subsection{Modul Payslip}
 % ---------------------------------- %
-Modul Payslip dibuat untuk mengelola dan menghasilkan slip gaji bagi pegawai berdasarkan kontrak yang telah disepakati, dan beberapa. Modul ini mencakup fitur perhitungan gaji, potongan, dan tunjangan sesuai dengan ketentuan yang berlaku dalam kontrak kerja. Struktur basis data dirancang untuk menyimpan informasi terkait gaji, termasuk rincian pembayaran, periode gaji, serta catatan historis. Modul ini juga menyediakan akses untuk menampilkan slip gaji kepada pegawai secara transparan. Modul Payslip juga merupakan langkah terakhir dari sistem penggajian (\textit{Payroll}) yang terintegrasi dengan modul Contract dan modul lainnya.
+Modul \textit{Payslip} dibuat untuk mengelola dan menghasilkan slip gaji bagi pegawai berdasarkan kontrak yang telah disepakati, dan beberapa. Modul ini mencakup fitur perhitungan gaji, potongan, dan tunjangan sesuai dengan ketentuan yang berlaku dalam kontrak kerja. Struktur basis data dirancang untuk menyimpan informasi terkait gaji, termasuk rincian pembayaran, periode gaji, serta catatan historis. Modul ini juga menyediakan akses untuk menampilkan slip gaji kepada pegawai secara transparan. Modul Payslip juga merupakan langkah terakhir dari sistem penggajian (\textit{Payroll}) yang terintegrasi dengan modul \textit{Contract} dan modul lainnya.
 
 \subsubsection{Diagram ERD Modul \textit{Payslip}}
-Berikut merupakan \textit{database diagram} untuk modul \textit{Payslip} yang telah dibuat selama pelaksanaan kerja praktik.
+Berikut merupakan \textit{database diagram} untuk modul \textit{Payslip} yang telah dibuat selama pelaksanaan kerja praktik. Gambar \ref{fig:erd_payslip} menunjukkan struktur basis data untuk modul \textit{Payslip}.
 \begin{figure}
     \centering
-    \fbox{\includegraphics[width=0.35\textwidth]{assets/pics/fig_erd_payslip.png}}
+    \fbox{\includegraphics[width=0.5\textwidth]{assets/pics/fig_erd_payslip.png}}
     \caption{Diagram ERD untuk modul \textit{Payslip}}
     \label{fig:erd_payslip}
 \end{figure}
-Gambar \ref{fig:erd_payslip} menunjukkan struktur basis data untuk modul \textit{Payslip}.
+
 
 \subsubsection{\textit{Payslip} API \textit{Endpoints}}
 Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Payslip}:
 \begin{table}
+    \caption{Daftar \textit{endpoints} API untuk modul \textit{Payslip}}
+    \label{tab:payslip_api_endpoints}
     \centering
     \begin{tabular}{|p{25mm}|c|p{50mm}|p{30mm}|}
         \hline
@@ -620,22 +621,22 @@ Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul
         Get User Payslip Detail by ID & GET & /payslip/user/:id & Mengambil detail slip gaji \textit{user} berdasarkan ID \\
         \hline
     \end{tabular}
-    \caption{Daftar \textit{endpoints} API untuk modul \textit{Payslip}}
-    \label{tab:payslip_api_endpoints}
 \end{table}
 
 Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Payslip} seperti pada Tabel \ref{tab:payslip_api_endpoints}. Setiap \textit{endpoint} memiliki fungsi spesifik dalam mengelola slip gaji pegawai, mulai dari pengambilan data slip gaji, hingga penyimpanan detail slip gaji. Selanjutnya, akan dijelaskan alur sistem untuk \textit{endpoints} dalam pada modul ini.
 
 \paragraph*{\textit{Get Payslip Detail}}
-Berikut merupakan \textit{flowchart} API \textit{Get Payslip Detail}.
+\textit{Get Payslip Detail} adalah \textit{endpoint} API yang berfungsi untuk mengambil detail slip gaji (\textit{Payslip Detail}) berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan. API ini digunakan di sisi \textit{frontend} untuk menampilkan informasi rinci mengenai slip gaji tertentu dalam page \textit{Payslip Detail}.
+
+Gambar \ref{fig:flowchart_get_payslip_detail} merupakan \textit{flowchart} API \textit{Get Payslip Detail}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payslip management} untuk mengakses data slip gaji. Jika pengguna tidak ada \textit{permission payslip management}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data slip gaji berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters}. Jika data slip gaji tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Setelah itu, sistem mengambil data \textit{payslip\_details} yang berelasi dengan \textit{payslip} tersebut. Jika data \textit{payslip\_details} tidak ditemukan, maka sistem akan membuat data \textit{payslip\_details} baru berdasarkan \textit{contract\_id} dan \textit{payslip\_date\_id} yang diberikan. Data akan diambil dari \textit{contract items} untuk komponen gaji yang ada pada kontrak tersebut, dan juga dari \textit{daily\_penalty\_logs} untuk potongan denda harian yang terjadi pada periode slip gaji tersebut. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail slip gaji yang diminta.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_flowchart_get_payslip_detail.jpg}}
+    \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_flowchart_get_payslip_detail.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Get Payslip Detail}}
     \label{fig:flowchart_get_payslip_detail}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get Payslip Detail}.
+Pada gambar \ref{fig:request_get_payslip_detail} menunjukkan contoh \textit{request} untuk API \textit{Get Payslip Detail} yang dikirimkan ke \textit{endpoint} \texttt{/payslip/date/{payslip\_date\_id}/contract/{contract\_id}} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{path parameters}, \texttt{payslip\_date\_id} dan \texttt{contract\_id}, untuk menentukan slip gaji yang ingin diambil detailnya.
 
 \begin{figure}[H]
     \centering
@@ -644,6 +645,8 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_get_payslip_detail}
 \end{figure}
 
+Pada gambar \ref{fig:response_get_payslip_detail} menunjukkan contoh \textit{response} untuk API \textit{Get Payslip Detail} yang diterima dari \textit{server}, berisi informasi rinci mengenai slip gaji tertentu, termasuk rincian komponen gaji, potongan, tunjangan, serta total gaji yang diterima.
+
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_response_get_payslip_detail.png}}
@@ -651,11 +654,13 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_get_payslip_detail}
 \end{figure}
 
-Gambar \ref{fig:flowchart_get_payslip_detail} menunjukkan \textit{flowchart} alur sistem API \textit{Get Payslip Detail} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/date/{payslip\_date\_id}/contract/{contract\_id}} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_payslip_detail}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail slip gaji (\textit{payslip\_details}) berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters}. Setelah didapatkan data \textit{payslip}, sistem juga akan mengambil data \textit{payslip\_details} yang berelasi dengan \textit{payslip} tersebut. Jika data \textit{payslip\_details} tidak ditemukan, maka sistem akan membuat data \textit{payslip\_details} baru berdasarkan \textit{contract\_id} dan \textit{payslip\_date\_id} yang diberikan. Data akan diambil dari \textit{contract items} untuk komponen gaji yang ada pada kontrak tersebut, dan juga dari \textit{daily\_penalty\_logs} untuk potongan denda harian yang terjadi pada periode slip gaji tersebut.Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail slip gaji yang diminta seperti pada Gambar \ref{fig:response_get_payslip_detail}.
+% Gambar \ref{fig:flowchart_get_payslip_detail} menunjukkan \textit{flowchart} alur sistem API \textit{Get Payslip Detail} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/date/{payslip\_date\_id}/contract/{contract\_id}} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_payslip_detail}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail slip gaji (\textit{payslip\_details}) berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters}. Setelah didapatkan data \textit{payslip}, sistem juga akan mengambil data \textit{payslip\_details} yang berelasi dengan \textit{payslip} tersebut. Jika data \textit{payslip\_details} tidak ditemukan, maka sistem akan membuat data \textit{payslip\_details} baru berdasarkan \textit{contract\_id} dan \textit{payslip\_date\_id} yang diberikan. Data akan diambil dari \textit{contract items} untuk komponen gaji yang ada pada kontrak tersebut, dan juga dari \textit{daily\_penalty\_logs} untuk potongan denda harian yang terjadi pada periode slip gaji tersebut.Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail slip gaji yang diminta seperti pada Gambar \ref{fig:response_get_payslip_detail}.
 
 
-\paragraph*{\textit{Save Payslip Detail}}   
-Berikut merupakan \textit{flowchart} API \textit{Save Payslip Detail}.
+\paragraph*{\textit{Save Payslip Detail}}
+\textit{Save Payslip Detail} adalah \textit{endpoint} API yang berfungsi untuk menyimpan atau memperbarui detail slip gaji (\textit{Payslip Detail}) berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan. API ini digunakan di sisi \textit{frontend} untuk menyimpan perubahan atau pembaruan pada detail slip gaji dalam page \textit{Payslip Detail}.
+
+Gambar \ref{fig:flowchart_save_payslip_detail} merupakan \textit{flowchart} API \textit{Save Payslip Detail}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payslip} untuk memperbarui detail slip gaji. Jika pengguna tidak ada \textit{permission payslip}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem memeriksa apakah \textit{request body} valid sesuai dengan ketentuan. Jika \textit{request body} tidak valid, sistem akan mengembalikan \textit{error} 422. Jika valid, sistem akan memeriksa apakah \textit{payslip} yang dicari itu ada pada sistem. Jika tidak ada, sistem akan mengembalikan \textit{error} 404. Setelah itu, sistem akan memeriksa kembali status dari \textit{payslip} yang dicari, apakah status \textit{payslip} tersebut merupakan \textit{Submitted}. Bila iya, sistem akan mengembalikan error 400. Bila tidak, sistem memperbarui data detail slip gaji berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters} dengan data yang diberikan dalam \textit{request body}. Setelah data detail slip gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai detail slip gaji yang telah diperbarui.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_flowchart_save_payslip_detail.jpg}}
@@ -663,7 +668,7 @@ Berikut merupakan \textit{flowchart} API \textit{Save Payslip Detail}.
     \label{fig:flowchart_save_payslip_detail}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Save Payslip Detail}.
+Pada gambar \ref{fig:request_save_payslip_detail} menunjukkan contoh \textit{request} untuk API \textit{Save Payslip Detail} yang dikirimkan ke \textit{endpoint} \texttt{/payslip/date/{payslip\_date\_id}/contract/{contract\_id}} menggunakan metode HTTP \textit{PATCH} dengan menyertakan \textit{path parameters}, \texttt{payslip\_date\_id} dan \texttt{contract\_id}, untuk menentukan slip gaji yang ingin diperbarui serta \textit{request body} yang berisi data detail slip gaji yang akan diperbarui.
 
 \begin{figure}[H]
     \centering
@@ -672,6 +677,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_save_payslip_detail}
 \end{figure}
 
+Pada gambar \ref{fig:response_save_payslip_detail_1} menunjukkan contoh \textit{response} untuk API \textit{Save Payslip Detail} yang diterima dari \textit{server}, berisi informasi mengenai detail slip gaji yang telah diperbarui, termasuk rincian komponen gaji, potongan, tunjangan, serta total gaji yang diterima.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_response_save_payslip_detail_1.png}}
@@ -679,17 +685,20 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_save_payslip_detail_1}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_save_payslip_detail_2.png}}
-    \caption{Contoh \textit{response} API \textit{Save Payslip Detail}} (Lanjutan)
-    \label{fig:response_save_payslip_detail_2}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_save_payslip_detail_2.png}}
+%     \caption{Contoh \textit{response} API \textit{Save Payslip Detail}} (Lanjutan)
+%     \label{fig:response_save_payslip_detail_2}
+% \end{figure}
 
-Gambar \ref{fig:flowchart_save_payslip_detail} menunjukkan \textit{flowchart} alur sistem API \textit{Save Payslip Detail} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/date/{payslip\_date\_id}/contract/{contract\_id}} menggunakan metode HTTP \textit{PATCH} seperti pada Gambar \ref{fig:request_save_payslip_detail}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, serta memperbarui data detail slip gaji berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters} dengan data yang diberikan dalam \textit{request body}. Di dalam \textit{request body}, pengguna dapat mengirimkan beberapa data detail slip gaji yang ingin diperbarui, seperti tunjangan, potongan, dan lain-lain. Pengguna juga dapat menambahkan beberapa data detail slip gaji baru yang belum ada pada slip gaji tersebut dengan deskripsi dan nominal yang diinginkan. Setelah data detail slip gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai detail slip gaji yang telah diperbarui seperti pada Gambar \ref{fig:response_save_payslip_detail_1} dan \ref{fig:response_save_payslip_detail_2}.
+% Gambar \ref{fig:flowchart_save_payslip_detail} menunjukkan \textit{flowchart} alur sistem API \textit{Save Payslip Detail} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/date/{payslip\_date\_id}/contract/{contract\_id}} menggunakan metode HTTP \textit{PATCH} seperti pada Gambar \ref{fig:request_save_payslip_detail}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, serta memperbarui data detail slip gaji berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters} dengan data yang diberikan dalam \textit{request body}. Di dalam \textit{request body}, pengguna dapat mengirimkan beberapa data detail slip gaji yang ingin diperbarui, seperti tunjangan, potongan, dan lain-lain. Pengguna juga dapat menambahkan beberapa data detail slip gaji baru yang belum ada pada slip gaji tersebut dengan deskripsi dan nominal yang diinginkan. Setelah data detail slip gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai detail slip gaji yang telah diperbarui seperti pada Gambar \ref{fig:response_save_payslip_detail_1} dan \ref{fig:response_save_payslip_detail_2}.
 
 \paragraph*{\textit{Get User Payslips List}}
-Berikut merupakan \textit{flowchart} API \textit{Get User Payslips List}.
+
+\textit{Get User Payslips List} adalah \textit{endpoint} API yang berfungsi untuk mengambil semua slip gaji (\textit{Payslips}) milik pengguna yang sedang melakukan autentikasi. API ini digunakan di sisi \textit{frontend} untuk menampilkan daftar slip gaji milik pengguna dalam page \textit{Payslips}.
+
+Gambar \ref{fig:flowchart_get_user_payslips_list} merupakan \textit{flowchart} API \textit{Get User Payslips List}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payslip} untuk mengakses data slip gaji. Jika pengguna tidak ada \textit{permission payslip}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data semua slip gaji milik pengguna yang sedang melakukan autentikasi. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar slip gaji milik pengguna.
 
 \begin{figure}[H]
     \centering
@@ -698,7 +707,7 @@ Berikut merupakan \textit{flowchart} API \textit{Get User Payslips List}.
     \label{fig:flowchart_get_user_payslips_list}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get User Payslips List}.
+Pada gambar \ref{fig:request_get_user_payslips_list} menunjukkan contoh \textit{request} untuk API \textit{Get User Payslips List} yang dikirimkan ke \textit{endpoint} \texttt{/payslips/user} menggunakan metode HTTP \textit{GET} dengan menyertakan beberapa \textit{query parameters} untuk kebutuhan \textit{pagination}, seperti \texttt{page} dan \texttt{row}.
 
 \begin{figure}[H]
     \centering
@@ -707,6 +716,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_get_user_payslips_list}
 \end{figure}
 
+Pada gambar \ref{fig:response_get_user_payslips_list} menunjukkan contoh \textit{response} untuk API \textit{Get User Payslips List} yang diterima dari \textit{server}, berisi daftar slip gaji milik pengguna yang sedang melakukan autentikasi, termasuk informasi seperti \textit{payslip ID}, tanggal slip gaji, \textit{job title}, dan \textit{employment status}.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_user_payslips_list.png}}
@@ -714,19 +724,20 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_get_user_payslips_list}
 \end{figure}
 
-Gambar \ref{fig:flowchart_get_user_payslips_list} menunjukkan \textit{flowchart} alur sistem API \textit{Get User Payslips List} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslips/user} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_payslips_list}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua slip gaji milik pengguna. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar slip gaji milik pengguna seperti pada Gambar \ref{fig:response_get_user_payslips_list}.
+% Gambar \ref{fig:flowchart_get_user_payslips_list} menunjukkan \textit{flowchart} alur sistem API \textit{Get User Payslips List} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslips/user} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_payslips_list}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua slip gaji milik pengguna. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar slip gaji milik pengguna seperti pada Gambar \ref{fig:response_get_user_payslips_list}.
 
 \paragraph*{\textit{Get User Payslip Detail by ID}}
+\textit{Get User Payslip Detail by ID} adalah \textit{endpoint} API yang berfungsi untuk mengambil detail slip gaji (\textit{Payslip Detail}) milik pengguna berdasarkan \textit{ID} slip gaji yang diberikan. API ini digunakan di sisi \textit{frontend} untuk menampilkan informasi rinci mengenai slip gaji tertentu milik pengguna dalam page \textit{Payslip Detail}.
 
-Berikut merupakan \textit{flowchart} API \textit{Get User Payslip Detail by ID}.
+Gambar \ref{fig:flowchart_get_user_payslip_detail_by_id} merupakan \textit{flowchart} API \textit{Get User Payslip Detail by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payslip} untuk mengakses data slip gaji. Jika pengguna tidak ada \textit{permission payslip}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data slip gaji milik pengguna berdasarkan \textit{ID} slip gaji yang diberikan dari \textit{path parameters}. Jika data slip gaji tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Setelah itu, sistem mengambil data \textit{payslip\_details} yang berelasi dengan \textit{payslip} tersebut. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail slip gaji yang diminta.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_get_user_payslip_detail_by_id.jpg}}
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_get_user_payslip_detail_by_id.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Get User Payslip Detail by ID}}
     \label{fig:flowchart_get_user_payslip_detail_by_id}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get User Payslip Detail by ID}.
+Pada gambar \ref{fig:request_get_user_payslip_detail_by_id} menunjukkan contoh \textit{request} untuk API \textit{Get User Payslip Detail by ID} yang dikirimkan ke \textit{endpoint} \texttt{/payslip/user/:id} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{path parameters}, \texttt{id}, untuk menentukan slip gaji yang ingin diambil detailnya.
 
 \begin{figure}[H]
     \centering
@@ -735,6 +746,8 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_get_user_payslip_detail_by_id}
 \end{figure}
 
+Pada gambar \ref{fig:response_get_user_payslip_detail_by_id} menunjukkan contoh \textit{response} untuk API \textit{Get User Payslip Detail by ID} yang diterima dari \textit{server}, berisi informasi rinci mengenai slip gaji tertentu milik pengguna, termasuk rincian komponen gaji, potongan, tunjangan, serta total gaji yang diterima.
+
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_response_get_user_payslip_detail_by_id.png}}
@@ -742,7 +755,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_get_user_payslip_detail_by_id}
 \end{figure}
 
-Gambar \ref{fig:flowchart_get_user_payslip_detail_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get User Payslip Detail by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/user/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_payslip_detail_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail slip gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail slip gaji yang diminta seperti pada Gambar \ref{fig:response_get_user_payslip_detail_by_id}.
+% Gambar \ref{fig:flowchart_get_user_payslip_detail_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get User Payslip Detail by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payslip/user/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_payslip_detail_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail slip gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail slip gaji yang diminta seperti pada Gambar \ref{fig:response_get_user_payslip_detail_by_id}.
 
 
 
