@@ -349,7 +349,7 @@ Pada gambar \ref{fig:response_terminate_contract_by_id} merupakan contoh \textit
 
 \begin{figure}
     \centering
-    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_response_terminate_contract_by_id.png}}
+    \fbox{\includegraphics[height=0.2\textwidth]{assets/pics/fig_response_terminate_contract_by_id.png}}
     \caption{Contoh \textit{response} API \textit{Terminate Contract by ID}}
     \label{fig:response_terminate_contract_by_id}
 \end{figure}
@@ -387,7 +387,7 @@ Pada gambar \ref{fig:response_delete_contract_by_id} merupakan contoh \textit{re
 
 \begin{figure}
     \centering
-    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_response_delete_contract_by_id.png}}
+    \fbox{\includegraphics[height=0.2\textheight]{assets/pics/fig_response_delete_contract_by_id.png}}
     \caption{Contoh \textit{response} API \textit{Delete Contract by ID}}
     \label{fig:response_delete_contract_by_id}
 \end{figure}
@@ -442,7 +442,7 @@ Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk mo
 Berikut merupakan \textit{flowchart} API \textit{Get All Payroll Item}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payroll item} untuk mengakses data komponen gaji. Jika pengguna tidak ada \textit{permission payroll item}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil semua data komponen gaji dari basis data. Data komponen gaji yang diambil kemudian dikemas dalam format JSON dan dikirimkan kembali sebagai respons kepada pengguna.
 \begin{figure}
     \centering
-    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_flowchart_get_all_payroll_items.jpg}}
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_get_all_payroll_items.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Get All Payroll Item}}
     \label{fig:flowchart_get_all_payroll_item}
 \end{figure}
@@ -471,7 +471,7 @@ Pada gambar \ref{fig:response_get_all_payroll_item} menunjukkan contoh \textit{r
 Gambar \ref{fig:flowchart_get_payroll_item_by_id} merupakan \textit{flowchart} API \textit{Get Payroll Item by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payroll item} untuk mengakses data komponen gaji. Jika pengguna tidak ada \textit{permission payroll item}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data komponen gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{payroll\_item\_id}. Data komponen gaji yang diambil kemudian dikemas dalam format JSON dan dikirimkan kembali sebagai respons kepada pengguna.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_get_payroll_item_by_id.jpg}}
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_get_payroll_item_by_id.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Get Payroll Item by ID}}
     \label{fig:flowchart_get_payroll_item_by_id}
 \end{figure}
@@ -480,7 +480,7 @@ Pada gambar \ref{fig:request_get_payroll_item_by_id} menunjukkan contoh \textit{
 
 \begin{figure}
     \centering
-    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_payroll_item_by_id.png}}
+    \fbox{\includegraphics[width=1\textwidth]{assets/pics/fig_request_get_payroll_item_by_id.png}}
     \caption{Contoh \textit{request} API \textit{Get Payroll Item by ID}}
     \label{fig:request_get_payroll_item_by_id}
 \end{figure}
@@ -501,7 +501,7 @@ Gambar \ref{fig:flowchart_create_payroll_item} merupakan \textit{flowchart} API 
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_create_payroll_items.jpg}}
+    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_create_payroll_items.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Create Payroll Item}}
     \label{fig:flowchart_create_payroll_item}
 \end{figure}
@@ -531,7 +531,7 @@ Pada gambar \ref{fig:response_create_payroll_item} menunjukkan contoh \textit{re
 Gambar \ref{fig:flowchart_update_payroll_item} merupakan \textit{flowchart} API \textit{Update Payroll Item}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payroll item} untuk memperbarui komponen gaji. Jika pengguna tidak ada \textit{permission payroll item}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem memeriksa apakah \textit{request body} valid sesuai dengan ketentuan. Jika \textit{request body} tidak valid, sistem akan mengembalikan \textit{error} 400. Jika valid, sistem mencari data komponen gaji dengan menggunakan \textit{ID} yang diberikan dari \textit{Path Parameter} serta memperbarui data komponen gaji data tersebut dengan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah diperbarui. 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_update_payroll_item_by_id.jpg}}
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_update_payroll_item_by_id.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Update Payroll Item}}
     \label{fig:flowchart_update_payroll_item}
 \end{figure}
@@ -562,7 +562,7 @@ Gambar \ref{fig:flowchart_delete_payroll_item} merupakan \textit{flowchart} API 
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_delete_payroll_item.jpg}}
+    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_flowchart_delete_payroll_item.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Delete Payroll Item}}
     \label{fig:flowchart_delete_payroll_item}
 \end{figure}
@@ -576,10 +576,10 @@ Pada gambar \ref{fig:request_delete_payroll_item} menunjukkan contoh \textit{req
     \label{fig:request_delete_payroll_item}
 \end{figure}
 
-Pada gambar \ref{fig:response_delete_payroll_item} menunjukkan contoh \textit{response} untuk API \textit{Delete Payroll Item} yang diterima dari \textit{server}, berisi informasi mengenai keberhasilan penghapusan komponen gaji dengan menampilkan \textit{payroll item ID} dari komponen gaji yang telah dihapus.
+Pada gambar \ref{fig:response_delete_payroll_item} menunjukkan contoh \textit{response} untuk API \textit{Delete Payroll Item} yang diterima dari \textit{server}, berisi \textit{status code} 200 dengan pesan sukses untuk mengindikasikan bahwa penghapusan komponen gaji berhasil dilakukan.
 \begin{figure}
     \centering
-    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_delete_payroll_item.png}}
+    \fbox{\includegraphics[height=0.2\textheight]{assets/pics/fig_response_delete_payroll_item.png}}
     \caption{Contoh \textit{response} API \textit{Delete Payroll Item}}
     \label{fig:response_delete_payroll_item}
 \end{figure}
@@ -631,7 +631,7 @@ Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk mo
 Gambar \ref{fig:flowchart_get_payslip_detail} merupakan \textit{flowchart} API \textit{Get Payslip Detail}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payslip management} untuk mengakses data slip gaji. Jika pengguna tidak ada \textit{permission payslip management}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data slip gaji berdasarkan \textit{payslip\_date\_id} dan \textit{contract\_id} yang diberikan dari \textit{path parameters}. Jika data slip gaji tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Setelah itu, sistem mengambil data \textit{payslip\_details} yang berelasi dengan \textit{payslip} tersebut. Jika data \textit{payslip\_details} tidak ditemukan, maka sistem akan membuat data \textit{payslip\_details} baru berdasarkan \textit{contract\_id} dan \textit{payslip\_date\_id} yang diberikan. Data akan diambil dari \textit{contract items} untuk komponen gaji yang ada pada kontrak tersebut, dan juga dari \textit{daily\_penalty\_logs} untuk potongan denda harian yang terjadi pada periode slip gaji tersebut. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail slip gaji yang diminta.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_flowchart_get_payslip_detail.jpg}}
+    \fbox{\includegraphics[height=0.65\textheight]{assets/pics/fig_flowchart_get_payslip_detail.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Get Payslip Detail}}
     \label{fig:flowchart_get_payslip_detail}
 \end{figure}
@@ -640,7 +640,7 @@ Pada gambar \ref{fig:request_get_payslip_detail} menunjukkan contoh \textit{requ
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.3\textheight]{assets/pics/fig_request_get_payslip_detail.png}}
+    \fbox{\includegraphics[width=1\textwidth]{assets/pics/fig_request_get_payslip_detail.png}}
     \caption{Contoh \textit{request} API \textit{Get Payslip Detail}}
     \label{fig:request_get_payslip_detail}
 \end{figure}
@@ -680,7 +680,7 @@ Pada gambar \ref{fig:request_save_payslip_detail} menunjukkan contoh \textit{req
 Pada gambar \ref{fig:response_save_payslip_detail_1} menunjukkan contoh \textit{response} untuk API \textit{Save Payslip Detail} yang diterima dari \textit{server}, berisi informasi mengenai detail slip gaji yang telah diperbarui, termasuk rincian komponen gaji, potongan, tunjangan, serta total gaji yang diterima.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_response_save_payslip_detail_1.png}}
+    \fbox{\includegraphics[height=0.8\textheight]{assets/pics/fig_response_save_payslip_detail_1.png}}
     \caption{Contoh \textit{response} API \textit{Save Payslip Detail}}
     \label{fig:response_save_payslip_detail_1}
 \end{figure}
@@ -702,7 +702,7 @@ Gambar \ref{fig:flowchart_get_user_payslips_list} merupakan \textit{flowchart} A
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.8\textheight]{assets/pics/fig_flowchart_get_user_payslips_list.jpg}}
+    \fbox{\includegraphics[height=0.55\textheight]{assets/pics/fig_flowchart_get_user_payslips_list.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Get User Payslips List}}
     \label{fig:flowchart_get_user_payslips_list}
 \end{figure}
@@ -711,7 +711,7 @@ Pada gambar \ref{fig:request_get_user_payslips_list} menunjukkan contoh \textit{
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_request_get_user_payslips_list.png}}
+    \fbox{\includegraphics[height=0.25\textheight]{assets/pics/fig_request_get_user_payslips_list.png}}
     \caption{Contoh \textit{request} API \textit{Get User Payslips List}}
     \label{fig:request_get_user_payslips_list}
 \end{figure}
@@ -719,7 +719,7 @@ Pada gambar \ref{fig:request_get_user_payslips_list} menunjukkan contoh \textit{
 Pada gambar \ref{fig:response_get_user_payslips_list} menunjukkan contoh \textit{response} untuk API \textit{Get User Payslips List} yang diterima dari \textit{server}, berisi daftar slip gaji milik pengguna yang sedang melakukan autentikasi, termasuk informasi seperti \textit{payslip ID}, tanggal slip gaji, \textit{job title}, dan \textit{employment status}.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_user_payslips_list.png}}
+    \fbox{\includegraphics[height=0.35\textheight]{assets/pics/fig_response_get_user_payslips_list.png}}
     \caption{Contoh \textit{response} API \textit{Get User Payslips List}}
     \label{fig:response_get_user_payslips_list}
 \end{figure}
@@ -732,7 +732,7 @@ Pada gambar \ref{fig:response_get_user_payslips_list} menunjukkan contoh \textit
 Gambar \ref{fig:flowchart_get_user_payslip_detail_by_id} merupakan \textit{flowchart} API \textit{Get User Payslip Detail by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payslip} untuk mengakses data slip gaji. Jika pengguna tidak ada \textit{permission payslip}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data slip gaji milik pengguna berdasarkan \textit{ID} slip gaji yang diberikan dari \textit{path parameters}. Jika data slip gaji tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Setelah itu, sistem mengambil data \textit{payslip\_details} yang berelasi dengan \textit{payslip} tersebut. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail slip gaji yang diminta.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_get_user_payslip_detail_by_id.jpg}}
+    \fbox{\includegraphics[height=0.45\textheight]{assets/pics/fig_flowchart_get_user_payslip_detail_by_id.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Get User Payslip Detail by ID}}
     \label{fig:flowchart_get_user_payslip_detail_by_id}
 \end{figure}
