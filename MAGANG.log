@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.12)  1 JAN 2026 17:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.12)  13 JAN 2026 13:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1238,20 +1238,6 @@ Package pdftex.def Info: assets/pics/logo_UMN_clean.png  used on input line 18.
 (pdftex.def)             Requested size: 142.26378pt x 142.26163pt.
 
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22         \MakeUppercase{ \large \Type} \\ \\
-                                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-
 <assets/pics/fig_background_UMN.jpg, id=166, 654.94687pt x 1204.5pt>
 File: assets/pics/fig_background_UMN.jpg Graphic file (type jpg)
 <use assets/pics/fig_background_UMN.jpg>
@@ -1264,16 +1250,26 @@ Underfull \hbox (badness 2376) in paragraph at lines 28--30
 ab Uni-ver-si-tas
  []
 
+<assets/pics/TTD/ttd_jose.png, id=172, 240.9pt x 240.9pt>
+File: assets/pics/TTD/ttd_jose.png Graphic file (type png)
+<use assets/pics/TTD/ttd_jose.png>
+Package pdftex.def Info: assets/pics/TTD/ttd_jose.png  used on input line 38.
+(pdftex.def)             Requested size: 71.13104pt x 71.13188pt.
 
 
 File: assets/pics/fig_background_UMN.jpg Graphic file (type jpg)
 <use assets/pics/fig_background_UMN.jpg>
 Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
- 42.
+ 44.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [2
 
-]) (./src/1.Awal/02b-Penggunaan AI.tex
+ <./assets/pics/TTD/ttd_jose.png>]) (./src/1.Awal/02b-Penggunaan AI.tex
+Underfull \hbox (badness 1622) in paragraph at lines 12--12
+\OT1/ptm/m/n/12 Pengembangan Back-end Modul Pay-roll Sis-tem In-for-masi
+ []
+
+
 Overfull \hbox (9.42253pt too wide) in paragraph at lines 7--15
 [] 
  []
@@ -1290,7 +1286,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 m
  []
 
-<assets/pics/TTD/ttd_jose.png, id=176, 240.9pt x 240.9pt>
 File: assets/pics/TTD/ttd_jose.png Graphic file (type png)
 <use assets/pics/TTD/ttd_jose.png>
 Package pdftex.def Info: assets/pics/TTD/ttd_jose.png  used on input line 51.
@@ -1305,7 +1300,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [3
 
 
- <./assets/pics/TTD/ttd_jose.png>]) (./src/1.Awal/03c-Keabsahan.tex
+]) (./src/1.Awal/03c-Keabsahan.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--23
 \OT1/ptm/m/n/12 Start Space Cowork-ing Space Gad-ing
  []
@@ -1321,17 +1316,26 @@ Underfull \hbox (badness 1205) in paragraph at lines 33--34
 mana
  []
 
+<assets/pics/TTD/ttd_spv.jpg, id=186, 573.64313pt x 353.06906pt>
+File: assets/pics/TTD/ttd_spv.jpg Graphic file (type jpg)
+<use assets/pics/TTD/ttd_spv.jpg>
+Package pdftex.def Info: assets/pics/TTD/ttd_spv.jpg  used on input line 65.
+(pdftex.def)             Requested size: 92.45pt x 56.9055pt.
+File: assets/pics/TTD/ttd_jose.png Graphic file (type png)
+<use assets/pics/TTD/ttd_jose.png>
+Package pdftex.def Info: assets/pics/TTD/ttd_jose.png  used on input line 81.
+(pdftex.def)             Requested size: 56.90556pt x 56.9055pt.
 
 
 File: assets/pics/fig_background_UMN.jpg Graphic file (type jpg)
 <use assets/pics/fig_background_UMN.jpg>
 Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
- 92.
+ 94.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [4
 
 
-]) (./src/1.Awal/04-Publikasi.tex
+ <./assets/pics/TTD/ttd_spv.jpg>]) (./src/1.Awal/04-Publikasi.tex
 Underfull \hbox (badness 1708) in paragraph at lines 27--28
 []\OT1/ptm/m/n/12 Saya tidak berse-dia karena dalam proses pen-ga-juan un-tuk d
 iter-bitkan
@@ -1662,7 +1666,7 @@ BAB 2.
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\uppercase' on input line 2.
 
-<assets/pics/fig_logo_perusahaan.png, id=652, 845.1575pt x 845.1575pt>
+<assets/pics/fig_logo_perusahaan.png, id=653, 845.1575pt x 845.1575pt>
 File: assets/pics/fig_logo_perusahaan.png Graphic file (type png)
 <use assets/pics/fig_logo_perusahaan.png>
 Package pdftex.def Info: assets/pics/fig_logo_perusahaan.png  used on input lin
@@ -1695,7 +1699,7 @@ Underfull \hbox (badness 6001) in paragraph at lines 34--35
 In-done-sia
  []
 
-<assets/pics/fig_struktur_organisasi_perusahaan.jpg, id=661, 1690.315pt x 1144.
+<assets/pics/fig_struktur_organisasi_perusahaan.jpg, id=662, 1690.315pt x 1144.
 275pt>
 File: assets/pics/fig_struktur_organisasi_perusahaan.jpg Graphic file (type jpg
 )
@@ -1735,7 +1739,7 @@ Underfull \hbox (badness 1472) in paragraph at lines 13--14
 e En-gi-neer In-tern \OT1/ptm/m/n/12 dalam \OT1/ptm/m/it/12 Soft-ware
  []
 
-<assets/pics/fig_struktur_tim_pengembang.jpg, id=673, 1690.315pt x 839.135pt>
+<assets/pics/fig_struktur_tim_pengembang.jpg, id=674, 1690.315pt x 839.135pt>
 File: assets/pics/fig_struktur_tim_pengembang.jpg Graphic file (type jpg)
 <use assets/pics/fig_struktur_tim_pengembang.jpg>
 Package pdftex.def Info: assets/pics/fig_struktur_tim_pengembang.jpg  used on i
@@ -1942,7 +1946,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  156.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [15]
-<assets/pics/fig_erd_contract.png, id=711, 1379.1525pt x 1167.36125pt>
+<assets/pics/fig_erd_contract.png, id=712, 1379.1525pt x 1167.36125pt>
 File: assets/pics/fig_erd_contract.png Graphic file (type png)
 <use assets/pics/fig_erd_contract.png>
 Package pdftex.def Info: assets/pics/fig_erd_contract.png  used on input line 1
@@ -2037,7 +2041,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  217.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [18]
-<assets/pics/fig_flowchart_get_all_user_contracts.jpg, id=730, 891.33pt x 1129.
+<assets/pics/fig_flowchart_get_all_user_contracts.jpg, id=731, 891.33pt x 1129.
 21875pt>
 File: assets/pics/fig_flowchart_get_all_user_contracts.jpg Graphic file (type j
 pg)
@@ -2045,7 +2049,7 @@ pg)
 Package pdftex.def Info: assets/pics/fig_flowchart_get_all_user_contracts.jpg  
 used on input line 223.
 (pdftex.def)             Requested size: 356.8657pt x 452.11232pt.
-<assets/pics/fig_request_get_all_user_contracts.png, id=731, 1054.94125pt x 745
+<assets/pics/fig_request_get_all_user_contracts.png, id=732, 1054.94125pt x 745
 .78625pt>
 File: assets/pics/fig_request_get_all_user_contracts.png Graphic file (type png
 )
@@ -2061,7 +2065,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  235.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [19 <./assets/pics/fig_flowchart_get_all_user_contracts.jpg>]
-<assets/pics/fig_response_get_all_user_contracts.png, id=736, 551.05875pt x 751
+<assets/pics/fig_response_get_all_user_contracts.png, id=737, 551.05875pt x 751
 .80875pt>
 File: assets/pics/fig_response_get_all_user_contracts.png Graphic file (type pn
 g)
@@ -2096,7 +2100,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [20 <./assets/pics/fig_request_get_all_user_contracts.png> <./assets/pics/fig_r
 esponse_get_all_user_contracts.png>]
-<assets/pics/fig_flowchart_get_user_contract_detail_by_id.jpg, id=746, 849.1725
+<assets/pics/fig_flowchart_get_user_contract_detail_by_id.jpg, id=747, 849.1725
 pt x 1184.425pt>
 File: assets/pics/fig_flowchart_get_user_contract_detail_by_id.jpg Graphic file
  (type jpg)
@@ -2104,7 +2108,7 @@ File: assets/pics/fig_flowchart_get_user_contract_detail_by_id.jpg Graphic file
 Package pdftex.def Info: assets/pics/fig_flowchart_get_user_contract_detail_by_
 id.jpg  used on input line 250.
 (pdftex.def)             Requested size: 231.52126pt x 322.93878pt.
-<assets/pics/fig_request_get_user_contract_detail_by_id.png, id=747, 1015.795pt
+<assets/pics/fig_request_get_user_contract_detail_by_id.png, id=748, 1015.795pt
  x 501.875pt>
 File: assets/pics/fig_request_get_user_contract_detail_by_id.png Graphic file (
 type png)
@@ -2120,7 +2124,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  262.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [21 <./assets/pics/fig_flowchart_get_user_contract_detail_by_id.jpg>]
-<assets/pics/fig_response_get_user_contract_detail_by_id_1.png, id=753, 887.315
+<assets/pics/fig_response_get_user_contract_detail_by_id_1.png, id=754, 887.315
 pt x 894.34125pt>
 File: assets/pics/fig_response_get_user_contract_detail_by_id_1.png Graphic fil
 e (type png)
@@ -2128,7 +2132,7 @@ e (type png)
 Package pdftex.def Info: assets/pics/fig_response_get_user_contract_detail_by_i
 d_1.png  used on input line 265.
 (pdftex.def)             Requested size: 256.31285pt x 258.34708pt.
-<assets/pics/fig_response_get_user_contract_detail_by_id_2.png, id=754, 690.58p
+<assets/pics/fig_response_get_user_contract_detail_by_id_2.png, id=755, 690.58p
 t x 895.345pt>
 File: assets/pics/fig_response_get_user_contract_detail_by_id_2.png Graphic fil
 e (type png)
@@ -2136,7 +2140,7 @@ e (type png)
 Package pdftex.def Info: assets/pics/fig_response_get_user_contract_detail_by_i
 d_2.png  used on input line 271.
 (pdftex.def)             Requested size: 199.26201pt x 258.34708pt.
-<assets/pics/fig_response_get_user_contract_detail_by_id_3.png, id=755, 481.8pt
+<assets/pics/fig_response_get_user_contract_detail_by_id_3.png, id=756, 481.8pt
  x 474.77374pt>
 File: assets/pics/fig_response_get_user_contract_detail_by_id_3.png Graphic fil
 e (type png)
@@ -2161,7 +2165,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [23 <./assets/pics/fig_response_get_user_contract_detail_by_id_2.png> <./assets
 /pics/fig_response_get_user_contract_detail_by_id_3.png>]
-<assets/pics/fig_flowchart_approve_contract_by_id.jpg, id=774, 707.64375pt x 14
+<assets/pics/fig_flowchart_approve_contract_by_id.jpg, id=775, 707.64375pt x 14
 21.31pt>
 File: assets/pics/fig_flowchart_approve_contract_by_id.jpg Graphic file (type j
 pg)
@@ -2176,7 +2180,7 @@ Underfull \hbox (badness 1533) in paragraph at lines 293--294
 /12 Ap-prove
  []
 
-<assets/pics/fig_request_approve_contract_by_id.png, id=775, 1396.21625pt x 592
+<assets/pics/fig_request_approve_contract_by_id.png, id=776, 1396.21625pt x 592
 .2125pt>
 File: assets/pics/fig_request_approve_contract_by_id.png Graphic file (type png
 )
@@ -2192,7 +2196,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  301.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [24 <./assets/pics/fig_flowchart_approve_contract_by_id.jpg>]
-<assets/pics/fig_response_approve_contract_by_id.png, id=780, 238.8925pt x 114.
+<assets/pics/fig_response_approve_contract_by_id.png, id=781, 238.8925pt x 114.
 4275pt>
 File: assets/pics/fig_response_approve_contract_by_id.png Graphic file (type pn
 g)
@@ -2220,7 +2224,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [25 <./assets/pics/fig_request_approve_contract_by_id.png> <./assets/pics/fig_r
 esponse_approve_contract_by_id.png>]
-<assets/pics/fig_flowchart_terminate_contract_by_id.jpg, id=789, 913.4125pt x 1
+<assets/pics/fig_flowchart_terminate_contract_by_id.jpg, id=790, 913.4125pt x 1
 102.1175pt>
 File: assets/pics/fig_flowchart_terminate_contract_by_id.jpg Graphic file (type
  jpg)
@@ -2228,7 +2232,7 @@ File: assets/pics/fig_flowchart_terminate_contract_by_id.jpg Graphic file (type
 Package pdftex.def Info: assets/pics/fig_flowchart_terminate_contract_by_id.jpg
   used on input line 316.
 (pdftex.def)             Requested size: 374.69667pt x 452.11232pt.
-<assets/pics/fig_request_terminate_contract_by_id.png, id=790, 1111.15125pt x 4
+<assets/pics/fig_request_terminate_contract_by_id.png, id=791, 1111.15125pt x 4
 95.8525pt>
 File: assets/pics/fig_request_terminate_contract_by_id.png Graphic file (type p
 ng)
@@ -2244,7 +2248,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  329.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [26 <./assets/pics/fig_flowchart_terminate_contract_by_id.jpg>]
-<assets/pics/fig_response_terminate_contract_by_id.png, id=795, 233.87375pt x 1
+<assets/pics/fig_response_terminate_contract_by_id.png, id=796, 233.87375pt x 1
 23.46124pt>
 File: assets/pics/fig_response_terminate_contract_by_id.png Graphic file (type 
 png)
@@ -2272,7 +2276,7 @@ Underfull \hbox (badness 1092) in paragraph at lines 343--344
 re-spons (\OT1/ptm/m/it/12 re-sponse\OT1/ptm/m/n/12 )
  []
 
-<assets/pics/fig_flowchart_delete_contract_by_id.jpg, id=805, 854.19125pt x 117
+<assets/pics/fig_flowchart_delete_contract_by_id.jpg, id=806, 854.19125pt x 117
 7.39874pt>
 File: assets/pics/fig_flowchart_delete_contract_by_id.jpg Graphic file (type jp
 g)
@@ -2280,7 +2284,7 @@ g)
 Package pdftex.def Info: assets/pics/fig_flowchart_delete_contract_by_id.jpg  u
 sed on input line 349.
 (pdftex.def)             Requested size: 234.28421pt x 322.93878pt.
-<assets/pics/fig_request_delete_contract_by_id.png, id=806, 1109.14375pt x 506.
+<assets/pics/fig_request_delete_contract_by_id.png, id=807, 1109.14375pt x 506.
 89375pt>
 File: assets/pics/fig_request_delete_contract_by_id.png Graphic file (type png)
 
@@ -2296,7 +2300,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  362.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [28 <./assets/pics/fig_flowchart_delete_contract_by_id.jpg>]
-<assets/pics/fig_response_delete_contract_by_id.png, id=812, 221.82875pt x 116.
+<assets/pics/fig_response_delete_contract_by_id.png, id=813, 221.82875pt x 116.
 435pt>
 File: assets/pics/fig_response_delete_contract_by_id.png Graphic file (type png
 )
@@ -2326,7 +2330,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [29 <./assets/pics/fig_request_delete_contract_by_id.png> <./assets/pics/fig_re
 sponse_delete_contract_by_id.png>]
-<assets/pics/fig_erd_payroll_item.png, id=822, 308.15125pt x 313.17pt>
+<assets/pics/fig_erd_payroll_item.png, id=823, 308.15125pt x 313.17pt>
 File: assets/pics/fig_erd_payroll_item.png Graphic file (type png)
 <use assets/pics/fig_erd_payroll_item.png>
 Package pdftex.def Info: assets/pics/fig_erd_payroll_item.png  used on input li
@@ -2390,7 +2394,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  411.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [30 <./assets/pics/fig_erd_payroll_item.png>]
-<assets/pics/fig_flowchart_get_all_payroll_items.jpg, id=833, 851.18pt x 1182.4
+<assets/pics/fig_flowchart_get_all_payroll_items.jpg, id=834, 851.18pt x 1182.4
 175pt>
 File: assets/pics/fig_flowchart_get_all_payroll_items.jpg Graphic file (type jp
 g)
@@ -2406,7 +2410,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  423.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [31]
-<assets/pics/fig_request_get_all_payroll_items.png, id=838, 1081.03876pt x 843.
+<assets/pics/fig_request_get_all_payroll_items.png, id=839, 1081.03876pt x 843.
 15pt>
 File: assets/pics/fig_request_get_all_payroll_items.png Graphic file (type png)
 
@@ -2414,7 +2418,7 @@ File: assets/pics/fig_request_get_all_payroll_items.png Graphic file (type png)
 Package pdftex.def Info: assets/pics/fig_request_get_all_payroll_items.png  use
 d on input line 427.
 (pdftex.def)             Requested size: 331.24216pt x 258.34708pt.
-<assets/pics/fig_response_get_all_payroll_items.png, id=839, 571.13374pt x 763.
+<assets/pics/fig_response_get_all_payroll_items.png, id=840, 571.13374pt x 763.
 85374pt>
 File: assets/pics/fig_response_get_all_payroll_items.png Graphic file (type png
 )
@@ -2438,7 +2442,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  440.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [33 <./assets/pics/fig_response_get_all_payroll_items.png>]
-<assets/pics/fig_flowchart_get_payroll_item_by_id.jpg, id=853, 873.2625pt x 115
+<assets/pics/fig_flowchart_get_payroll_item_by_id.jpg, id=854, 873.2625pt x 115
 2.305pt>
 File: assets/pics/fig_flowchart_get_payroll_item_by_id.jpg Graphic file (type j
 pg)
@@ -2446,7 +2450,7 @@ pg)
 Package pdftex.def Info: assets/pics/fig_flowchart_get_payroll_item_by_id.jpg  
 used on input line 446.
 (pdftex.def)             Requested size: 342.62303pt x 452.11232pt.
-<assets/pics/fig_request_get_payroll_item_by_id.png, id=854, 1158.3275pt x 736.
+<assets/pics/fig_request_get_payroll_item_by_id.png, id=855, 1158.3275pt x 736.
 7525pt>
 File: assets/pics/fig_request_get_payroll_item_by_id.png Graphic file (type png
 )
@@ -2467,7 +2471,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  458.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [34 <./assets/pics/fig_flowchart_get_payroll_item_by_id.jpg>]
-<assets/pics/fig_response_get_payroll_item_by_id.png, id=860, 744.7825pt x 384.
+<assets/pics/fig_response_get_payroll_item_by_id.png, id=861, 744.7825pt x 384.
 43625pt>
 File: assets/pics/fig_response_get_payroll_item_by_id.png Graphic file (type pn
 g)
@@ -2490,7 +2494,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [35 <./assets/pics/fig_request_get_payroll_item_by_id.png> <./assets/pics/fig_r
 esponse_get_payroll_item_by_id.png>]
-<assets/pics/fig_flowchart_create_payroll_items.jpg, id=870, 707.64375pt x 1422
+<assets/pics/fig_flowchart_create_payroll_items.jpg, id=871, 707.64375pt x 1422
 .31375pt>
 File: assets/pics/fig_flowchart_create_payroll_items.jpg Graphic file (type jpg
 )
@@ -2506,14 +2510,14 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  482.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [36 <./assets/pics/fig_flowchart_create_payroll_items.jpg>]
-<assets/pics/fig_request_create_payroll_items.png, id=875, 1132.23pt x 809.0225
+<assets/pics/fig_request_create_payroll_items.png, id=876, 1132.23pt x 809.0225
 pt>
 File: assets/pics/fig_request_create_payroll_items.png Graphic file (type png)
 <use assets/pics/fig_request_create_payroll_items.png>
 Package pdftex.def Info: assets/pics/fig_request_create_payroll_items.png  used
  on input line 485.
 (pdftex.def)             Requested size: 361.56084pt x 258.34708pt.
-<assets/pics/fig_response_create_payroll_items.png, id=876, 866.23625pt x 624.3
+<assets/pics/fig_response_create_payroll_items.png, id=877, 866.23625pt x 624.3
 325pt>
 File: assets/pics/fig_response_create_payroll_items.png Graphic file (type png)
 
@@ -2536,7 +2540,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [37 <./assets/pics/fig_request_create_payroll_items.png> <./assets/pics/fig_res
 ponse_create_payroll_items.png>]
-<assets/pics/fig_flowchart_update_payroll_item_by_id.jpg, id=886, 711.65875pt x
+<assets/pics/fig_flowchart_update_payroll_item_by_id.jpg, id=887, 711.65875pt x
  1414.28375pt>
 File: assets/pics/fig_flowchart_update_payroll_item_by_id.jpg Graphic file (typ
 e jpg)
@@ -2544,7 +2548,7 @@ e jpg)
 Package pdftex.def Info: assets/pics/fig_flowchart_update_payroll_item_by_id.jp
 g  used on input line 504.
 (pdftex.def)             Requested size: 162.49443pt x 322.93878pt.
-<assets/pics/fig_request_update_payroll_item_by_id.png, id=887, 1217.54875pt x 
+<assets/pics/fig_request_update_payroll_item_by_id.png, id=888, 1217.54875pt x 
 828.09375pt>
 File: assets/pics/fig_request_update_payroll_item_by_id.png Graphic file (type 
 png)
@@ -2560,7 +2564,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  517.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [38 <./assets/pics/fig_flowchart_update_payroll_item_by_id.jpg>]
-<assets/pics/fig_response_update_payroll_item_by_id.png, id=892, 757.83125pt x 
+<assets/pics/fig_response_update_payroll_item_by_id.png, id=893, 757.83125pt x 
 352.31625pt>
 File: assets/pics/fig_response_update_payroll_item_by_id.png Graphic file (type
  png)
@@ -2589,7 +2593,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [39 <./assets/pics/fig_request_update_payroll_item_by_id.png> <./assets/pics/fi
 g_response_update_payroll_item_by_id.png>]
-<assets/pics/fig_flowchart_delete_payroll_item.jpg, id=902, 738.76pt x 1362.088
+<assets/pics/fig_flowchart_delete_payroll_item.jpg, id=903, 738.76pt x 1362.088
 75pt>
 File: assets/pics/fig_flowchart_delete_payroll_item.jpg Graphic file (type jpg)
 
@@ -2597,7 +2601,7 @@ File: assets/pics/fig_flowchart_delete_payroll_item.jpg Graphic file (type jpg)
 Package pdftex.def Info: assets/pics/fig_flowchart_delete_payroll_item.jpg  use
 d on input line 533.
 (pdftex.def)             Requested size: 175.15295pt x 322.93878pt.
-<assets/pics/fig_request_delete_payroll_item.png, id=903, 928.46875pt x 678.535
+<assets/pics/fig_request_delete_payroll_item.png, id=904, 928.46875pt x 678.535
 pt>
 File: assets/pics/fig_request_delete_payroll_item.png Graphic file (type png)
 <use assets/pics/fig_request_delete_payroll_item.png>
@@ -2612,7 +2616,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  546.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [40 <./assets/pics/fig_flowchart_delete_payroll_item.jpg>]
-<assets/pics/fig_response_delete_payroll_item.png, id=909, 256.96pt x 128.48pt>
+<assets/pics/fig_response_delete_payroll_item.png, id=910, 256.96pt x 128.48pt>
 
 File: assets/pics/fig_response_delete_payroll_item.png Graphic file (type png)
 <use assets/pics/fig_response_delete_payroll_item.png>
@@ -2640,7 +2644,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [41 <./assets/pics/fig_request_delete_payroll_item.png> <./assets/pics/fig_resp
 onse_delete_payroll_item.png>]
-<assets/pics/fig_erd_payslip.png, id=919, 476.78125pt x 641.39626pt>
+<assets/pics/fig_erd_payslip.png, id=920, 476.78125pt x 641.39626pt>
 File: assets/pics/fig_erd_payslip.png Graphic file (type png)
 <use assets/pics/fig_erd_payslip.png>
 Package pdftex.def Info: assets/pics/fig_erd_payslip.png  used on input line 56
@@ -2704,7 +2708,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  591.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [42 <./assets/pics/fig_erd_payslip.png>]
-<assets/pics/fig_flowchart_get_payslip_detail.jpg, id=929, 774.895pt x 1298.852
+<assets/pics/fig_flowchart_get_payslip_detail.jpg, id=930, 774.895pt x 1298.852
 5pt>
 File: assets/pics/fig_flowchart_get_payslip_detail.jpg Graphic file (type jpg)
 <use assets/pics/fig_flowchart_get_payslip_detail.jpg>
@@ -2719,14 +2723,14 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  603.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [43]
-<assets/pics/fig_request_get_payslip_detail.png, id=934, 1042.89626pt x 741.771
+<assets/pics/fig_request_get_payslip_detail.png, id=935, 1042.89626pt x 741.771
 26pt>
 File: assets/pics/fig_request_get_payslip_detail.png Graphic file (type png)
 <use assets/pics/fig_request_get_payslip_detail.png>
 Package pdftex.def Info: assets/pics/fig_request_get_payslip_detail.png  used o
 n input line 608.
 (pdftex.def)             Requested size: 272.4197pt x 193.76523pt.
-<assets/pics/fig_response_get_payslip_detail.png, id=935, 409.53pt x 710.655pt>
+<assets/pics/fig_response_get_payslip_detail.png, id=936, 409.53pt x 710.655pt>
 
 File: assets/pics/fig_response_get_payslip_detail.png Graphic file (type png)
 <use assets/pics/fig_response_get_payslip_detail.png>
@@ -2773,7 +2777,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  621.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [45 <./assets/pics/fig_response_get_payslip_detail.png>]
-<assets/pics/fig_flowchart_save_payslip_detail.jpg, id=949, 633.36626pt x 1587.
+<assets/pics/fig_flowchart_save_payslip_detail.jpg, id=950, 633.36626pt x 1587.
 9325pt>
 File: assets/pics/fig_flowchart_save_payslip_detail.jpg Graphic file (type jpg)
 
@@ -2796,14 +2800,14 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  633.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [47 <./assets/pics/fig_flowchart_save_payslip_detail.jpg>]
-<assets/pics/fig_request_save_payslip_detail.png, id=959, 664.4825pt x 906.3862
+<assets/pics/fig_request_save_payslip_detail.png, id=960, 664.4825pt x 906.3862
 5pt>
 File: assets/pics/fig_request_save_payslip_detail.png Graphic file (type png)
 <use assets/pics/fig_request_save_payslip_detail.png>
 Package pdftex.def Info: assets/pics/fig_request_save_payslip_detail.png  used 
 on input line 636.
 (pdftex.def)             Requested size: 358.50229pt x 489.01254pt.
-<assets/pics/fig_response_save_payslip_detail_1.png, id=960, 452.69125pt x 863.
+<assets/pics/fig_response_save_payslip_detail_1.png, id=961, 452.69125pt x 863.
 225pt>
 File: assets/pics/fig_response_save_payslip_detail_1.png Graphic file (type png
 )
@@ -2819,7 +2823,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  647.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [48 <./assets/pics/fig_request_save_payslip_detail.png>]
-<assets/pics/fig_response_save_payslip_detail_2.png, id=967, 354.32375pt x 318.
+<assets/pics/fig_response_save_payslip_detail_2.png, id=968, 354.32375pt x 318.
 18875pt>
 File: assets/pics/fig_response_save_payslip_detail_2.png Graphic file (type png
 )
@@ -2863,7 +2867,7 @@ Underfull \hbox (badness 1394) in paragraph at lines 655--656
 t/12 re-quest body \OT1/ptm/m/n/12 terse-but valid sesuai de-ngan
  []
 
-<assets/pics/fig_flowchart_get_user_payslips_list.jpg, id=975, 775.89874pt x 12
+<assets/pics/fig_flowchart_get_user_payslips_list.jpg, id=976, 775.89874pt x 12
 97.84875pt>
 File: assets/pics/fig_flowchart_get_user_payslips_list.jpg Graphic file (type j
 pg)
@@ -2879,7 +2883,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  665.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [50 <./assets/pics/fig_response_save_payslip_detail_2.png>]
-<assets/pics/fig_request_get_user_payslips_list.png, id=981, 1079.03125pt x 624
+<assets/pics/fig_request_get_user_payslips_list.png, id=982, 1079.03125pt x 624
 .3325pt>
 File: assets/pics/fig_request_get_user_payslips_list.png Graphic file (type png
 )
@@ -2895,7 +2899,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  674.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [51 <./assets/pics/fig_flowchart_get_user_payslips_list.jpg>]
-<assets/pics/fig_response_get_user_payslips_list.png, id=986, 508.90125pt x 426
+<assets/pics/fig_response_get_user_payslips_list.png, id=987, 508.90125pt x 426
 .59375pt>
 File: assets/pics/fig_response_get_user_payslips_list.png Graphic file (type pn
 g)
@@ -2912,7 +2916,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [52 <./assets/pics/fig_request_get_user_payslips_list.png> <./assets/pics/fig_r
 esponse_get_user_payslips_list.png>]
-<assets/pics/fig_flowchart_get_user_payslip_detail_by_id.jpg, id=997, 731.73375
+<assets/pics/fig_flowchart_get_user_payslip_detail_by_id.jpg, id=998, 731.73375
 pt x 1375.1375pt>
 File: assets/pics/fig_flowchart_get_user_payslip_detail_by_id.jpg Graphic file 
 (type jpg)
@@ -2920,7 +2924,7 @@ File: assets/pics/fig_flowchart_get_user_payslip_detail_by_id.jpg Graphic file
 Package pdftex.def Info: assets/pics/fig_flowchart_get_user_payslip_detail_by_i
 d.jpg  used on input line 690.
 (pdftex.def)             Requested size: 171.83463pt x 322.93878pt.
-<assets/pics/fig_request_get_user_payslip_detail_by_id.png, id=998, 1040.88875p
+<assets/pics/fig_request_get_user_payslip_detail_by_id.png, id=999, 1040.88875p
 t x 687.56876pt>
 File: assets/pics/fig_request_get_user_payslip_detail_by_id.png Graphic file (t
 ype png)
@@ -2936,7 +2940,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  703.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [53 <./assets/pics/fig_flowchart_get_user_payslip_detail_by_id.jpg>]
-<assets/pics/fig_response_get_user_payslip_detail_by_id.png, id=1003, 427.5975p
+<assets/pics/fig_response_get_user_payslip_detail_by_id.png, id=1004, 427.5975p
 t x 795.97375pt>
 File: assets/pics/fig_response_get_user_payslip_detail_by_id.png Graphic file (
 type png)
@@ -2964,7 +2968,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 719--720
 
  []
 
-<assets/pics/fig_erd_on_boarding.png, id=1017, 472.76625pt x 324.21124pt>
+<assets/pics/fig_erd_on_boarding.png, id=1018, 472.76625pt x 324.21124pt>
 File: assets/pics/fig_erd_on_boarding.png Graphic file (type png)
 <use assets/pics/fig_erd_on_boarding.png>
 Package pdftex.def Info: assets/pics/fig_erd_on_boarding.png  used on input lin
@@ -3052,14 +3056,14 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  754.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [57 <./assets/pics/fig_erd_on_boarding.png>]
-<assets/pics/fig_flowchart_get_on_boarding.jpg, id=1031, 798.985pt x 1258.7025p
+<assets/pics/fig_flowchart_get_on_boarding.jpg, id=1032, 798.985pt x 1258.7025p
 t>
 File: assets/pics/fig_flowchart_get_on_boarding.jpg Graphic file (type jpg)
 <use assets/pics/fig_flowchart_get_on_boarding.jpg>
 Package pdftex.def Info: assets/pics/fig_flowchart_get_on_boarding.jpg  used on
  input line 761.
 (pdftex.def)             Requested size: 122.98798pt x 193.76523pt.
-<assets/pics/fig_request_get_on_boarding.png, id=1032, 1364.09625pt x 383.4325p
+<assets/pics/fig_request_get_on_boarding.png, id=1033, 1364.09625pt x 383.4325p
 t>
 File: assets/pics/fig_request_get_on_boarding.png Graphic file (type png)
 <use assets/pics/fig_request_get_on_boarding.png>
@@ -3081,7 +3085,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  772.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [58 <./assets/pics/fig_flowchart_get_on_boarding.jpg>]
-<assets/pics/fig_response_get_on_boarding.png, id=1038, 528.97626pt x 651.43375
+<assets/pics/fig_response_get_on_boarding.png, id=1039, 528.97626pt x 651.43375
 pt>
 File: assets/pics/fig_response_get_on_boarding.png Graphic file (type png)
 <use assets/pics/fig_response_get_on_boarding.png>
@@ -3103,14 +3107,14 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [59 <./assets/pics/fig_request_get_on_boarding.png> <./assets/pics/fig_response
 _get_on_boarding.png>]
-<assets/pics/fig_flowchart_on_boarding_import.jpg, id=1048, 670.505pt x 1501.61
+<assets/pics/fig_flowchart_on_boarding_import.jpg, id=1049, 670.505pt x 1501.61
 pt>
 File: assets/pics/fig_flowchart_on_boarding_import.jpg Graphic file (type jpg)
 <use assets/pics/fig_flowchart_on_boarding_import.jpg>
 Package pdftex.def Info: assets/pics/fig_flowchart_on_boarding_import.jpg  used
  on input line 787.
 (pdftex.def)             Requested size: 201.87946pt x 452.11232pt.
-<assets/pics/fig_flowchart_import_data_for_all_module.jpg, id=1049, 599.23875pt
+<assets/pics/fig_flowchart_import_data_for_all_module.jpg, id=1050, 599.23875pt
  x 1678.27pt>
 File: assets/pics/fig_flowchart_import_data_for_all_module.jpg Graphic file (ty
 pe jpg)
@@ -3126,7 +3130,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  798.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [60 <./assets/pics/fig_flowchart_on_boarding_import.jpg>]
-<assets/pics/fig_request_on_boarding_import_csv.png, id=1054, 775.89874pt x 901
+<assets/pics/fig_request_on_boarding_import_csv.png, id=1055, 775.89874pt x 901
 .3675pt>
 File: assets/pics/fig_request_on_boarding_import_csv.png Graphic file (type png
 )
@@ -3142,7 +3146,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  805.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [61 <./assets/pics/fig_flowchart_import_data_for_all_module.jpg>]
-<assets/pics/fig_response_on_boarding_import_csv.png, id=1059, 442.65375pt x 92
+<assets/pics/fig_response_on_boarding_import_csv.png, id=1060, 442.65375pt x 92
 1.4425pt>
 File: assets/pics/fig_response_on_boarding_import_csv.png Graphic file (type pn
 g)
@@ -3171,7 +3175,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  815.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [63 <./assets/pics/fig_response_on_boarding_import_csv.png>]
-<assets/pics/fig_erd_overtime.png, id=1074, 492.84125pt x 602.25pt>
+<assets/pics/fig_erd_overtime.png, id=1075, 492.84125pt x 602.25pt>
 File: assets/pics/fig_erd_overtime.png Graphic file (type png)
 <use assets/pics/fig_erd_overtime.png>
 Package pdftex.def Info: assets/pics/fig_erd_overtime.png  used on input line 8
@@ -3287,7 +3291,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  854.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [65 <./assets/pics/fig_erd_overtime.png>]
-<assets/pics/fig_flowchart_get_overtime_list.jpg, id=1089, 840.13875pt x 1198.4
+<assets/pics/fig_flowchart_get_overtime_list.jpg, id=1090, 840.13875pt x 1198.4
 775pt>
 File: assets/pics/fig_flowchart_get_overtime_list.jpg Graphic file (type jpg)
 <use assets/pics/fig_flowchart_get_overtime_list.jpg>
@@ -3302,7 +3306,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  865.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [66]
-<assets/pics/fig_request_get_overtime_list.png, id=1094, 1008.76875pt x 780.917
+<assets/pics/fig_request_get_overtime_list.png, id=1095, 1008.76875pt x 780.917
 5pt>
 File: assets/pics/fig_request_get_overtime_list.png Graphic file (type png)
 <use assets/pics/fig_request_get_overtime_list.png>
@@ -3317,7 +3321,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  873.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [67 <./assets/pics/fig_flowchart_get_overtime_list.jpg>]
-<assets/pics/fig_response_get_overtime_list.png, id=1100, 501.875pt x 607.26875
+<assets/pics/fig_response_get_overtime_list.png, id=1101, 501.875pt x 607.26875
 pt>
 File: assets/pics/fig_response_get_overtime_list.png Graphic file (type png)
 <use assets/pics/fig_response_get_overtime_list.png>
@@ -3339,7 +3343,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [68 <./assets/pics/fig_request_get_overtime_list.png> <./assets/pics/fig_respon
 se_get_overtime_list.png>]
-<assets/pics/fig_flowchart_get_user_overtime_list.jpg, id=1110, 804.00375pt x 1
+<assets/pics/fig_flowchart_get_user_overtime_list.jpg, id=1111, 804.00375pt x 1
 252.68pt>
 File: assets/pics/fig_flowchart_get_user_overtime_list.jpg Graphic file (type j
 pg)
@@ -3347,7 +3351,7 @@ pg)
 Package pdftex.def Info: assets/pics/fig_flowchart_get_user_overtime_list.jpg  
 used on input line 887.
 (pdftex.def)             Requested size: 207.26944pt x 322.93878pt.
-<assets/pics/fig_request_get_user_overtime_list.png, id=1111, 968.61874pt x 713
+<assets/pics/fig_request_get_user_overtime_list.png, id=1112, 968.61874pt x 713
 .66624pt>
 File: assets/pics/fig_request_get_user_overtime_list.png Graphic file (type png
 )
@@ -3363,7 +3367,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  899.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [69 <./assets/pics/fig_flowchart_get_user_overtime_list.jpg>]
-<assets/pics/fig_response_get_user_overtime_list.png, id=1116, 501.875pt x 607.
+<assets/pics/fig_response_get_user_overtime_list.png, id=1117, 501.875pt x 607.
 26875pt>
 File: assets/pics/fig_response_get_user_overtime_list.png Graphic file (type pn
 g)
@@ -3380,7 +3384,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [70 <./assets/pics/fig_request_get_user_overtime_list.png> <./assets/pics/fig_r
 esponse_get_user_overtime_list.png>]
-<assets/pics/fig_flowchart_get_overtime_detail_by_id.jpg, id=1127, 750.805pt x 
+<assets/pics/fig_flowchart_get_overtime_detail_by_id.jpg, id=1128, 750.805pt x 
 1340.00626pt>
 File: assets/pics/fig_flowchart_get_overtime_detail_by_id.jpg Graphic file (typ
 e jpg)
@@ -3388,7 +3392,7 @@ e jpg)
 Package pdftex.def Info: assets/pics/fig_flowchart_get_overtime_detail_by_id.jp
 g  used on input line 913.
 (pdftex.def)             Requested size: 144.75093pt x 258.34708pt.
-<assets/pics/fig_request_get_overtime_detail_by_id.png, id=1128, 1241.63875pt x
+<assets/pics/fig_request_get_overtime_detail_by_id.png, id=1129, 1241.63875pt x
  549.05125pt>
 File: assets/pics/fig_request_get_overtime_detail_by_id.png Graphic file (type 
 png)
@@ -3404,7 +3408,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  926.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [71 <./assets/pics/fig_flowchart_get_overtime_detail_by_id.jpg>]
-<assets/pics/fig_response_get_overtime_detail_by_id.png, id=1133, 546.04pt x 60
+<assets/pics/fig_response_get_overtime_detail_by_id.png, id=1134, 546.04pt x 60
 0.2425pt>
 File: assets/pics/fig_response_get_overtime_detail_by_id.png Graphic file (type
  png)
@@ -3427,7 +3431,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [72 <./assets/pics/fig_request_get_overtime_detail_by_id.png> <./assets/pics/fi
 g_response_get_overtime_detail_by_id.png>]
-<assets/pics/fig_flowchart_delete_overtime_by_id.jpg, id=1143, 658.46pt x 1527.
+<assets/pics/fig_flowchart_delete_overtime_by_id.jpg, id=1144, 658.46pt x 1527.
 7075pt>
 File: assets/pics/fig_flowchart_delete_overtime_by_id.jpg Graphic file (type jp
 g)
@@ -3435,7 +3439,7 @@ g)
 Package pdftex.def Info: assets/pics/fig_flowchart_delete_overtime_by_id.jpg  u
 sed on input line 940.
 (pdftex.def)             Requested size: 139.18494pt x 322.93878pt.
-<assets/pics/fig_request_delete_overtime_by_id.png, id=1144, 1191.45125pt x 554
+<assets/pics/fig_request_delete_overtime_by_id.png, id=1145, 1191.45125pt x 554
 .07pt>
 File: assets/pics/fig_request_delete_overtime_by_id.png Graphic file (type png)
 
@@ -3451,7 +3455,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  953.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [73 <./assets/pics/fig_flowchart_delete_overtime_by_id.jpg>]
-<assets/pics/fig_response_delete_overtime_by_id.png, id=1149, 252.945pt x 129.4
+<assets/pics/fig_response_delete_overtime_by_id.png, id=1150, 252.945pt x 129.4
 8375pt>
 File: assets/pics/fig_response_delete_overtime_by_id.png Graphic file (type png
 )
@@ -3560,7 +3564,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  5.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [78]
-<assets/pdf/PRO-STEP-01_Cover Letter.pdf, id=1202, page=1, 597.51233pt x 845.04
+<assets/pdf/PRO-STEP-01_Cover Letter.pdf, id=1203, page=1, 597.51233pt x 845.04
 71pt>
 File: assets/pdf/PRO-STEP-01_Cover Letter.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-01_Cover Letter.pdf, page 1>
@@ -3575,7 +3579,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
  13.
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [79 <./assets/pdf/PRO-STEP-01_Cover Letter.pdf>]
-<assets/pdf/PRO-STEP-02 _Internship Card.pdf, id=1227, page=1, 597.6729pt x 845
+<assets/pdf/PRO-STEP-02 _Internship Card.pdf, id=1228, page=1, 597.6729pt x 845
 .07718pt>
 File: assets/pdf/PRO-STEP-02 _Internship Card.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-02 _Internship Card.pdf, page 1>
@@ -3592,7 +3596,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [80
 
  <./assets/pdf/PRO-STEP-02 _Internship Card.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1239, page=1, 597.6729pt x 845.07718
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1240, page=1, 597.6729pt x 845.07718
 pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 1>
@@ -3609,7 +3613,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [81
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1257, page=2, 597.6729pt x 845.07718
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1258, page=2, 597.6729pt x 845.07718
 pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 2>
@@ -3626,7 +3630,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [82
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1270, page=3, 597.6729pt x 845.07718
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1271, page=3, 597.6729pt x 845.07718
 pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 3>
@@ -3643,7 +3647,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [83
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1282, page=4, 597.6729pt x 845.07718
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1283, page=4, 597.6729pt x 845.07718
 pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 4>
@@ -3660,7 +3664,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [84
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1300, page=5, 597.6729pt x 845.07718
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1301, page=5, 597.6729pt x 845.07718
 pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 5>
@@ -3677,7 +3681,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [85
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1318, page=6, 597.6729pt x 845.07718
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1319, page=6, 597.6729pt x 845.07718
 pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 6>
@@ -3694,7 +3698,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [86
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1330, page=7, 597.6729pt x 845.07718
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1331, page=7, 597.6729pt x 845.07718
 pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 7>
@@ -3711,7 +3715,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [87
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1342, page=8, 597.6729pt x 845.07718
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1343, page=8, 597.6729pt x 845.07718
 pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 8>
@@ -3728,7 +3732,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [88
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1356, page=9, 597.6729pt x 845.07718
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1357, page=9, 597.6729pt x 845.07718
 pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 9>
@@ -3745,7 +3749,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [89
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1368, page=10, 597.6729pt x 845.0771
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1369, page=10, 597.6729pt x 845.0771
 8pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 10>
@@ -3762,7 +3766,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [90
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1380, page=11, 597.6729pt x 845.0771
+<assets/pdf/PRO-STEP-03_Daily Task.pdf, id=1381, page=11, 597.6729pt x 845.0771
 8pt>
 File: assets/pdf/PRO-STEP-03_Daily Task.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-03_Daily Task.pdf, page 11>
@@ -3779,7 +3783,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [91
 
  <./assets/pdf/PRO-STEP-03_Daily Task.pdf>]
-<assets/pdf/PRO-STEP-04_Verification Form.pdf, id=1392, page=1, 597.6729pt x 84
+<assets/pdf/PRO-STEP-04_Verification Form.pdf, id=1393, page=1, 597.6729pt x 84
 5.07718pt>
 File: assets/pdf/PRO-STEP-04_Verification Form.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-04_Verification Form.pdf, page 1>
@@ -3796,7 +3800,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [92
 
  <./assets/pdf/PRO-STEP-04_Verification Form.pdf>]
-<assets/pdf/PRO-STEP-05_Surat Penerimaan.pdf, id=1410, page=1, 614.295pt x 794.
+<assets/pdf/PRO-STEP-05_Surat Penerimaan.pdf, id=1411, page=1, 614.295pt x 794.
 97pt>
 File: assets/pdf/PRO-STEP-05_Surat Penerimaan.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-05_Surat Penerimaan.pdf, page 1>
@@ -3813,7 +3817,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [93
 
  <./assets/pdf/PRO-STEP-05_Surat Penerimaan.pdf>]
-<assets/pdf/PRO-STEP-05_Form Bimbingan.pdf, id=1462, page=1, 597.51233pt x 845.
+<assets/pdf/PRO-STEP-05_Form Bimbingan.pdf, id=1463, page=1, 597.51233pt x 845.
 0471pt>
 File: assets/pdf/PRO-STEP-05_Form Bimbingan.pdf Graphic file (type pdf)
 <use assets/pdf/PRO-STEP-05_Form Bimbingan.pdf, page 1>
@@ -3830,7 +3834,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [94
 
  <./assets/pdf/PRO-STEP-05_Form Bimbingan.pdf>]
-<assets/pdf/File Turnitin.pdf, id=1486, page=1, 614.295pt x 794.97pt>
+<assets/pdf/File Turnitin.pdf, id=1487, page=1, 614.295pt x 794.97pt>
 File: assets/pdf/File Turnitin.pdf Graphic file (type pdf)
 <use assets/pdf/File Turnitin.pdf, page 1>
 Package pdftex.def Info: assets/pdf/File Turnitin.pdf , page1 used on input lin
@@ -3846,7 +3850,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [95
 
  <./assets/pdf/File Turnitin.pdf>]
-<assets/pdf/File Turnitin.pdf, id=1526, page=2, 614.295pt x 794.97pt>
+<assets/pdf/File Turnitin.pdf, id=1527, page=2, 614.295pt x 794.97pt>
 File: assets/pdf/File Turnitin.pdf Graphic file (type pdf)
 <use assets/pdf/File Turnitin.pdf, page 2>
 Package pdftex.def Info: assets/pdf/File Turnitin.pdf , page2 used on input lin
@@ -3862,7 +3866,7 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 [96
 
  <./assets/pdf/File Turnitin.pdf>]
-<assets/pdf/File Turnitin.pdf, id=1562, page=3, 614.295pt x 794.97pt>
+<assets/pdf/File Turnitin.pdf, id=1563, page=3, 614.295pt x 794.97pt>
 File: assets/pdf/File Turnitin.pdf Graphic file (type pdf)
 <use assets/pdf/File Turnitin.pdf, page 3>
 Package pdftex.def Info: assets/pdf/File Turnitin.pdf , page3 used on input lin
@@ -3948,35 +3952,19 @@ Overfull \hbox (71.95445pt too wide) in alignment at lines 33--43
  []
 
 
-Overfull \hbox (36.87021pt too wide) in paragraph at lines 47--47
- []|\OT1/ptm/m/n/10 https://gemini.google.com/app| 
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/ptm/m/n/10 Dalam sis-tem HRIS
  []
 
-
-Underfull \hbox (badness 8075) in paragraph at lines 48--48
-[]|\OT1/ptm/m/n/10 Isi de-ngan prompt, jika
- []
-
-
-LaTeX Warning: File `assets/pics/prompt-1.png' not found on input line 50.
-
-
-! Package pdftex.def Error: File `assets/pics/prompt-1.png' not found: using dr
-aft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 ...idth=\linewidth]{assets/pics/prompt-1.png}
-                                                   \\ \hline
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<assets/pics/prompt-1.png, id=1592, 764.8575pt x 808.01875pt>
+File: assets/pics/prompt-1.png Graphic file (type png)
+<use assets/pics/prompt-1.png>
+Package pdftex.def Info: assets/pics/prompt-1.png  used on input line 50.
+(pdftex.def)             Requested size: 85.35826pt x 90.16458pt.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.50 ...width]{assets/pics/prompt-1.png} \\ \hline
+l.50 ...inewidth]{assets/pics/prompt-1.png} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -3999,35 +3987,29 @@ in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
 
-Overfull \hbox (36.87021pt too wide) in paragraph at lines 54--54
- []|\OT1/ptm/m/n/10 https://gemini.google.com/app| 
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+[]|\OT1/ptm/m/n/10 Analisis pe-nga-ruh
  []
 
 
-Underfull \hbox (badness 8075) in paragraph at lines 55--55
-[]|\OT1/ptm/m/n/10 Isi de-ngan prompt, jika
+Underfull \hbox (badness 4981) in paragraph at lines 55--55
+\OT1/ptm/m/n/10 pay-roll au-toma-tion dalam
  []
 
 
-LaTeX Warning: File `assets/pics/prompt-2.png' not found on input line 57.
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+\OT1/ptm/m/n/10 meningkatkan kepatuhan
+ []
 
-
-! Package pdftex.def Error: File `assets/pics/prompt-2.png' not found: using dr
-aft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57 ...idth=\linewidth]{assets/pics/prompt-2.png}
-                                                   \\ \hline
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<assets/pics/prompt-2.png, id=1593, 760.8425pt x 812.03375pt>
+File: assets/pics/prompt-2.png Graphic file (type png)
+<use assets/pics/prompt-2.png>
+Package pdftex.def Info: assets/pics/prompt-2.png  used on input line 57.
+(pdftex.def)             Requested size: 85.35826pt x 91.09584pt.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
-l.57 ...width]{assets/pics/prompt-2.png} \\ \hline
+l.57 ...inewidth]{assets/pics/prompt-2.png} \hline
                                                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -4049,8 +4031,78 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
+<assets/pics/prompt-3.png, id=1594, 749.80125pt x 578.16pt>
+File: assets/pics/prompt-3.png Graphic file (type png)
+<use assets/pics/prompt-3.png>
+Package pdftex.def Info: assets/pics/prompt-3.png  used on input line 64.
+(pdftex.def)             Requested size: 85.35826pt x 65.81212pt.
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.64 ...inewidth]{assets/pics/prompt-3.png} \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-Overfull \hbox (71.95445pt too wide) in alignment at lines 43--59
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.65 
+     
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> ... width\arrayrulewidth }\endtemplate 
+                                                  
+l.65 
+     
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
+[]|\OT1/ptm/m/n/10 Jelaskan de-ngan de-tail
+ []
+
+
+Underfull \hbox (badness 3942) in paragraph at lines 69--69
+\OT1/ptm/m/n/10 kon-sep "sin-gle source of
+ []
+
+<assets/pics/prompt-4.png, id=1595, 753.81625pt x 794.97pt>
+File: assets/pics/prompt-4.png Graphic file (type png)
+<use assets/pics/prompt-4.png>
+Package pdftex.def Info: assets/pics/prompt-4.png  used on input line 71.
+(pdftex.def)             Requested size: 85.35826pt x 90.00645pt.
+! Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \penalty \@M \futurelet \@let@token \LT@@h...
+l.71 ...inewidth]{assets/pics/prompt-4.png} \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.72 
+     
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra alignment tab has been changed to \cr.
+<template> ... width\arrayrulewidth }\endtemplate 
+                                                  
+l.72 
+     
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+
+Overfull \hbox (71.95445pt too wide) in alignment at lines 43--73
 [] [] [] [] [] []
  []
 
@@ -4063,7 +4115,8 @@ Package pdftex.def Info: assets/pics/fig_background_UMN.jpg  used on input line
 (pdftex.def)             Requested size: 298.75394pt x 549.4268pt.
 [98
 
-]) (./MAGANG.aux)
+ <./assets/pics/prompt-1.png> <./assets/pics/prompt-2.png> <./assets/pics/promp
+t-3.png> <./assets/pics/prompt-4.png>]) (./MAGANG.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -4079,11 +4132,11 @@ Package rerunfilecheck Info: File `MAGANG.out' has not changed.
 (rerunfilecheck)             Checksum: 7CA4082A83DA5E864E6301FC221AB70B;6817.
  ) 
 Here is how much of TeX's memory you used:
- 29032 strings out of 473190
- 555098 string characters out of 5715800
- 993647 words of memory out of 5000000
- 51327 multiletter control sequences out of 15000+600000
- 593466 words of font info for 108 fonts, out of 8000000 for 9000
+ 29005 strings out of 473190
+ 554142 string characters out of 5715800
+ 993675 words of memory out of 5000000
+ 51302 multiletter control sequences out of 15000+600000
+ 592613 words of font info for 105 fonts, out of 8000000 for 9000
  1210 hyphenation exceptions out of 8191
  132i,13n,135p,1543b,969s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
@@ -4092,10 +4145,10 @@ usr/local/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/
 texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2
 025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025/texmf-
 dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on MAGANG.pdf (113 pages, 30842216 bytes).
+Output written on MAGANG.pdf (113 pages, 31279777 bytes).
 PDF statistics:
- 1693 PDF objects out of 1728 (max. 8388607)
+ 1702 PDF objects out of 1728 (max. 8388607)
  1291 compressed objects within 13 object streams
  300 named destinations out of 1000 (max. 500000)
- 779 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 804 words of extra memory for PDF output out of 10000 (max. 10000000)
 
