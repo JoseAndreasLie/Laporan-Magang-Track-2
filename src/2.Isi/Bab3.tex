@@ -783,6 +783,8 @@ Gambar \ref{fig:erd_on_boarding} menunjukkan struktur basis data untuk modul \te
 
 Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{On Boarding}:
 \begin{table}
+    \caption{Daftar \textit{endpoints} API untuk modul \textit{On Boarding}}
+    \label{tab:on_boarding_api_endpoints}
     \centering
     \begin{tabular}{|p{30mm}|c|p{50mm}|p{30mm}|}
         \hline
@@ -795,22 +797,20 @@ Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul
         Download Second Batch Template & GET & /on-boarding/download-template & Mengunduh \textit{template} Excel untuk impor batch kedua \\
         \hline 
     \end{tabular}
-    \caption{Daftar \textit{endpoints} API untuk modul \textit{On Boarding}}
-    \label{tab:on_boarding_api_endpoints}
 \end{table}
 
 Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{On Boarding} seperti pada Tabel \ref{tab:on_boarding_api_endpoints}. Setiap \textit{endpoint} memiliki fungsi spesifik dalam mengelola proses impor data klien baru, mulai dari pengambilan data impor, hingga proses impor data dari berkas CSV. Selanjutnya, akan dijelaskan alur sistem untuk \textit{endpoints} dalam pada modul ini.
 
 \paragraph*{\textit{Get On Boarding}}
-Berikut merupakan \textit{flowchart} API \textit{Get On Boarding}.
+Gambar \ref{fig:flowchart_get_on_boarding} merupakan \textit{flowchart} API \textit{Get On Boarding}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission data setup} untuk mengakses data impor. Jika pengguna tidak ada \textit{permission on boarding}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data semua riwayat impor data klien baru. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar riwayat impor data.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.3\textheight]{assets/pics/fig_flowchart_get_on_boarding.jpg}}
+    \fbox{\includegraphics[height=0.6\textheight]{assets/pics/fig_flowchart_get_on_boarding.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Get On Boarding}}
     \label{fig:flowchart_get_on_boarding}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get On Boarding}.
+Pada gambar \ref{fig:request_get_on_boarding} merupakan contoh \textit{request} untuk API \textit{Get On Boarding} yang dikirimkan ke \textit{endpoint} \texttt{/on-boarding} menggunakan metode HTTP \textit{GET}.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_request_get_on_boarding.png}}
@@ -818,6 +818,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_get_on_boarding}
 \end{figure}
 
+Pada gambar \ref{fig:response_get_on_boarding} merupakan contoh \textit{response} untuk API \textit{Get On Boarding} yang diterima dari \textit{server}, berisi daftar riwayat impor data klien baru, termasuk informasi seperti \textit{ID}, nama berkas (\textit{file name}), dan modul yang diimpor.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_response_get_on_boarding.png}}
@@ -825,10 +826,11 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_get_on_boarding}
 \end{figure}
 
-Gambar \ref{fig:flowchart_get_on_boarding} menunjukkan \textit{flowchart} alur sistem API \textit{Get On Boarding} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/on-boarding} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_on_boarding}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua riwayat impor data klien baru. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar riwayat impor data seperti pada Gambar \ref{fig:response_get_on_boarding}.
+% Gambar \ref{fig:flowchart_get_on_boarding} menunjukkan \textit{flowchart} alur sistem API \textit{Get On Boarding} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/on-boarding} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_on_boarding}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua riwayat impor data klien baru. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar riwayat impor data seperti pada Gambar \ref{fig:response_get_on_boarding}.
 
 \paragraph*{\textit{On Boarding Import}}
-Berikut merupakan \textit{flowchart} API \textit{On Boarding Import}.
+\textit{On Boarding Import} adalah \textit{endpoint} API yang berfungsi untuk mengimpor data klien baru dari berkas CSV yang diunggah oleh pengguna. API ini digunakan di sisi \textit{frontend} untuk memproses impor data klien baru ke dalam sistem berdasarkan data yang terdapat pada berkas CSV.
+Gambar \ref{fig:flowchart_on_boarding_import} dan Gambar \ref{fig:flowchart_import_data_for_all_module} merupakan \textit{flowchart} API \textit{On Boarding Import}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission data setup} untuk mengimpor data klien baru. Jika pengguna tidak ada \textit{permission on boarding}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem memproses data dari \textit{request body} untuk mengimpor data yang sudah diunggah ke dalam table modul masing-masing. Setelah data berhasil diimpor, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai hasil impor data.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_on_boarding_import.jpg}}
@@ -836,6 +838,7 @@ Berikut merupakan \textit{flowchart} API \textit{On Boarding Import}.
     \label{fig:flowchart_on_boarding_import}
 \end{figure}
 
+Pada gambar \ref{fig:flowchart_import_data_for_all_module} merupakan subproses dari \textit{flowchart} API \textit{On Boarding Import} yang bernama \textit{Import Data for All Module} yang menjelaskan proses untuk memastikan tidak ada data yang duplikat dan memproses memasukkan data dari masing-masing modul.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.95\textheight]{assets/pics/fig_flowchart_import_data_for_all_module.jpg}}
@@ -843,13 +846,15 @@ Berikut merupakan \textit{flowchart} API \textit{On Boarding Import}.
     \label{fig:flowchart_import_data_for_all_module}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{On Boarding Import}.
+Pada gambar \ref{fig:request_on_boarding_import} menunjukkan contoh \textit{request} untuk API \textit{On Boarding Import} yang dikirimkan ke \textit{endpoint} \texttt{/on-boarding/import-csv} menggunakan metode HTTP \textit{POST} dengan menyertakan \textit{request body} yang berisi data dari berkas CSV yang diunggah oleh pengguna.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_request_on_boarding_import_csv.png}}
     \caption{Contoh \textit{request} API \textit{On Boarding Import}}
     \label{fig:request_on_boarding_import}
 \end{figure}
+
+Pada gambar \ref{fig:response_on_boarding_import} menunjukkan contoh \textit{response} untuk API \textit{On Boarding Import} yang diterima dari \textit{server}, berisi informasi mengenai hasil impor data klien baru, termasuk jumlah data yang berhasil diimpor dan jumlah data yang gagal diimpor beserta alasan kegagalannya.
 
 \begin{figure}[H]
     \centering
@@ -858,7 +863,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_on_boarding_import}
 \end{figure}
 
-Gambar \ref{fig:flowchart_on_boarding_import} menunjukkan \textit{flowchart} alur sistem API \textit{On Boarding Import} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/on-boarding/import-csv} menggunakan metode HTTP \textit{POST} seperti pada Gambar \ref{fig:request_on_boarding_import}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, lalu memproses data dari \textit{request body} untuk mengimpor data yang sudah diunggah ke dalam table modul masing-masing. Setelah data berhasil diimpor, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai hasil impor data seperti pada Gambar \ref{fig:response_on_boarding_import}. Untuk proses pada gambar \ref{fig:flowchart_import_data_for_all_module} merupakan proses untuk memastikan tidak ada data yang duplikat dan memproses memasukkan data dari masing-masing modul.
+% Gambar \ref{fig:flowchart_on_boarding_import} menunjukkan \textit{flowchart} alur sistem API \textit{On Boarding Import} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/on-boarding/import-csv} menggunakan metode HTTP \textit{POST} seperti pada Gambar \ref{fig:request_on_boarding_import}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, lalu memproses data dari \textit{request body} untuk mengimpor data yang sudah diunggah ke dalam table modul masing-masing. Setelah data berhasil diimpor, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai hasil impor data seperti pada Gambar \ref{fig:response_on_boarding_import}. Untuk proses pada gambar \ref{fig:flowchart_import_data_for_all_module} merupakan proses untuk memastikan tidak ada data yang duplikat dan memproses memasukkan data dari masing-masing modul.
 
 % ---------------------------------- %
 \subsection{Modul Overtime}
@@ -881,6 +886,8 @@ Gambar \ref{fig:erd_overtime} menunjukkan struktur basis data untuk modul \text{
 
 Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Overtime}:
 \begin{table}
+    \caption{Daftar \textit{endpoints} API untuk modul \textit{Overtime}}
+    \label{tab:overtime_api_endpoints}
     \centering
     \begin{tabular}{|p{30mm}|c|p{50mm}|p{30mm}|}
         \hline
@@ -895,14 +902,13 @@ Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul
         Delete Overtime by ID & DELETE & /overtime/:id & Menghapus permintaan lembur berdasarkan ID \\
         \hline
     \end{tabular}
-    \caption{Daftar \textit{endpoints} API untuk modul \textit{Overtime}}
-    \label{tab:overtime_api_endpoints}
 \end{table}
 
 Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Overtime} seperti pada Tabel \ref{tab:overtime_api_endpoints}. Setiap \textit{endpoint} memiliki fungsi spesifik dalam mengelola permintaan lembur pegawai, mulai dari pengambilan data lembur, hingga penghapusan permintaan lembur. Selanjutnya, akan dijelaskan alur sistem untuk \textit{endpoints} dalam pada modul ini.
 
 \paragraph*{\textit{Get Overtime List}}
-Berikut merupakan \textit{flowchart} API \textit{Get Overtime List}.
+\textit{Get Overtime List} adalah \textit{endpoint} API yang berfungsi untuk mengambil semua permintaan lembur (\textit{Overtime}) yang ada di dalam sistem. API ini digunakan di sisi \textit{frontend} untuk menampilkan daftar permintaan lembur dalam page \textit{Overtime}.
+Gambar \ref{fig:flowchart_get_overtime_list} merupakan \textit{flowchart} API \textit{Get Overtime List}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission overtime} untuk mengakses data permintaan lembur. Jika pengguna tidak ada \textit{permission overtime}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data semua permintaan lembur. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar permintaan lembur.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_get_overtime_list.jpg}}
@@ -910,7 +916,7 @@ Berikut merupakan \textit{flowchart} API \textit{Get Overtime List}.
     \label{fig:flowchart_get_overtime_list}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get Overtime List}.
+Pada gambar \ref{fig:request_get_overtime_list} menunjukkan contoh \textit{request} untuk API \textit{Get Overtime List} yang dikirimkan ke \textit{endpoint} \texttt{/overtime} menggunakan metode HTTP \textit{GET} dengan menyertakan beberapa \textit{query parameters} untuk kebutuhan \textit{pagination}, seperti \texttt{page} dan \texttt{row}.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_overtime_list.png}}
@@ -918,17 +924,20 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_get_overtime_list}
 \end{figure}
 
+Pada gambar \ref{fig:response_get_overtime_list} menunjukkan contoh \textit{response} untuk API \textit{Get Overtime List} yang diterima dari \textit{server}, berisi daftar permintaan lembur, termasuk informasi seperti \textit{overtime ID}, nama pengguna, tanggal lembur, durasi, dan status persetujuan.
+
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_overtime_list.png}}
+    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_response_get_overtime_list.png}}
     \caption{Contoh \textit{response} API \textit{Get Overtime List}}
     \label{fig:response_get_overtime_list}
 \end{figure}
 
-Gambar \ref{fig:flowchart_get_overtime_list} menunjukkan \textit{flowchart} alur sistem API \textit{Get Overtime List} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_overtime_list}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua permintaan lembur. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar permintaan lembur seperti pada Gambar \ref{fig:response_get_overtime_list}.
+% Gambar \ref{fig:flowchart_get_overtime_list} menunjukkan \textit{flowchart} alur sistem API \textit{Get Overtime List} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_overtime_list}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua permintaan lembur. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar permintaan lembur seperti pada Gambar \ref{fig:response_get_overtime_list}.
 
 \paragraph*{\textit{Get User Overtime List}}
-Berikut merupakan \textit{flowchart} API \textit{Get User Overtime List}.
+\textit{Get User Overtime List} adalah \textit{endpoint} API yang berfungsi untuk mengambil semua permintaan lembur (\textit{Overtime}) milik pengguna yang sedang melakukan autentikasi. API ini digunakan di sisi \textit{frontend} untuk menampilkan daftar permintaan lembur milik pengguna dalam page \textit{My Overtime}.
+Gambar \ref{fig:flowchart_get_user_overtime_list} merupakan \textit{flowchart} API \textit{Get User Overtime List}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission overtime} untuk mengakses data permintaan lembur. Jika pengguna tidak ada \textit{permission overtime}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data semua permintaan lembur milik pengguna yang sedang melakukan autentikasi. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar permintaan lembur milik pengguna.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_get_user_overtime_list.jpg}}
@@ -936,7 +945,7 @@ Berikut merupakan \textit{flowchart} API \textit{Get User Overtime List}.
     \label{fig:flowchart_get_user_overtime_list}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get User Overtime List}.
+Pada gambar \ref{fig:request_get_user_overtime_list} menunjukkan contoh \textit{request} untuk API \textit{Get User Overtime List} yang dikirimkan ke \textit{endpoint} \texttt{/overtime/user} menggunakan metode HTTP \textit{GET} dengan menyertakan beberapa \textit{query parameters} untuk kebutuhan \textit{pagination}, seperti \texttt{page} dan \texttt{row}.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_user_overtime_list.png}}
@@ -944,6 +953,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_get_user_overtime_list}
 \end{figure}
 
+Pada gambar \ref{fig:response_get_user_overtime_list} menunjukkan contoh \textit{response} untuk API \textit{Get User Overtime List} yang diterima dari \textit{server}, berisi daftar permintaan lembur milik pengguna yang sedang melakukan autentikasi, termasuk informasi seperti \textit{overtime ID}, tanggal lembur, durasi, dan status persetujuan.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_get_user_overtime_list.png}}
@@ -951,18 +961,19 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_get_user_overtime_list}
 \end{figure}
 
-Gambar \ref{fig:flowchart_get_user_overtime_list} menunjukkan \textit{flowchart} alur sistem API \textit{Get User Overtime List} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime/user} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_overtime_list}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua permintaan lembur milik pengguna. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar permintaan lembur milik pengguna seperti pada Gambar \ref{fig:response_get_user_overtime_list}.
+% Gambar \ref{fig:flowchart_get_user_overtime_list} menunjukkan \textit{flowchart} alur sistem API \textit{Get User Overtime List} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime/user} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_user_overtime_list}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil data semua permintaan lembur milik pengguna. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar permintaan lembur milik pengguna seperti pada Gambar \ref{fig:response_get_user_overtime_list}.
 
 \paragraph*{\textit{Get Overtime Detail by ID}}
-Berikut merupakan \textit{flowchart} API \textit{Get Overtime Detail by ID}.
+\textit{Get Overtime Detail by ID} adalah \textit{endpoint} API yang berfungsi untuk mengambil detail permintaan lembur (\textit{Overtime}) berdasarkan \textit{ID} lembur yang diberikan. API ini digunakan di sisi \textit{frontend} untuk menampilkan informasi rinci mengenai permintaan lembur tertentu dalam page \textit{Overtime Detail}.
+Gambar \ref{fig:flowchart_get_overtime_detail_by_id} merupakan \textit{flowchart} API \textit{Get Overtime Detail by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission user overtime} atau \textit{permission overtime management} untuk mengakses data permintaan lembur. Jika pengguna tidak ada \textit{permission user overtime} atau \textit{permission overtime management}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data detail permintaan lembur berdasarkan \textit{ID} lembur yang diberikan dari \textit{path parameters}. Jika data permintaan lembur tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail permintaan lembur yang diminta.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_flowchart_get_overtime_detail_by_id.jpg}}
+    \fbox{\includegraphics[height=0.6\textheight]{assets/pics/fig_flowchart_get_overtime_detail_by_id.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Get Overtime Detail by ID}}
     \label{fig:flowchart_get_overtime_detail_by_id}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get Overtime Detail by ID}.
+Pada gambar \ref{fig:request_get_overtime_detail_by_id} menunjukkan contoh \textit{request} untuk API \textit{Get Overtime Detail by ID} yang dikirimkan ke \textit{endpoint} \texttt{/overtime/:id} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{path parameters}, \texttt{id}, untuk menentukan permintaan lembur yang ingin diambil detailnya.
 
 \begin{figure}[H]
     \centering
@@ -971,17 +982,19 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_get_overtime_detail_by_id}
 \end{figure}
 
+Pada gambar \ref{fig:response_get_overtime_detail_by_id} menunjukkan contoh \textit{response} untuk API \textit{Get Overtime Detail by ID} yang diterima dari \textit{server}, berisi informasi rinci mengenai permintaan lembur tertentu, termasuk rincian seperti nama pengguna, tanggal lembur, jam lembur, durasi, alasan lembur, status persetujuan, deskripsi lembur, dan lain-lain.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_overtime_detail_by_id.png}}
+    \fbox{\includegraphics[width=0.65\textwidth]{assets/pics/fig_response_get_overtime_detail_by_id.png}}
     \caption{Contoh \textit{response} API \textit{Get Overtime Detail by ID}}
     \label{fig:response_get_overtime_detail_by_id}
 \end{figure}
 
-Gambar \ref{fig:flowchart_get_overtime_detail_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get Overtime Detail by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_overtime_detail_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail permintaan lembur berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail permintaan lembur yang diminta seperti pada Gambar \ref{fig:response_get_overtime_detail_by_id}.
+% Gambar \ref{fig:flowchart_get_overtime_detail_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get Overtime Detail by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_overtime_detail_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data detail permintaan lembur berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail permintaan lembur yang diminta seperti pada Gambar \ref{fig:response_get_overtime_detail_by_id}.
 
 \paragraph*{\textit{Delete Overtime by ID}}
-Berikut merupakan \textit{flowchart} API \textit{Delete Overtime by ID}.
+\textit{Delete Overtime by ID} adalah \textit{endpoint} API yang berfungsi untuk menghapus permintaan lembur (\textit{Overtime}) berdasarkan \textit{ID} lembur yang diberikan. API ini digunakan di sisi \textit{frontend} untuk menghapus permintaan lembur tertentu dalam page \textit{Overtime Detail}.
+Gambar \ref{fig:flowchart_delete_overtime_by_id} merupakan \textit{flowchart} API \textit{Delete Overtime by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission overtime management} untuk menghapus data permintaan lembur. Jika pengguna tidak ada \textit{permission overtime management}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem menghapus data permintaan lembur berdasarkan \textit{ID} lembur yang diberikan dari \textit{path parameters}. Jika data permintaan lembur tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Setelah data permintaan lembur berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai keberhasilan penghapusan permintaan lembur.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_delete_overtime_by_id.jpg}}
@@ -989,24 +1002,26 @@ Berikut merupakan \textit{flowchart} API \textit{Delete Overtime by ID}.
     \label{fig:flowchart_delete_overtime_by_id}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Delete Overtime by ID}.
+Pada gambar \ref{fig:request_delete_overtime_by_id} menunjukkan contoh \textit{request} untuk API \textit{Delete Overtime by ID} yang dikirimkan ke \textit{endpoint} \texttt{/overtime/:id} menggunakan metode HTTP \textit{DELETE} dengan menyertakan \textit{path parameters}, \texttt{id}, untuk menentukan permintaan lembur yang ingin dihapus.
 
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.8\textwidth]{assets/pics/fig_request_delete_overtime_by_id.png}}
+    \fbox{\includegraphics[width=1\textwidth]{assets/pics/fig_request_delete_overtime_by_id.png}}
     \caption{Contoh \textit{request} API \textit{Delete Overtime by ID}}
     \label{fig:request_delete_overtime_by_id}
 \end{figure}
 
+Pada gambar \ref{fig:response_delete_overtime_by_id} menunjukkan contoh \textit{response} untuk API \textit{Delete Overtime by ID} yang diterima dari \textit{server}, berisi \textit{status code} 200 dengan pesan sukses mengindikasikan bahwa permintaan lembur telah berhasil dihapus.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_delete_overtime_by_id.png}}
+    \fbox{\includegraphics[height=0.2\textheight]{assets/pics/fig_response_delete_overtime_by_id.png}}
     \caption{Contoh \textit{response} API \textit{Delete Overtime by ID}}
     \label{fig:response_delete_overtime_by_id}
 \end{figure}
 
-Gambar \ref{fig:flowchart_delete_overtime_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Delete Overtime by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime/:id} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_delete_overtime_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta menghapus data permintaan lembur berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data permintaan lembur berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai keberhasilan penghapusan permintaan lembur seperti pada Gambar \ref{fig:response_delete_overtime_by_id}.
+% Gambar \ref{fig:flowchart_delete_overtime_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Delete Overtime by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/overtime/:id} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_delete_overtime_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta menghapus data permintaan lembur berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data permintaan lembur berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai keberhasilan penghapusan permintaan lembur seperti pada Gambar \ref{fig:response_delete_overtime_by_id}.
 
+\newpage
 \section{Kendala dan Solusi yang Ditemukan}
 
 Selama pelaksanaan kerja praktik, terdapat beberapa kendala yang dihadapi dalam pengembangan sistem, antara lain:
