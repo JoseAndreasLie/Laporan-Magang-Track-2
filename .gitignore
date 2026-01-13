@@ -1,0 +1,54 @@
+# OS-specific files
+.DS_Store
+*/.DS_Store
+
+# LaTeX temporary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.ptc
+*.lol
+*.dvi
+*.apc
+*.equ
+
+# Bibliography auxiliary files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Beamer
+*.nav
+*.pre
+*.snm
+*.vrb
+
+# XeLaTeX
+*.xdv
+
+# Generated figures and pdfs
+figures/*/generated/
+MAGANG.toc
+MAGANG.synctex.gz
+MAGANG.aux
+MAGANG.pdf
+MAGANG.out
