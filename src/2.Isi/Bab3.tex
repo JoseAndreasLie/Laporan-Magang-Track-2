@@ -236,7 +236,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_get_all_user_contracts}
 \end{figure}
 
-Pada gambar \ref{fig:response_get_all_user_contracts} menunjukkan contoh \textit{response} yang diterima dari server, berisi daftar kontrak yang dimiliki oleh pengguna beserta informasi terkait seperti \textit{contract ID}, nama kontrak, status kontrak, \textit{start date}, \textit{end date}, nama karyawan, pekerjaan karyawan, \textit{employment status} karyawan, dan karyawan yang membuat kontrak tersebut.
+Pada gambar \ref{fig:response_get_all_user_contracts} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi daftar kontrak yang dimiliki oleh pengguna beserta informasi terkait seperti \textit{contract ID}, nama kontrak, status kontrak, \textit{start date}, \textit{end date}, nama karyawan, pekerjaan karyawan, \textit{employment status} karyawan, dan karyawan yang membuat kontrak tersebut.
 \begin{figure}
     \centering
     \fbox{\includegraphics[height=0.6\textheight]{assets/pics/fig_response_get_all_user_contracts.png}}
@@ -268,7 +268,7 @@ Pada gambar \ref{fig:request_get_user_contract_detail_by_id} menunjukkan contoh 
 
 Pada gambar \ref{fig:response_get_user_contract_detail_by_id_1} 
 % , \ref{fig:response_get_user_contract_detail_by_id_2}, dan \ref{fig:response_get_user_contract_detail_by_id_3} 
-menunjukkan contoh \textit{response} yang diterima dari server, berisi informasi rinci mengenai kontrak tertentu, termasuk data kontrak, data pegawai terkait, jadwal kerja, jenis cuti, rincian komponen gaji kontrak (\textit{contract items}), serta aturan penalti yang berlaku dalam kontrak tersebut.
+menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi informasi rinci mengenai kontrak tertentu, termasuk data kontrak, data pegawai terkait, jadwal kerja, jenis cuti, rincian komponen gaji kontrak (\textit{contract items}), serta aturan penalti yang berlaku dalam kontrak tersebut.
 
 Berikut merupakan contoh \textit{response} untuk API \textit{Get User's Contract Detail by ID}.
 \begin{figure}[H]
@@ -331,7 +331,7 @@ Pada gambar \ref{fig:response_approve_contract_by_id} merupakan contoh \textit{r
 Pada gambar \ref{fig:flowchart_terminate_contract_by_id} merupakan \textit{flowchart} API \textit{Terminate Contract by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission contract management} untuk mengakhiri kontrak. Jika pengguna tidak ada \textit{permission contract management}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem akan mencari kontrak berdasarkan \textit{ID} yang diberikan pada \textit{request path parameters}. Jika kontrak tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Lalu, kontrak yang ditemukan akan diperiksa status kontrak. Apabila status kontrak tidak sesuai dengan ketentuan, sistem akan mengembalikan \textit{error} 400. Setelah itu, sistem akan memeriksa apa status kontrak sekarang. Kalau status kontak sekarang adalah \textit{Pending}, maka status kontrak akan diperbarui menjadi \textit{Rejected} mengindikasikan bahwa kontrak ditolak. Jika status kontrak sekarang adalah \textit{Approved}, status kontrak diperbarui menjadi \textit{Cancelled} mengindikasikan bahwa kontrak sudah diakhiri sebelum dimulai. Jika status kontrak sekarang adalah \textit{On Going}, status kontrak akan diperbarui menjadi \textit{Terminated} mengindikasikan bahwa kontrak sempat aktif lalu diakhiri. Jika status kontrak tidak ada yang sesuai dengan yang diatas, sistem akan mengembalikan \textit{error} 400. Setelah status kontrak berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi kontrak yang telah dihentikan.
 \begin{figure}[H]
     \centering
-    \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_terminate_contract_by_id.jpg}}
+    \fbox{\includegraphics[height=0.6\textheight]{assets/pics/fig_flowchart_terminate_contract_by_id.jpg}}
     \caption{\textit{Flowchart} alur sistem API \textit{Terminate Contract by ID}}
     \label{fig:flowchart_terminate_contract_by_id}
 \end{figure}
@@ -414,6 +414,8 @@ Gambar \ref{fig:erd_payroll_item} menunjukkan struktur basis data untuk modul \t
 \subsubsection{\textit{Payroll Item} API \textit{Endpoints}}
 Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Payroll Item}:
 \begin{table}
+    \caption{Daftar \textit{endpoints} API untuk modul \textit{Payroll Item}}
+    \label{tab:payroll_item_api_endpoints}
     \centering
     \begin{tabular}{|p{25mm}|c|p{35mm}|p{45mm}|}
         \hline
@@ -430,15 +432,15 @@ Berikut adalah daftar \textit{endpoints} API yang telah dikembangkan untuk modul
         Delete Payroll Item & DELETE & /payroll-items/:id & Menghapus komponen gaji berdasarkan ID \\
         \hline
     \end{tabular}
-    \caption{Daftar \textit{endpoints} API untuk modul \textit{Payroll Item}}
-    \label{tab:payroll_item_api_endpoints}
 \end{table}
 
 Berikut merupakan daftar \textit{endpoints} API yang telah dikembangkan untuk modul \textit{Payroll Item} seperti pada Tabel \ref{tab:payroll_item_api_endpoints}. Setiap \textit{endpoint} memiliki fungsi spesifik untuk mengelola komponen gaji (\textit{Payroll Item}). Selanjutnya, akan dijelaskan alur sistem untuk \textit{endpoints} dalam pada modul ini.
 
 
 \paragraph*{\textit{Get All Payroll Item}}
-Berikut merupakan \textit{flowchart} API \textit{Get All Payroll Item}.
+\textit{Get All Payroll Item} adalah \textit{endpoint} API yang berfungsi untuk mengambil semua komponen gaji (\textit{Payroll Item}) yang tersedia dalam sistem. API ini digunakan di sisi \textit{frontend} untuk menampilkan daftar komponen gaji dalam page \textit{Payroll Items}.
+
+Berikut merupakan \textit{flowchart} API \textit{Get All Payroll Item}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payroll item} untuk mengakses data komponen gaji. Jika pengguna tidak ada \textit{permission payroll item}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil semua data komponen gaji dari basis data. Data komponen gaji yang diambil kemudian dikemas dalam format JSON dan dikirimkan kembali sebagai respons kepada pengguna.
 \begin{figure}
     \centering
     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_flowchart_get_all_payroll_items.jpg}}
@@ -446,7 +448,7 @@ Berikut merupakan \textit{flowchart} API \textit{Get All Payroll Item}.
     \label{fig:flowchart_get_all_payroll_item}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get All Payroll Item}.
+Berikut merupakan contoh \textit{request} untuk API \textit{Get All Payroll Item}. Pada gambar \ref{fig:request_get_all_payroll_item} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{query parameters} untuk \textit{pagination} seperti \textit{page}, \textit{row}, \textit{sort}, dan \textit{search}.
 \begin{figure}
     \centering
     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_request_get_all_payroll_items.png}}
@@ -454,6 +456,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_get_all_payroll_item}
 \end{figure}
 
+Berikut merupakan contoh \textit{response} untuk API \textit{Get All Payroll Item}. Pada gambar \ref{fig:response_get_all_payroll_item} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi daftar komponen gaji beserta informasi terkait seperti \textit{payroll item ID}, nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
 \begin{figure}
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_all_payroll_items.png}}
@@ -461,11 +464,12 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_get_all_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:flowchart_get_all_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Get All Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_all_payroll_item}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil semua data komponen gaji (\textit{Payroll Item}). Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar komponen gaji seperti pada Gambar \ref{fig:response_get_all_payroll_item}.
+% Gambar \ref{fig:flowchart_get_all_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Get All Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_all_payroll_item}. Dalam \textit{query parameters} terdapat beberapa variabel yang harus diisi dan dapat diisi untuk memenuhi kebutuhan \textit{pagination} supaya data yang diterima dapat dibatasi. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna dan mengambil semua data komponen gaji (\textit{Payroll Item}). Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi daftar komponen gaji seperti pada Gambar \ref{fig:response_get_all_payroll_item}.
 
 \paragraph*{\textit{Get Payroll Item by ID}}
+\textit{Get Payroll Item by ID} adalah \textit{endpoint} API yang berfungsi untuk mengambil detail komponen gaji (\textit{Payroll Item}) berdasarkan \textit{ID} komponen gaji yang diberikan. API ini digunakan di sisi \textit{frontend} untuk menampilkan informasi rinci mengenai komponen gaji tertentu dalam page \textit{Payroll Item Detail}.
 
-Berikut merupakan \textit{flowchart} API \textit{Get Payroll Item by ID}.
+Gambar \ref{fig:flowchart_get_payroll_item_by_id} merupakan \textit{flowchart} API \textit{Get Payroll Item by ID}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payroll item} untuk mengakses data komponen gaji. Jika pengguna tidak ada \textit{permission payroll item}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mengambil data komponen gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{payroll\_item\_id}. Data komponen gaji yang diambil kemudian dikemas dalam format JSON dan dikirimkan kembali sebagai respons kepada pengguna.
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.7\textheight]{assets/pics/fig_flowchart_get_payroll_item_by_id.jpg}}
@@ -473,7 +477,7 @@ Berikut merupakan \textit{flowchart} API \textit{Get Payroll Item by ID}.
     \label{fig:flowchart_get_payroll_item_by_id}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Get Payroll Item by ID}.
+Gambar \ref{fig:request_get_payroll_item_by_id} merupakan contoh \textit{request} untuk API \textit{Get Payroll Item by ID}. Pada gambar \ref{fig:request_get_payroll_item_by_id} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{GET} dengan menyertakan \textit{path parameters}, \texttt{payroll\_item\_id}, untuk menentukan komponen gaji yang ingin diambil detailnya.
 
 \begin{figure}
     \centering
@@ -482,6 +486,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_get_payroll_item_by_id}
 \end{figure}
 
+Gambar \ref{fig:response_get_payroll_item_by_id} merupakan contoh \textit{response} untuk API \textit{Get Payroll Item by ID}. Pada gambar \ref{fig:response_get_payroll_item_by_id} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi informasi rinci mengenai komponen gaji tertentu, termasuk nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
 \begin{figure}
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_get_payroll_item_by_id.png}}
@@ -489,12 +494,11 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_get_payroll_item_by_id}
 \end{figure}
 
-Gambar \ref{fig:flowchart_get_payroll_item_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get Payroll Item by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_payroll_item_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data komponen gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail komponen gaji yang diminta seperti pada Gambar \ref{fig:response_get_payroll_item_by_id}.
-
+% Gambar \ref{fig:flowchart_get_payroll_item_by_id} menunjukkan \textit{flowchart} alur sistem API \textit{Get Payroll Item by ID} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{GET} seperti pada Gambar \ref{fig:request_get_payroll_item_by_id}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta mengambil data komponen gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data berhasil diambil, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi detail komponen gaji yang diminta seperti pada Gambar \ref{fig:response_get_payroll_item_by_id}.
 
 \paragraph*{\textit{Create Payroll Item}}
 
-Berikut merupakan \textit{flowchart} API \textit{Create Payroll Item}.
+Gambar \ref{fig:flowchart_create_payroll_item} merupakan \textit{flowchart} API \textit{Create Payroll Item}. Flowchart dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payroll item} untuk membuat komponen gaji baru. Jika pengguna tidak ada \textit{permission payroll item}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem memeriksa apakah \textit{request body} valid sesuai dengan ketentuan. Jika \textit{request body} tidak valid, sistem akan mengembalikan \textit{error} 400. Jika valid, sistem membuat data komponen gaji baru berdasarkan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil dibuat, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah dibuat.
 
 \begin{figure}[H]
     \centering
@@ -503,7 +507,7 @@ Berikut merupakan \textit{flowchart} API \textit{Create Payroll Item}.
     \label{fig:flowchart_create_payroll_item}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Create Payroll Item}.
+Gambar \ref{fig:request_create_payroll_item} merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Create Payroll Item}. Pada gambar \ref{fig:request_create_payroll_item} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{POST} dengan menyertakan \textit{request body} yang berisi data komponen gaji baru yang akan dibuat.
 
 \begin{figure}
     \centering
@@ -512,6 +516,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_create_payroll_item}
 \end{figure}
 
+Gambar \ref{fig:response_create_payroll_item} merupakan contoh \textit{response} untuk API \textit{Create Payroll Item}. Pada gambar \ref{fig:response_create_payroll_item} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi informasi mengenai komponen gaji yang telah dibuat, termasuk nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
 \begin{figure}
     \centering
     \fbox{\includegraphics[height=0.4\textheight]{assets/pics/fig_response_create_payroll_items.png}}
@@ -519,11 +524,12 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_create_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:flowchart_create_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Create Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{POST} seperti pada Gambar \ref{fig:request_create_payroll_item}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, serta membuat data komponen gaji baru berdasarkan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil dibuat, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah dibuat seperti pada Gambar \ref{fig:response_create_payroll_item}.
+% Gambar \ref{fig:flowchart_create_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Create Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items} menggunakan metode HTTP \textit{POST} seperti pada Gambar \ref{fig:request_create_payroll_item}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, serta membuat data komponen gaji baru berdasarkan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil dibuat, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah dibuat seperti pada Gambar \ref{fig:response_create_payroll_item}.
 
 \paragraph*{\textit{Update Payroll Item}}
+\textit{Update Payroll Item} adalah \textit{endpoint} API yang berfungsi untuk memperbarui komponen gaji (\textit{Payroll Item}) berdasarkan \textit{ID} komponen gaji yang diberikan. API ini digunakan di sisi \textit{frontend} untuk mengubah informasi komponen gaji dalam page \textit{Payroll Item Detail}.
 
-Berikut merupakan \textit{flowchart} API \textit{Update Payroll Item}.
+Gambar \ref{fig:flowchart_update_payroll_item} merupakan \textit{flowchart} API \textit{Update Payroll Item}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payroll item} untuk memperbarui komponen gaji. Jika pengguna tidak ada \textit{permission payroll item}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem memeriksa apakah \textit{request body} valid sesuai dengan ketentuan. Jika \textit{request body} tidak valid, sistem akan mengembalikan \textit{error} 400. Jika valid, sistem mencari data komponen gaji dengan menggunakan \textit{ID} yang diberikan dari \textit{Path Parameter} serta memperbarui data komponen gaji data tersebut dengan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah diperbarui. 
 \begin{figure}[H]
     \centering
     \fbox{\includegraphics[height=0.5\textheight]{assets/pics/fig_flowchart_update_payroll_item_by_id.jpg}}
@@ -531,7 +537,7 @@ Berikut merupakan \textit{flowchart} API \textit{Update Payroll Item}.
     \label{fig:flowchart_update_payroll_item}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Update Payroll Item}.
+Gambar \ref{fig:request_update_payroll_item} dan Gambar \ref{fig:response_update_payroll_item} merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Update Payroll Item}. Pada gambar \ref{fig:request_update_payroll_item} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{PUT} dengan menyertakan \textit{path parameters}, \texttt{payroll\_item\_id}, untuk menentukan komponen gaji yang ingin diperbarui serta \textit{request body} yang berisi data komponen gaji yang akan diperbarui.
 
 \begin{figure}
     \centering
@@ -540,6 +546,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_update_payroll_item}
 \end{figure}
 
+Gambar \ref{fig:response_update_payroll_item} merupakan contoh \textit{response} untuk API \textit{Update Payroll Item}. Pada gambar \ref{fig:response_update_payroll_item} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi informasi mengenai komponen gaji yang telah diperbarui, termasuk nama komponen gaji, jenis komponen gaji, besaran komponen gaji, serta status komponen gaji (aktif atau tidak aktif).
 \begin{figure}
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_update_payroll_item_by_id.png}}
@@ -547,11 +554,12 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_update_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:flowchart_update_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Update Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{PUT} seperti pada Gambar \ref{fig:request_update_payroll_item}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, mencari data \textit{Payroll Item} dengan menggunakan \textit{ID} yang diberikan dari \textit{Path Parameter} serta memperbarui data komponen gaji data tersebut dengan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah diperbarui seperti pada Gambar \ref{fig:response_update_payroll_item}.
+% Gambar \ref{fig:flowchart_update_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Update Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{PUT} seperti pada Gambar \ref{fig:request_update_payroll_item}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, memeriksa \textit{request body} tersebut valid sesuai dengan ketentuan, mencari data \textit{Payroll Item} dengan menggunakan \textit{ID} yang diberikan dari \textit{Path Parameter} serta memperbarui data komponen gaji data tersebut dengan data yang diberikan dalam \textit{request body}. Setelah data komponen gaji berhasil diperbarui, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai komponen gaji yang telah diperbarui seperti pada Gambar \ref{fig:response_update_payroll_item}.
 
 \paragraph*{\textit{Delete Payroll Item}}
+\textit{Delete Payroll Item} adalah \textit{endpoint} API yang berfungsi untuk menghapus komponen gaji (\textit{Payroll Item}) berdasarkan \textit{ID} komponen gaji yang diberikan. API ini digunakan di sisi \textit{frontend} untuk menghapus data komponen gaji dalam page \textit{Payroll Item Detail}.
 
-Berikut merupakan \textit{flowchart} API \textit{Delete Payroll Item}.
+Gambar \ref{fig:flowchart_delete_payroll_item} merupakan \textit{flowchart} API \textit{Delete Payroll Item}. \textit{Flowchart} dimulai dari pengecekan autentikasi pengguna. Jika autentikasi gagal, sistem akan mengembalikan \textit{error} 401. Jika autentikasi berhasil, sistem akan memeriksa \textit{permission payroll item} untuk menghapus komponen gaji. Jika pengguna tidak ada \textit{permission payroll item}, sistem akan mengembalikan \textit{error} 403. Setelah itu, sistem mencari data komponen gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{payroll\_item\_id}. Jika komponen gaji tidak ditemukan, sistem akan mengembalikan \textit{error} 404. Setelah itu, sistem menghapus data komponen gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}, \texttt{payroll\_item\_id}. Setelah data komponen gaji berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai keberhasilan penghapusan komponen gaji.
 
 \begin{figure}[H]
     \centering
@@ -560,7 +568,7 @@ Berikut merupakan \textit{flowchart} API \textit{Delete Payroll Item}.
     \label{fig:flowchart_delete_payroll_item}
 \end{figure}
 
-Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \textit{Delete Payroll Item}.
+Gambar \ref{fig:request_delete_payroll_item} merupakan contoh \textit{request} untuk API \textit{Delete Payroll Item}. Pada gambar \ref{fig:request_delete_payroll_item} menunjukkan contoh \textit{request} yang dikirimkan ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{DELETE} dengan menyertakan \textit{path parameters}, \texttt{payroll\_item\_id}, untuk menentukan komponen gaji yang ingin dihapus.
 
 \begin{figure}
     \centering
@@ -569,6 +577,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:request_delete_payroll_item}
 \end{figure}
 
+Gambar \ref{fig:response_delete_payroll_item} merupakan contoh \textit{response} untuk API \textit{Delete Payroll Item}. Pada gambar \ref{fig:response_delete_payroll_item} menunjukkan contoh \textit{response} yang diterima dari \textit{server}, berisi informasi mengenai keberhasilan penghapusan komponen gaji dengan menampilkan \textit{payroll item ID} dari komponen gaji yang telah dihapus.
 \begin{figure}
     \centering
     \fbox{\includegraphics[width=0.9\textwidth]{assets/pics/fig_response_delete_payroll_item.png}}
@@ -576,7 +585,7 @@ Berikut merupakan contoh \textit{request} dan \textit{response} untuk API \texti
     \label{fig:response_delete_payroll_item}
 \end{figure}
 
-Gambar \ref{fig:flowchart_delete_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Delete Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_delete_payroll_item}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta menghapus data komponen gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data komponen gaji berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai keberhasilan penghapusan komponen gaji seperti pada Gambar \ref{fig:response_delete_payroll_item}.
+% Gambar \ref{fig:flowchart_delete_payroll_item} menunjukkan \textit{flowchart} alur sistem API \textit{Delete Payroll Item} yang dimulai dari pengguna mengirimkan permintaan (\textit{request}) ke \textit{endpoint} \texttt{/payroll-items/:id} menggunakan metode HTTP \textit{DELETE} seperti pada Gambar \ref{fig:request_delete_payroll_item}. Sistem kemudian memproses permintaan tersebut dengan memeriksa autentikasi pengguna, memeriksa \textit{permission} pengguna, serta menghapus data komponen gaji berdasarkan \textit{ID} yang diberikan dari \textit{path parameters}. Setelah data komponen gaji berhasil dihapus, sistem mengembalikan respons (\textit{response}) kepada pengguna yang berisi informasi mengenai keberhasilan penghapusan komponen gaji seperti pada Gambar \ref{fig:response_delete_payroll_item}.
 
 
 % ---------------------------------- %
